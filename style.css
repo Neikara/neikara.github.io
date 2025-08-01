@@ -2,7 +2,10 @@
 
 /* Fond général plus sombre */
 body {
-    background-color: #111 !important;
+    background-image: url('https://konofan.fandom.com/wiki/Character:Megumin/Nice_Explosion!!?file=Megumin_-_Nice_Explosion%21%21.png');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
     color: #eee !important;
     font-family: "Segoe UI", sans-serif;
 }
