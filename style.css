@@ -8,16 +8,28 @@ body {
     font-family: "Segoe UI", sans-serif;
 }
 
+.container {
+    max-width: none !important;
+    background-image: url(https://i.imgur.com/Mb6ZPCU.png); /* lien direct ici */
+    background-position: 40 center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
-.avatar-container .Player-username {
+.avatar-container .Player-username{
     font-size: 24pt;
     font-family: 'Bangers', cursive;
     color: rgb(147, 165, 7);
     display: inline-block;
     animation: wave 2s ease-in-out infinite;
 }
-.avatar-container .Player-username span:nth-child(2) {
-    animation-delay: 0.2s;
+
+.avatar-container .Player-rank{
+    font-size: 24pt;
+    font-family: 'Bangers', cursive;
+    color: rgb(147, 165, 7);
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
 }
 
 @keyframes wave {
@@ -28,10 +40,8 @@ body {
         transform: translateY(-20px);
     }
 }
-
-.container {
-    max-width: none !important;
-    background-image: url(https://ibb.co/DHNQh2Lg); /* lien direct ici */
+.avatar-container .Player-username span:nth-child(2) {
+    animation-delay: 0.2s;
 }
 
 /* Rang */
