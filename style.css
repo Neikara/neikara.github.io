@@ -7,11 +7,11 @@ body {
     color: #eee !important;
     font-family: "Segoe UI", sans-serif;
 }
-h1, h2, h3{
-  font-family: 'Bangers', cursive;
-  color: #ff4444;
-  text-shadow: 1px 1px 3px #000;
-  letter-spacing: 1px;
+h1, h2, h3 {
+    font-family: 'Bangers', cursive;
+    color: rgb(147, 165, 7);
+    text-shadow: 1px 1px 3px #000;
+    letter-spacing: 1px;
 }
 .container {
     max-width: none !important;
