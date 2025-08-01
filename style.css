@@ -48,15 +48,6 @@ body {
     margin-top: 15px;
 }
 
-/* Liens */
-a {
-    color: #ff469c !important;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-
 /* Masquer les pubs (facultatif) */
 .ad-container, .banner-ad {
     display: none !important;
