@@ -8,10 +8,25 @@ body {
     font-family: "Segoe UI", sans-serif;
 }
 
+
 .avatar-container .Player-username {
     font-size: 24pt;
-    font-family: 'BadaBoom BB', cursive;
-    color: rgb(165, 7, 7);
+    font-family: 'Bangers', cursive;
+    color: rgb(147, 165, 7);
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+}
+.avatar-container .Player-username span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .container {
