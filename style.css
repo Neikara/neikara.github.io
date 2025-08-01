@@ -16,7 +16,10 @@ body {
 
 .container {
     max-width: none !important;
-    background-image: url('https://i.imgur.com/eCL4HYE.jpeg');
+    background-image: url('https://i.ibb.co/XYZ123/monimage.png'); /* lien direct ici */
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* ou 'contain' selon l'effet voulu */
 }
 
 /* Rang */
