@@ -1,15 +1,16 @@
-/* === OGS Custom Profile Theme by Yannick === */
+/* === OGS Custom Profile Theme by neikara === */
 
 /* Fond général plus sombre */
 body {
-    background-image: url('https://i.imgur.com/eCL4HYE.jpeg');
-    background-size: cover;
-    background-position: center;
+    background-color:#282828;
     color: #ffffff;
     color: #eee !important;
     font-family: "Segoe UI", sans-serif;
 }
-
+.container {
+    max-width: none !important;
+   background-image: url('https://i.imgur.com/eCL4HYE.jpeg');
+}
 /* Zone de profil */
 .player-profile {
     background: linear-gradient(to bottom, #222, #111);
