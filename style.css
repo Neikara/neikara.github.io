@@ -1,0 +1,64 @@
+/* === OGS Custom Profile Theme by Yannick === */
+
+/* Fond général plus sombre */
+body {
+    background-color: #111 !important;
+    color: #eee !important;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Zone de profil */
+.player-profile {
+    background: linear-gradient(to bottom, #222, #111);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 15px #000;
+}
+
+/* Nom du joueur */
+.player-profile .username {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+}
+
+/* Rang */
+.player-profile .rank {
+    background-color: #333;
+    color: #0f0;
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+/* Avatar */
+.player-profile .avatar {
+    border-radius: 50%;
+    border: 3px solid #555;
+    box-shadow: 0 0 10px #888;
+}
+
+/* Stats */
+.player-profile .stats {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+/* Liens */
+a {
+    color: #44aaff !important;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* Masquer les pubs (facultatif) */
+.ad-container, .banner-ad {
+    display: none !important;
+}
