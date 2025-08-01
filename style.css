@@ -13,6 +13,11 @@ h1, h2, h3 {
     text-shadow: 1px 1px 3px #000;
     letter-spacing: 1px;
 }
+.avatar-container, .ratings-row, .ratings-container, .col-sm-12, .col-sm-4 {
+    background-color: #fa8c164d;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
 .container {
     max-width: none !important;
     background-image: url(https://i.imgur.com/Mb6ZPCU.png); /* lien direct ici */
