@@ -1,22 +1,32 @@
 /* === OGS Custom Profile Theme by neikara === */
 
 /* Fond général plus sombre */
+:root {
+  --primary-color: #ac7070;
+}
 body {
     background-color:#282828;
     color: #ffffff;
     color: #eee !important;
     font-family: "Segoe UI", sans-serif;
+    primary: #3a7bd4;
+    --danger: #ffa600;
+    --success: #32c738;
+    --info: #c376fe;
+    --reject: #ff410f;
+    --select-header-bg: #f4f4f4;
+    --select-header-fg: #202020;
 }
 h1, h2, h3 {
     font-family: 'Bangers', cursive;
     color: rgb(165 7 119);
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
 }
 * {
   box-sizing: border-box;
 }
-.avatar-container, .ratings-row, .ratings-container, .col-sm-12, .col-sm-4 {
+.avatar-container, .ratings-container{
     background-color: #d7545c38;
     border-radius: 20px;
     margin-bottom: 10px;
@@ -27,7 +37,6 @@ h1, h2, h3 {
     background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg); /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .avatar-container .username {
@@ -196,4 +205,7 @@ padding-left: 40px;
         transform: rotate(315deg) translateX(-1000px);
         opacity: 0;
     }
+}
+.Card{
+    background-color:#2a2a2ad1 !important
 }
