@@ -231,3 +231,8 @@ body.accessible .RatingsChart .area, body.dark .RatingsChart .area {
     fill: #fa012659 !important;
     stroke: #fa0126c7 !important;
 }
+body.accessible header.NavBar, body.dark header.NavBar {
+    background-color: #230c3f !important;
+}
+body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo {
+    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important}
