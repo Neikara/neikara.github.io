@@ -9,12 +9,12 @@ body {
 }
 h1, h2, h3 {
     font-family: 'Bangers', cursive;
-    color: rgb(251 150 16);
+    color: rgb(67 38 40);
     text-shadow: 1px 1px 3px #000;
     letter-spacing: 1px;
 }
 .avatar-container, .ratings-row, .ratings-container, .col-sm-12, .col-sm-4 {
-    background-color: #fa8c164d;
+    background-color: #d7545c38;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid #ff909066;
