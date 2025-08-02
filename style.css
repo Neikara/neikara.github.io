@@ -13,6 +13,9 @@ h1, h2, h3 {
     text-shadow: 1px 1px 3px #000;
     letter-spacing: 1px;
 }
+* {
+  box-sizing: border-box;
+}
 .avatar-container, .ratings-row, .ratings-container, .col-sm-12, .col-sm-4 {
     background-color: #d7545c38;
     border-radius: 20px;
