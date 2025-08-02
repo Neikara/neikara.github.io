@@ -110,3 +110,37 @@ h1, h2, h3 {
   color: #c82b31;
 font-family: bangers
 }
+.custom-stats {
+background-color: #ffa600;
+border-radius: .3rem;
+border: 1px solid #d98d00;
+padding: 10px !important;
+display: inline-block;
+position: relative;
+box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
+box-sizing: border-box;
+}
+
+.custom-stats a:before {
+width: 32px;
+content: " ";
+background-image: url(https://cdn-icons-png.flaticon.com/512/599/599698.png);
+position: absolute;
+height: 32px;
+left: 10px;
+top: 5px;
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+.custom-stats:hover {
+background-color: #ffb326;
+}
+
+.custom-stats a {
+display: inline-block;
+color: white !important;
+text-decoration: none !important;
+text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+padding-left: 40px;
+}
