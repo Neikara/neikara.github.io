@@ -229,4 +229,12 @@ body.accessible header.NavBar, body.dark header.NavBar {
     background-color: #230c3f !important;
 }
 body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo {
-    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important}
+    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important
+}
+body.accessible {
+    --select-header-bg: #ff0000 !important;
+    --select-header-fg: #ff0000 !important;
+}
+body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr {
+    border-bottom-color: #772424!important;
+}
