@@ -203,38 +203,34 @@ padding-left: 40px;
     margin-bottom: 10px !important;
     border: 2px solid #401c4a66 !important;
 }
-body.accessible .RatingsChart .weak-wins {
+body.accessible .RatingsChart .weak-wins, body.dark .RatingsChart .weak-wins, body.light .RatingsChart .weak-wins {
     fill: #a5077787 !important;
 }
-body.accessible .RatingsChart .strong-wins {
+body.accessible .RatingsChart .strong-wins, body.dark .RatingsChart .strong-wins, body.light .RatingsChart .strong-wins {
     fill: rgb(255 36 0 / 48%) !important;
 }
-body.accessible .RatingsChart .weak-losses {
+body.accessible .RatingsChart .weak-losses, body.dark .RatingsChart .weak-losses, body.light .RatingsChart .weak-losses {
     fill: #1b0f1b85 !important;
 }
-body.accessible .RatingsChart .strong-losses {
+body.accessible .RatingsChart .strong-losses, body.dark .RatingsChart .strong-losses, body.light .RatingsChart .strong-losses {
     fill: #5299ffb8 !important;
 }
-body.accessible .RatingsChart .chart .rating.line, body.dark .RatingsChart .chart .rating.line {
+body.accessible .RatingsChart .chart .rating.line, body.dark .RatingsChart .chart .rating.line, body.light .RatingsChart .chart .rating.line {
     stroke: #ff2400 !important;
 }
-body.accessible .RatingsChart .deviation-area, body.dark .RatingsChart .deviation-area {
+body.accessible .RatingsChart .deviation-area, body.dark .RatingsChart .deviation-area, body.light .RatingsChart .deviation-area {
     fill: #ff240033 !important;
 }
-body.accessible .RatingsChart .area, body.dark .RatingsChart .area {
+body.accessible .RatingsChart .area, body.dark .RatingsChart .area, body.light .RatingsChart .area {
     fill: #ff24005e !important;
     stroke: #ff2400 !important;
 }
-body.accessible header.NavBar, body.dark header.NavBar {
+body.accessible header.NavBar, body.dark header.NavBar, body.light header.NavBar {
     background-color: #230c3f !important;
 }
-body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo {
+body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo, body.light .ogs-nav-logo {
     background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important;
 }
-body.accessible {
-    --select-header-bg: #ff0000 !important;
-    --select-header-fg: #ff0000 !important;
-}
-body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr {
+body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr, body.light .PaginatedTable div table tr {
     border-bottom-color: #772424!important;
 }
