@@ -17,6 +17,7 @@ h1, h2, h3 {
     background-color: #fa8c164d;
     border-radius: 20px;
     margin-bottom: 10px;
+    border: 2px solid red; /* contour rouge */
 }
 .container {
     max-width: none !important;
