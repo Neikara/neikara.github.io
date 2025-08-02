@@ -9,7 +9,7 @@ body {
 }
 h1, h2, h3 {
     font-family: 'Bangers', cursive;
-    color: rgb(147, 165, 7);
+    color: rgb(251 150 16);
     text-shadow: 1px 1px 3px #000;
     letter-spacing: 1px;
 }
@@ -17,7 +17,7 @@ h1, h2, h3 {
     background-color: #fa8c164d;
     border-radius: 20px;
     margin-bottom: 10px;
-    border: 2px solid red; /* contour rouge */
+    border: 2px solid #ff909066;
 }
 .ratings-container{
     display: none !important;
@@ -44,7 +44,7 @@ h1, h2, h3 {
   z-index: 1;
 }
 .avatar-container .username span {
-  color: #93a507;
+  color: #a50781;
   position: relative;
   z-index: 2;
   transition: all 0.5s ease;
@@ -60,7 +60,7 @@ h1, h2, h3 {
   height: 100%;
   background: repeating-radial-gradient(
     circle at center, 
-    #93a507 5px, 
+    #a50781 5px, 
     transparent 10px, 
     transparent 25px
   );
@@ -85,15 +85,12 @@ h1, h2, h3 {
 .avatar-container .Player-username{
     font-size: 24pt;
     font-family: 'Bangers', cursive;
-    color: rgb(147, 165, 7);
     display: inline-block;
     animation: wave 2s ease-in-out infinite;
 }
 
 .avatar-container .Player-rank{
-    font-size: 24pt;
     font-family: 'Bangers', cursive;
-    color: rgb(147, 165, 7);
     display: inline-block;
     animation: wave 2s ease-in-out infinite;
 }
