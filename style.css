@@ -209,3 +209,25 @@ padding-left: 40px;
 .Card{
     background-color:#2a2a2ad1 !important
 }
+body.accessible .RatingsChart .weak-wins {
+    fill: #a5077787 !important;
+}
+body.accessible .RatingsChart .strong-wins {
+    fill: #ff376feb !important;
+}
+body.accessible .RatingsChart .weak-losses {
+    fill: #1b0f1b85 !important;
+}
+body.accessible .RatingsChart .strong-losses {
+    fill: #5299ffb8 !important;
+}
+body.accessible .RatingsChart .chart .rating.line, body.dark .RatingsChart .chart .rating.line {
+    stroke: #fa0126 !important;
+}
+body.accessible .RatingsChart .deviation-area, body.dark .RatingsChart .deviation-area {
+    fill: #9b1b5587 !important;
+}
+body.accessible .RatingsChart .area, body.dark .RatingsChart .area {
+    fill: #fa012659 !important;
+    stroke: #fa0126c7 !important;
+}
