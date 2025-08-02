@@ -4,22 +4,14 @@
 :root {
   --primary-color: #ac7070;
 }
-body {
+html, body {
     background-color:#282828;
-    color: #ffffff;
-    color: #eee !important;
+    color: rgb(255 36 0) !important;
     font-family: "Segoe UI", sans-serif;
-    primary: #3a7bd4;
-    --danger: #ffa600;
-    --success: #32c738;
-    --info: #c376fe;
-    --reject: #ff410f;
-    --select-header-bg: #f4f4f4;
-    --select-header-fg: #202020;
 }
 h1, h2, h3 {
     font-family: 'Bangers', cursive;
-    color: rgb(165 7 119);
+    color: rgb(255 36 0);
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
 }
@@ -27,10 +19,10 @@ h1, h2, h3 {
   box-sizing: border-box;
 }
 .avatar-container, .ratings-container{
-    background-color: #d7545c38;
+    background-color: #ff24002e;
     border-radius: 20px;
     margin-bottom: 10px;
-    border: 2px solid #ff909066;
+    border: 2px solid #ff24002e;
 }
 .container {
     max-width: none !important;
@@ -50,9 +42,8 @@ h1, h2, h3 {
   z-index: 1;
 }
 .avatar-container .username span {
-  color: #a50781;
+  color: rgb(255 36 0);
   position: relative;
-  z-index: 2;
   transition: all 0.5s ease;
 }
 
@@ -66,7 +57,7 @@ h1, h2, h3 {
   height: 100%;
   background: repeating-radial-gradient(
     circle at center, 
-    #a50781 5px, 
+    rgb(255 36 0) 5px, 
     transparent 10px, 
     transparent 25px
   );
@@ -113,7 +104,7 @@ h1, h2, h3 {
     animation-delay: 0.2s;
 }
 .Player-username {
-  color: #c82b31;
+  color: rgb(255 36 0);
 font-family: bangers
 }
 .custom-stats {
@@ -207,13 +198,16 @@ padding-left: 40px;
     }
 }
 .Card{
-    background-color:#2a2a2ad1 !important
+    background-color: #4d0b00b5!important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+    border: 2px solid #401c4a66 !important;
 }
 body.accessible .RatingsChart .weak-wins {
     fill: #a5077787 !important;
 }
 body.accessible .RatingsChart .strong-wins {
-    fill: #ff376feb !important;
+    fill: rgb(255 36 0 / 48%) !important;
 }
 body.accessible .RatingsChart .weak-losses {
     fill: #1b0f1b85 !important;
@@ -222,17 +216,12 @@ body.accessible .RatingsChart .strong-losses {
     fill: #5299ffb8 !important;
 }
 body.accessible .RatingsChart .chart .rating.line, body.dark .RatingsChart .chart .rating.line {
-    stroke: #fa0126 !important;
+    stroke: #ff2400 !important;
 }
 body.accessible .RatingsChart .deviation-area, body.dark .RatingsChart .deviation-area {
-    fill: #9b1b5587 !important;
+    fill: #ff240033 !important;
 }
 body.accessible .RatingsChart .area, body.dark .RatingsChart .area {
-    fill: #fa012659 !important;
-    stroke: #fa0126c7 !important;
+    fill: #ff24005e !important;
+    stroke: #ff2400 !important;
 }
-body.accessible header.NavBar, body.dark header.NavBar {
-    background-color: #230c3f !important;
-}
-body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo {
-    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important}
