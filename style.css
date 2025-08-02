@@ -1,11 +1,9 @@
 /* === OGS Custom Profile Theme by neikara === */
 
 /* Fond général plus sombre */
-:root {
-  --primary-color: #ac7070;
-}
-html, body {
-    background-color:#282828;
+
+body {
+    background-color:#040404;
     color: rgb(255 36 0) !important;
     font-family: "Segoe UI", sans-serif;
 }
@@ -41,6 +39,7 @@ h1, h2, h3 {
   position: relative;
   z-index: 1;
 }
+
 .avatar-container .username span {
   color: rgb(255 36 0);
   position: relative;
@@ -105,8 +104,8 @@ h1, h2, h3 {
     animation-delay: 0.2s;
 }
 .Player-username {
-  color: rgb(255 36 0);
-font-family: bangers
+    color: rgb(255 36 0);
+    font-family: 'bangers';
 }
 .custom-stats {
 background-color: #ffa600;
@@ -142,6 +141,7 @@ text-decoration: none !important;
 text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
 padding-left: 40px;
 }
+
 .star::before {
   content: '';
   position: absolute;
@@ -234,4 +234,15 @@ body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo, body.light .ogs-nav-logo
 }
 body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr, body.light .PaginatedTable div table tr {
     border-bottom-color: #772424!important;
+}
+body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr, body.light .PaginatedTable div table tr::hover {
+    border-bottom-color: #772424!important;
+    background-color : #772424!important; 
+}
+body.accessible button, body.dark .btn, body.dark a.btn, body.dark button, body.light .btn, body.light a.btn, body.light button {
+    color: #ff2400 !important;
+    background-color : #570f03f0 !important;
+}
+body.light header.NavBar a {
+    color: #bbb !important;
 }
