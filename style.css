@@ -239,7 +239,7 @@ body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div tabl
     border-bottom-color: #772424!important;
     background-color : #772424!important; 
 }
-body.accessible button, body.dark .btn, body.dark a.btn, body.dark button, body.light .btn, body.light a.btn, body.light button {
+.sm {
     color: #ff2400 !important;
     background-color : #570f03f0 !important;
 }
