@@ -344,14 +344,13 @@ body.light .PaginatedTable div table tr::hover {
 }
 
 .sm {
-    color: #ff2400 !important;
+    color: #550000 !important;
     background-color: #570f03f0 !important;
 }
 
 body.light header.NavBar a {
     color: #bbb !important;
 }
-
 
 button {
   position: relative;
@@ -407,3 +406,4 @@ button::before {
   animation: particles 3s linear infinite;
   z-index: -2;
 }
+
