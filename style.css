@@ -3,246 +3,351 @@
 /* Fond général plus sombre */
 
 body {
-    background-color:#040404;
+    background-color: #040404;
     color: rgb(255 36 0) !important;
     font-family: "Segoe UI", sans-serif;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-family: 'Bangers', cursive;
     color: rgb(255 36 0);
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
 }
+
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-.avatar-container, .ratings-container{
+
+.avatar-container,
+.ratings-container {
     background-color: #ff24002e;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid #ff24002e;
 }
+
 .container {
     max-width: none !important;
-    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg); /* lien direct ici */
+    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
+    /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
 }
 
 .avatar-container .username {
-  width: 300px;
-  height: 100px;
-  background: #11111100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 1;
+    width: 150px;
+    height: 50px;
+    background: #00000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    animation: wave 2s ease-in-out infinite;
 }
 
 .avatar-container .username span {
-  color: rgb(255 36 0);
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s ease;
+    color: rgb(255 36 0);
+    position: relative;
+    z-index: 2;
+    transition: all 0.5s ease;
 }
 
 .avatar-container .username::before,
 .avatar-container .username::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-radial-gradient(
-    circle at center, 
-    rgb(255 36 0) 5px, 
-    transparent 10px, 
-    transparent 25px
-  );
-  opacity: 0;
-  transition: all 0.5s ease;
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: repeating-radial-gradient(circle at center,
+            rgb(255 36 0) 5px,
+            transparent 10px,
+            transparent 20px);
+    opacity: 0;
+    transition: all 0.5s ease;
 }
 
-.avatar-container .username:hover span{
-  transform: scale(1.5) rotate(360deg);
-  opacity: 0;
+.avatar-container .username:hover span {
+    transform: scale(1.5) rotate(360deg);
+    opacity: 0;
 }
 
 .avatar-container .username:hover::before {
-  transform: scale(2) rotate(45deg);
-  opacity: 0.3;
+    transform: scale(2) rotate(45deg);
+    opacity: 0.3;
 }
 
 .avatar-container .username:hover::after {
-  transform: scale(2) rotate(-45deg);
-  opacity: 0.3;
-}
-.avatar-container .Player-username{
-    font-size: 24pt;
-    font-family: 'Bangers', cursive;
-    display: inline-block;
-    animation: wave 2s ease-in-out infinite;
+    transform: scale(2) rotate(-45deg);
+    opacity: 0.3;
 }
 
-.avatar-container .Player-rank{
+.avatar-container .Player-username {
     font-family: 'Bangers', cursive;
     display: inline-block;
-    animation: wave 2s ease-in-out infinite;
+}
+
+.avatar-container .Player-rank {
+    font-size: 24pt;
+    font-family: 'Bangers', cursive;
 }
 
 @keyframes wave {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
-        transform: translateY(-20px);
+        transform: translateY(20px);
     }
 }
+
 .avatar-container .Player-username span:nth-child(2) {
     animation-delay: 0.2s;
 }
+
 .Player-username {
     color: rgb(255 36 0);
     font-family: 'bangers';
 }
+
 .custom-stats {
-background-color: #ffa600;
-border-radius: .3rem;
-border: 1px solid #d98d00;
-padding: 10px !important;
-display: inline-block;
-position: relative;
-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
-box-sizing: border-box;
+    background-color: #ffa600;
+    border-radius: .3rem;
+    border: 1px solid #d98d00;
+    padding: 10px !important;
+    display: inline-block;
+    position: relative;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
+    box-sizing: border-box;
 }
 
 .custom-stats a:before {
-width: 32px;
-content: " ";
-background-image: url(https://cdn-icons-png.flaticon.com/512/599/599698.png);
-position: absolute;
-height: 32px;
-left: 10px;
-top: 5px;
-background-size: contain;
-background-repeat: no-repeat;
+    width: 32px;
+    content: " ";
+    background-image: url(https://cdn-icons-png.flaticon.com/512/599/599698.png);
+    position: absolute;
+    height: 32px;
+    left: 10px;
+    top: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .custom-stats:hover {
-background-color: #ffb326;
+    background-color: #ffb326;
 }
 
 .custom-stats a {
-display: inline-block;
-color: white !important;
-text-decoration: none !important;
-text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
-padding-left: 40px;
+    display: inline-block;
+    color: white !important;
+    text-decoration: none !important;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+    padding-left: 40px;
 }
 
 .star::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  width: 200px;
-  height: 1px;
-  background: linear-gradient(90deg, #fff, transparent);
-  transform: translateY(-50%);
-  opacity: 0.8;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    width: 200px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+    transform: translateY(-50%);
+    opacity: 0.8;
 }
+
 .star {
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow:
-    0 0 5px 2px rgba(255,255,255,0.8),
-    0 0 10px 4px rgba(255,255,255,0.5);
-  animation-name: shootingStar;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow:
+        0 0 5px 2px rgba(255, 255, 255, 0.8),
+        0 0 10px 4px rgba(255, 255, 255, 0.5);
+    animation-name: shootingStar;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 /* Animations avec des delays et durées différentes */
 
-.star1 { top: 0; left: 40%; animation-duration: 1.7s; animation-delay: 0s; }
-.star2 { top: 0; left: 80%; animation-duration: 2.8s; animation-delay: 0.4s; }
-.star3 { top: 0; left: 25%; animation-duration: 2.5s; animation-delay: 0.8s; }
-.star4 { top: 0; left: 10%; animation-duration: 1.5s; animation-delay: 1.2s; }
-.star5 { top: 0; left: 50%; animation-duration: 2.7s; animation-delay: 1.6s; }
-.star6 { top: 80%; left: 100%; animation-duration: 3.1s; animation-delay: 2.0s; }
-.star7 { top: 55%; left: 100%; animation-duration: 4.9s; animation-delay: 2.4s; }
-.star8 { top: 30%; left: 100%; animation-duration: 3.3s; animation-delay: 2.8s; }
-.star9 { top: 10%; left: 100%; animation-duration: 5.0s; animation-delay: 3.2s; }
-.star10 { top: 25%; left: 100%; animation-duration: 6.6s; animation-delay: 3.6s; }
+.star1 {
+    top: 0;
+    left: 40%;
+    animation-duration: 1.7s;
+    animation-delay: 0s;
+}
+
+.star2 {
+    top: 0;
+    left: 80%;
+    animation-duration: 2.8s;
+    animation-delay: 0.4s;
+}
+
+.star3 {
+    top: 0;
+    left: 25%;
+    animation-duration: 2.5s;
+    animation-delay: 0.8s;
+}
+
+.star4 {
+    top: 0;
+    left: 10%;
+    animation-duration: 1.5s;
+    animation-delay: 1.2s;
+}
+
+.star5 {
+    top: 0;
+    left: 50%;
+    animation-duration: 2.7s;
+    animation-delay: 1.6s;
+}
+
+.star6 {
+    top: 80%;
+    left: 100%;
+    animation-duration: 3.1s;
+    animation-delay: 2.0s;
+}
+
+.star7 {
+    top: 55%;
+    left: 100%;
+    animation-duration: 4.9s;
+    animation-delay: 2.4s;
+}
+
+.star8 {
+    top: 30%;
+    left: 100%;
+    animation-duration: 3.3s;
+    animation-delay: 2.8s;
+}
+
+.star9 {
+    top: 10%;
+    left: 100%;
+    animation-duration: 5.0s;
+    animation-delay: 3.2s;
+}
+
+.star10 {
+    top: 25%;
+    left: 100%;
+    animation-duration: 6.6s;
+    animation-delay: 3.6s;
+}
 
 
-@keyframes shootingStar
-{
-    0%
-    {
+@keyframes shootingStar {
+    0% {
         transform: rotate(315deg) translateX(0);
         opacity: 1;
     }
-    70%
-    {
+
+    70% {
         opacity: 1;
     }
-    100%
-    {
+
+    100% {
         transform: rotate(315deg) translateX(-1000px);
         opacity: 0;
     }
 }
-.Card{
-    background-color: #4d0b00b5!important;
+
+.Card {
+    background-color: #4d0b00b5 !important;
     border-radius: 20px !important;
     margin-bottom: 10px !important;
     border: 2px solid #401c4a66 !important;
 }
-body.accessible .RatingsChart .weak-wins, body.dark .RatingsChart .weak-wins, body.light .RatingsChart .weak-wins {
+
+body.accessible .RatingsChart .weak-wins,
+body.dark .RatingsChart .weak-wins,
+body.light .RatingsChart .weak-wins {
     fill: #a5077787 !important;
 }
-body.accessible .RatingsChart .strong-wins, body.dark .RatingsChart .strong-wins, body.light .RatingsChart .strong-wins {
+
+body.accessible .RatingsChart .strong-wins,
+body.dark .RatingsChart .strong-wins,
+body.light .RatingsChart .strong-wins {
     fill: rgb(255 36 0 / 48%) !important;
 }
-body.accessible .RatingsChart .weak-losses, body.dark .RatingsChart .weak-losses, body.light .RatingsChart .weak-losses {
+
+body.accessible .RatingsChart .weak-losses,
+body.dark .RatingsChart .weak-losses,
+body.light .RatingsChart .weak-losses {
     fill: #1b0f1b85 !important;
 }
-body.accessible .RatingsChart .strong-losses, body.dark .RatingsChart .strong-losses, body.light .RatingsChart .strong-losses {
+
+body.accessible .RatingsChart .strong-losses,
+body.dark .RatingsChart .strong-losses,
+body.light .RatingsChart .strong-losses {
     fill: #5299ffb8 !important;
 }
-body.accessible .RatingsChart .chart .rating.line, body.dark .RatingsChart .chart .rating.line, body.light .RatingsChart .chart .rating.line {
+
+body.accessible .RatingsChart .chart .rating.line,
+body.dark .RatingsChart .chart .rating.line,
+body.light .RatingsChart .chart .rating.line {
     stroke: #ff2400 !important;
 }
-body.accessible .RatingsChart .deviation-area, body.dark .RatingsChart .deviation-area, body.light .RatingsChart .deviation-area {
+
+body.accessible .RatingsChart .deviation-area,
+body.dark .RatingsChart .deviation-area,
+body.light .RatingsChart .deviation-area {
     fill: #ff240033 !important;
 }
-body.accessible .RatingsChart .area, body.dark .RatingsChart .area, body.light .RatingsChart .area {
+
+body.accessible .RatingsChart .area,
+body.dark .RatingsChart .area,
+body.light .RatingsChart .area {
     fill: #ff24005e !important;
     stroke: #ff2400 !important;
 }
-body.accessible header.NavBar, body.dark header.NavBar, body.light header.NavBar {
+
+body.accessible header.NavBar,
+body.dark header.NavBar,
+body.light header.NavBar {
     background-color: #250303 !important;
 }
-body.accessible .ogs-nav-logo, body.dark .ogs-nav-logo, body.light .ogs-nav-logo {
-    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/)!important;
+
+body.accessible .ogs-nav-logo,
+body.dark .ogs-nav-logo,
+body.light .ogs-nav-logo {
+    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/) !important;
 }
-body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr, body.light .PaginatedTable div table tr {
-    border-bottom-color: #772424!important;
+
+body.accessible .PaginatedTable div table tr,
+body.dark .PaginatedTable div table tr,
+body.light .PaginatedTable div table tr {
+    border-bottom-color: #772424 !important;
 }
-body.accessible .PaginatedTable div table tr, body.dark .PaginatedTable div table tr, body.light .PaginatedTable div table tr::hover {
-    border-bottom-color: #772424!important;
-    background-color : #772424!important; 
+
+body.accessible .PaginatedTable div table tr,
+body.dark .PaginatedTable div table tr,
+body.light .PaginatedTable div table tr::hover {
+    border-bottom-color: #772424 !important;
+    background-color: #772424 !important;
 }
+
 .sm {
     color: #ff2400 !important;
-    background-color : #570f03f0 !important;
+    background-color: #570f03f0 !important;
 }
+
 body.light header.NavBar a {
     color: #bbb !important;
 }
