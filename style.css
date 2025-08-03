@@ -117,7 +117,9 @@ h3 {
     color: rgb(255 36 0);
     font-family: 'bangers';
 }
-
+.PaginatedTable.clickable-rows tbody tr:hover {
+    background-color: #690000 !important;
+}
 .custom-stats {
     background-color: #ffa600;
     border-radius: .3rem;
@@ -127,6 +129,7 @@ h3 {
     position: relative;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .custom-stats a:before {
@@ -352,7 +355,7 @@ body.light header.NavBar a {
     color: #bbb !important;
 }
 
-button {
+button, .custom-stats {
   position: relative;
   padding: 14px 28px;
   background: linear-gradient(45deg, #ff2d00, #ff8c00);
@@ -367,12 +370,8 @@ button {
   transition: transform 0.2s ease;
 }
 
-button:hover {
-  transform: scale(1.05);
-}
-
 /* Éclair lumineux */
-button::after {
+button::after, .custom-stats ::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -388,13 +387,13 @@ button::after {
   z-index: 0;
 }
 
-button:hover::after {
+button:hover::after, .custom-stats :hover::after {
   transform: translate(-50%, -50%) scale(8);
   opacity: 1;
 }
 
 /* Particules animées */
-button::before {
+button::before, .custom-stats ::before {
   content: '';
   position: absolute;
   top: -50%;
