@@ -546,7 +546,7 @@ body.light .country-line::after {
   content: '';
   position: absolute;
   top: 10%;
-  left: -300px;
+  left: -50px;
   width: 300px;
   height: 100px;
   background: radial-gradient(circle at 30% 30%, #ffffffdd, transparent 70%),
@@ -554,7 +554,7 @@ body.light .country-line::after {
               radial-gradient(circle at 50% 50%, #ffffffdd, transparent 70%);
   opacity: 0.4;
   border-radius: 50%;
-  animation: cloudFloat 60s linear infinite;
+  animation: cloudFloat 30s linear infinite;
   pointer-events: none;
   z-index: 0;
 }
