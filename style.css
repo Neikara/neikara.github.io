@@ -411,6 +411,13 @@ button::before,
     z-index: -2;
 }
 
+body.light #main-content,
+body.light #main-content>div,
+body.light body,
+body.light html {
+    color: #d2d2d2 !important;
+}
+
 /* Style de base du lien */
 .Card.activity-card a {
     position: relative;
