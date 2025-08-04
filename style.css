@@ -536,3 +536,9 @@ body.light .RatingsChartByGame .area {
 body.light input, body.light select, body.light textarea {
     color: #d2d2d2 !important;
 }
+body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
+    color: #a30000 !important;
+}
+body.light .User .game-history-table .library-won-result-unranked, body.light .User .review-history-table .library-won-result-unranked {
+    color: #ff8e00 !important;
+}
