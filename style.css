@@ -408,6 +408,3 @@ button::before, .custom-stats ::before {
 body.light #main-content, body.light #main-content>div, body.light body, body.light html {
     color: #d2d2d2 !important;
 }
-body.accessible #main-content, body.accessible #main-content>div, body.accessible body, body.accessible html {
-    color: #d2d2d2 !important;
-}
