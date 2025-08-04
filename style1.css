@@ -12,8 +12,9 @@ h1,
 h2,
 h3 {
     font-family: 'Cinzel', cursive;
-    color: #5C5C5C;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 2px 3px #000;
+    text-align: center;
+    color: #fff6e5;
     letter-spacing: 1px;
 }
 button {
@@ -64,7 +65,7 @@ body.dark .container, body.accessible .container {
 
 body.light .container {
     max-width: none !important;
-    background-image: url(https://as2.ftcdn.net/v2/jpg/14/88/25/23/1000_F_1488252311_DJtjqbgxLfvmPvr4hD6SFgThpKNpFXtM.jpg);
+    background-image: url(https://i.pinimg.com/736x/d8/fa/94/d8fa9442a1b62dc61bfea064c3e09e6d.jpg);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -72,17 +73,12 @@ body.light .container {
 body.accessible header.NavBar,
 body.dark header.NavBar
 {
-    background: linear-gradient(45deg, #3b0000, #b46918);
+    background: linear-gradient(45deg, #5C5C5C, #B0B0B0);
 }
 body.light header.NavBar {
     background: linear-gradient(45deg, #B0B0B0 , #5C5C5C );
 }
 
-body.accessible .ogs-nav-logo,
-body.dark .ogs-nav-logo,
-body.light .ogs-nav-logo {
-    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/) !important;
-}
 body.dark .avatar-container,
 body.dark .ratings-container,
 body.accessible .avatar-container,
@@ -94,10 +90,10 @@ body.accessible .ratings-container{
 }
 body.light .avatar-container,
 body.light .ratings-container {
+    text-align: center;
     background-color: #ffffff78;
-    border-radius: 20px;
     margin-bottom: 10px;
-    border: 2px solid #4d0b00b5;
+    border: 2px solid #484848b5;
 }
 
 .avatar-container .username {
@@ -113,8 +109,10 @@ body.light .ratings-container {
 }
 
 .avatar-container .username span {
-    color: #5C5C5C;
-    text-shadow: 1px 1px 1px #000;
+    font-family: 'Cinzel', cursive;
+    text-shadow: 2px 3px #000;
+    text-align: center;
+    color: #fff6e5;
     position: relative;
     z-index: 2;
     transition: all 0.5s ease;
@@ -133,21 +131,6 @@ body.light .ratings-container {
             transparent 20px);
     opacity: 0;
     transition: all 0.5s ease;
-}
-
-.avatar-container .username:hover span {
-    transform: scale(1.5) rotate(360deg);
-    opacity: 0;
-}
-
-.avatar-container .username:hover::before {
-    transform: scale(2) rotate(45deg);
-    opacity: 0.3;
-}
-
-.avatar-container .username:hover::after {
-    transform: scale(2) rotate(-45deg);
-    opacity: 0.3;
 }
 
 .avatar-container .Player-username {
@@ -176,113 +159,40 @@ body.light .ratings-container {
     animation-delay: 0.2s;
 }
 
-.custom-stats {
-    background-color: #ffa600;
-    border-radius: .3rem;
-    border: 1px solid #d98d00;
-    padding: 10px !important;
-    display: inline-block;
-    position: relative;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .15);
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
-.custom-stats a:before {
-    width: 32px;
-    content: " ";
-    background-image: url(https://cdn-icons-png.flaticon.com/512/599/599698.png);
-    position: absolute;
-    height: 32px;
-    left: 10px;
-    top: 5px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.custom-stats:hover {
-    background-color: #ffb326;
-}
-
-.custom-stats a {
-    display: inline-block;
-    color: white !important;
-    text-decoration: none !important;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, .25);
-    padding-left: 40px;
-}
-
 body.dark .Card, body.accessible .Card {
-    background-color: #4d0b00b5 !important;
-    border-radius: 20px !important;
+    background-color: #4a4a4ab5 !important;
     margin-bottom: 10px !important;
     border: 2px solid #401c4a66 !important;
 }
 body.light .Card {
-    background-color: #ff24002e !important;
-    border-radius: 20px !important;
+    background-color: #d9d9d9db !important;
     margin-bottom: 10px !important;
-    border: 2px solid #ff24002e !important;
-}
-body.accessible .RatingsChart .weak-wins,
-body.dark .RatingsChart .weak-wins,
-body.light .RatingsChart .weak-wins {
-    fill: #a5077787 !important;
-}
-
-body.accessible .RatingsChart .strong-wins,
-body.dark .RatingsChart .strong-wins,
-body.light .RatingsChart .strong-wins {
-    fill: rgb(255 36 0 / 48%) !important;
-}
-
-body.accessible .RatingsChart .weak-losses,
-body.dark .RatingsChart .weak-losses,
-body.light .RatingsChart .weak-losses {
-    fill: #1b0f1b85 !important;
-}
-
-body.accessible .RatingsChart .strong-losses,
-body.dark .RatingsChart .strong-losses,
-body.light .RatingsChart .strong-losses {
-    fill: #5299ffb8 !important;
+    border: 2px solid #ffffff2e !important;
 }
 
 body.accessible .RatingsChart .chart .rating.line,
 body.dark .RatingsChart .chart .rating.line,
 body.light .RatingsChart .chart .rating.line {
-    stroke: #ff2400 !important;
+    stroke: #000000 !important;
 }
 
 body.accessible .RatingsChart .deviation-area,
 body.dark .RatingsChart .deviation-area,
 body.light .RatingsChart .deviation-area {
-    fill: #6c0f00b0 !important;
+    fill: #777676d4 !important;
 }
 
 body.accessible .RatingsChart .area,
 body.dark .RatingsChart .area,
 body.light .RatingsChart .area {
-    fill: #ff24005e !important;
-    stroke: #ff2400 !important;
+    fill: #ffffff5e !important;
+    stroke: #3a3a3a !important;
 }
 
-body.accessible .PaginatedTable div table tr,
-body.dark .PaginatedTable div table tr,
-body.light .PaginatedTable div table tr {
-    border-bottom-color: #772424 !important;
-}
 
-body.accessible .PaginatedTable div table tr,
-body.dark .PaginatedTable div table tr,
-body.light .PaginatedTable div table tr::hover {
-    border-bottom-color: #772424 !important;
-    background-color: #772424 !important;
-}
 
 .sm {
-    color: #550000 !important;
-    background-color: #570f03f0 !important;
+    color: #6c6c6c !important;
 }
 
 body.accessible .RatingsChartByGame .weak-wins,
@@ -335,7 +245,7 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     color: #ffd100 !important;
 }
 .PaginatedTable.clickable-rows tbody tr:hover {
-    background-color: #69000096 !important;
+    background-color: #71717196 !important;
 }
 .Player-username {
     color: #5C5C5C;
@@ -429,98 +339,6 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     animation-name: shootingStar;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-/* Animations avec des delays et durées différentes */
-body.dark .star,
-body.accessible .star{
-    display:block;
-}
-.star1 {
-    top: 0;
-    left: 40%;
-    animation-duration: 1.7s;
-    animation-delay: 0s;
-}
-
-.star2 {
-    top: 0;
-    left: 80%;
-    animation-duration: 2.8s;
-    animation-delay: 0.4s;
-}
-
-.star3 {
-    top: 0;
-    left: 25%;
-    animation-duration: 2.5s;
-    animation-delay: 0.8s;
-}
-
-.star4 {
-    top: 0;
-    left: 10%;
-    animation-duration: 1.5s;
-    animation-delay: 1.2s;
-}
-
-.star5 {
-    top: 0;
-    left: 50%;
-    animation-duration: 2.7s;
-    animation-delay: 1.6s;
-}
-
-.star6 {
-    top: 80%;
-    left: 100%;
-    animation-duration: 3.1s;
-    animation-delay: 2.0s;
-}
-
-.star7 {
-    top: 55%;
-    left: 100%;
-    animation-duration: 4.9s;
-    animation-delay: 2.4s;
-}
-
-.star8 {
-    top: 30%;
-    left: 100%;
-    animation-duration: 3.3s;
-    animation-delay: 2.8s;
-}
-
-.star9 {
-    top: 10%;
-    left: 100%;
-    animation-duration: 5.0s;
-    animation-delay: 3.2s;
-}
-
-.star10 {
-    top: 25%;
-    left: 100%;
-    animation-duration: 6.6s;
-    animation-delay: 3.6s;
-}
-
-
-@keyframes shootingStar {
-    0% {
-        transform: rotate(315deg) translateX(0);
-        opacity: 1;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: rotate(315deg) translateX(-1000px);
-        opacity: 0;
-    }
 }
 
 body.light .country-line::before,
