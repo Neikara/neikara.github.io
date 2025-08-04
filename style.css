@@ -21,17 +21,34 @@ h3 {
     box-sizing: border-box;
 }
 
-.avatar-container,
-.ratings-container {
+body.dark .avatar-container,
+body.dark .ratings-container,
+body.accessible .avatar-container,
+body.accessible .ratings-container{
     background-color: #ff24002e;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid #ff24002e;
 }
+body.light .avatar-container,
+body.light .ratings-container {
+    background-color: #ffffff78;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    border: 2px solid #4d0b00b5;
+}
 
-.container {
+body.dark .container, body.accessible .container {
     max-width: none !important;
     background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
+    /* lien direct ici */
+    background-position: 40 center;
+    background-size: contain;
+}
+
+body.light .container {
+    max-width: none !important;
+    background-image: url(https://i.imgur.com/6Idvk9K.jpeg);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -273,13 +290,18 @@ h3 {
     }
 }
 
-.Card {
+body.dark .Card, body.accessible .Card {
     background-color: #4d0b00b5 !important;
     border-radius: 20px !important;
     margin-bottom: 10px !important;
     border: 2px solid #401c4a66 !important;
 }
-
+body.light .Card {
+    background-color: #ff24002e !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+    border: 2px solid #ff24002e !important;
+}
 body.accessible .RatingsChart .weak-wins,
 body.dark .RatingsChart .weak-wins,
 body.light .RatingsChart .weak-wins {
@@ -411,13 +433,6 @@ button::before,
     z-index: -2;
 }
 
-body.light #main-content,
-body.light #main-content>div,
-body.light body,
-body.light html {
-    color: #d2d2d2 !important;
-}
-
 /* Style de base du lien */
 .Card.activity-card a {
     position: relative;
@@ -526,8 +541,8 @@ body.light .RatingsChartByGame .area {
     fill: #ff24005e !important;
     stroke: #ff2400 !important;
 }
-.ratings-container{
-    color:#ff6b6b
+body.light .ratings-container{
+    color:#ff4949
 }
 body.light input, body.light select, body.light textarea {
     color: #d2d2d2 !important;
