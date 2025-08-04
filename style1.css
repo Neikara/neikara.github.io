@@ -24,7 +24,7 @@ button {
   padding: 15px 30px;
   font-family: 'Cinzel', serif;
   font-size: 18px;
-  color: #4a2e0e;
+  color: #43413e !important;
   text-shadow: 1px 1px #fff6e5;
   box-shadow: inset 0 0 10px #e2d2b6, 3px 3px 10px #999;
   cursor: pointer;
@@ -57,7 +57,7 @@ button::before {
 }
 body.dark .container, body.accessible .container {
     max-width: none !important;
-    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
+    background-image: url(https://i.pinimg.com/564x/67/6f/6d/676f6d861a8fffe0a1cd1e24f68d983e.jpg);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -83,10 +83,10 @@ body.dark .avatar-container,
 body.dark .ratings-container,
 body.accessible .avatar-container,
 body.accessible .ratings-container{
-    background-color: #ff24002e;
+    background-color: #ffffff2e;
     border-radius: 20px;
     margin-bottom: 10px;
-    border: 2px solid #ff24002e;
+    border: 2px solid #ffffff2e;
 }
 body.light .avatar-container,
 body.light .ratings-container {
@@ -162,7 +162,7 @@ body.light .ratings-container {
 body.dark .Card, body.accessible .Card {
     background-color: #4a4a4ab5 !important;
     margin-bottom: 10px !important;
-    border: 2px solid #401c4a66 !important;
+    border: 2px solid #43434366 !important;
 }
 body.light .Card {
     background-color: #d9d9d9db !important;
@@ -239,67 +239,64 @@ body.light .RatingsChartByGame .area {
 }
 
 body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
-    color: #ff0000 !important;
+    color: #000000 !important;
 }
 body.light .User .game-history-table .library-won-result-unranked, body.light .User .review-history-table .library-won-result-unranked {
-    color: #ffd100 !important;
+    color: #ffffff !important;
 }
 .PaginatedTable.clickable-rows tbody tr:hover {
     background-color: #71717196 !important;
 }
-.Player-username {
+body.light .Player-username {
     color: #5C5C5C;
     font-family: 'Cinzel';
 }
+body.dark .Player-username, body.accessible .Player-username {
+    color: #cbcbcb;
+    font-family: 'Cinzel';
+}
 /* Style de base du lien */
+/* Police rétro stylisée */
 .Card.activity-card a {
-    position: relative;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    background: linear-gradient(to right, #ff4500, #ff8c00);
-    padding: 2px 6px;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-    z-index: 1;
+  font-family: 'Cinzel', serif;
+  color: #C0C0C0; /* argent métallique */
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 2px solid #B0B0B0; /* argent mat */
+  background-color: #6E6552; /* gris crasseux */
+  border-radius: 8px;
+  box-shadow:
+    inset 0 0 5px #888,
+    0 0 8px rgba(0,0,0,0.5);
+  transition: all 0.3s ease;
+  display: inline-block;
+  position: relative;
 }
 
-/* Effet feu : couche animée */
+/* Icône engrenage en pseudo-élément */
 .Card.activity-card a::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 160%;
-    height: 160%;
-    background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 10%, transparent 70%);
-    opacity: 0.7;
-    border-radius: 50%;
-    animation: flame-flicker 1.5s infinite ease-in-out;
-    z-index: -1;
-    filter: blur(8px);
-    pointer-events: none;
+  content: "⚙ ";
+  color: #B08950; /* laiton clair */
+  margin-right: 6px;
 }
 
-/* Éclair au survol */
-.Card.activity-card a::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: all 0.4s ease;
-    pointer-events: none;
-    z-index: -1;
-}
-
+/* Hover : bordure brillante + survol métallique */
 .Card.activity-card a:hover {
-    color: #4b0e0d !important;
+  color: #FFD700; /* or clair */
+  border-color: #FFD700;
+  box-shadow:
+    0 0 12px #B08950,
+    inset 0 0 5px #bfa374;
+  background-color: #5a5040;
+  transform: scale(1.05);
 }
+
+/* Active : enfoncement */
+.Card.activity-card a:active {
+  transform: scale(0.97);
+  box-shadow: inset 2px 2px 4px #444;
+}
+
 /* Animation du feu */
 @keyframes flame-flicker {
 
@@ -313,32 +310,6 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
         transform: scale(1.2) translateY(-5px) rotate(2deg);
         opacity: 1;
     }
-}
-.star::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    width: 200px;
-    height: 1px;
-    background: linear-gradient(90deg, #fff, transparent);
-    transform: translateY(-50%);
-    opacity: 0.8;
-}
-
-.star {
-    display: none;
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow:
-        0 0 5px 2px rgba(255, 255, 255, 0.8),
-        0 0 10px 4px rgba(255, 255, 255, 0.5);
-    animation-name: shootingStar;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 
 body.light .country-line::before,
@@ -500,4 +471,6 @@ body.light .country-line::after {
     opacity: 0;
   }
 }
+
+
 
