@@ -132,11 +132,11 @@ body.light .ratings-container {
 
 .avatar-container .username span {
     color: rgb(255 36 0);
+    text-shadow: 1px 1px 1px #000;
     position: relative;
     z-index: 2;
     transition: all 0.5s ease;
 }
-
 .avatar-container .username::before,
 .avatar-container .username::after {
     content: '';
@@ -192,9 +192,6 @@ body.light .ratings-container {
 
 .avatar-container .Player-username span:nth-child(2) {
     animation-delay: 0.2s;
-}
-body.light .ratings-container{
-    color:#a60000
 }
 
 .custom-stats {
