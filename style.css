@@ -450,7 +450,8 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 }
 
 /* Animations avec des delays et durées différentes */
-body.dark .star{
+body.dark .star,
+body.acessible .star{
     display:block;
 }
 .star1 {
@@ -540,8 +541,8 @@ body.dark .star{
     }
 }
 
-.country-line::before,
-.country-line::after {
+body.light .country-line::before,
+body.light .country-line::after {
   content: '';
   position: absolute;
   top: 10%;
@@ -558,7 +559,7 @@ body.dark .star{
   z-index: 0;
 }
 
-.country-line::after {
+body.light .country-line::after {
   top: 50%;
   left: -400px;
   animation-delay: 30s;
