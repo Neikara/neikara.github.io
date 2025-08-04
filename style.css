@@ -483,3 +483,47 @@ body.light html {
         opacity: 1;
     }
 }
+
+
+body.accessible .RatingsChartByGame .weak-wins,
+body.dark .RatingsChartByGame .weak-wins,
+body.light .RatingsChartByGame .weak-wins {
+    fill: #a5077787 !important;
+}
+
+body.accessible .RatingsChartByGame .strong-wins,
+body.dark .RatingsChartByGame .strong-wins,
+body.light .RatingsChartByGame .strong-wins {
+    fill: rgb(255 36 0 / 48%) !important;
+}
+
+body.accessible .RatingsChartByGame .weak-losses,
+body.dark .RatingsChartByGame .weak-losses,
+body.light .RatingsChartByGame .weak-losses {
+    fill: #1b0f1b85 !important;
+}
+
+body.accessible .RatingsChartByGame .strong-losses,
+body.dark .RatingsChartByGame .strong-losses,
+body.light .RatingsChartByGame .strong-losses {
+    fill: #5299ffb8 !important;
+}
+
+body.accessible .RatingsChartByGame .chart .rating.line,
+body.dark .RatingsChartByGame .chart .rating.line,
+body.light .RatingsChartByGame .chart .rating.line {
+    stroke: #ff2400 !important;
+}
+
+body.accessible .RatingsChartByGame .deviation-area,
+body.dark .RatingsChartByGame .deviation-area,
+body.light .RatingsChartByGame .deviation-area {
+    fill: #6c0f0096 !important;
+}
+
+body.accessible .RatingsChartByGame .area,
+body.dark .RatingsChartByGame .area,
+body.light .RatingsChartByGame .area {
+    fill: #ff24005e !important;
+    stroke: #ff2400 !important;
+}
