@@ -275,7 +275,7 @@ body.light .RatingsChart .chart .rating.line {
 body.accessible .RatingsChart .deviation-area,
 body.dark .RatingsChart .deviation-area,
 body.light .RatingsChart .deviation-area {
-    fill: #ff240033 !important;
+    fill: #6c0f00b0 !important;
 }
 
 body.accessible .RatingsChart .area,
@@ -336,13 +336,13 @@ body.light .RatingsChartByGame .chart .rating.line {
 body.accessible .RatingsChartByGame .deviation-area,
 body.dark .RatingsChartByGame .deviation-area,
 body.light .RatingsChartByGame .deviation-area {
-    fill: #6c0f0096 !important;
+    fill: #6c0f00b0 !important;
 }
 
 body.accessible .RatingsChartByGame .area,
 body.dark .RatingsChartByGame .area,
 body.light .RatingsChartByGame .area {
-    fill: #ff24005e !important;
+    fill: #ff240073 !important;
     stroke: #ff2400 !important;
 }
 
