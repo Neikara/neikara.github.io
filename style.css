@@ -451,7 +451,7 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 
 /* Animations avec des delays et durées différentes */
 body.dark .star,
-body.acessible .star{
+body.accessible .star{
     display:block;
 }
 .star1 {
