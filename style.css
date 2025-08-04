@@ -527,3 +527,6 @@ body.light .RatingsChartByGame .area {
     fill: #ff24005e !important;
     stroke: #ff2400 !important;
 }
+.ratings-container{
+    color:#ff6b6b
+}
