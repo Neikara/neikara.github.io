@@ -435,6 +435,7 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 }
 
 .star {
+    display: none;
     position: absolute;
     width: 4px;
     height: 4px;
@@ -449,7 +450,9 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 }
 
 /* Animations avec des delays et durées différentes */
-
+body.dark .star{
+    display:block;
+}
 .star1 {
     top: 0;
     left: 40%;
@@ -536,3 +539,37 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
         opacity: 0;
     }
 }
+
+.country-line::before,
+.country-line::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: -300px;
+  width: 300px;
+  height: 100px;
+  background: radial-gradient(circle at 30% 30%, #ffffffdd, transparent 70%),
+              radial-gradient(circle at 70% 60%, #ffffffdd, transparent 70%),
+              radial-gradient(circle at 50% 50%, #ffffffdd, transparent 70%);
+  opacity: 0.4;
+  border-radius: 50%;
+  animation: cloudFloat 60s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.country-line::after {
+  top: 50%;
+  left: -400px;
+  animation-delay: 30s;
+}
+
+@keyframes cloudFloat {
+  0% {
+    transform: translateX(-300px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}
+
