@@ -16,11 +16,91 @@ h3 {
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
 }
+button,
+.custom-stats {
+    position: relative;
+    padding: 14px 28px;
+    background: linear-gradient(45deg, #ff2d00, #ff8c00);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
+    transition: transform 0.2s ease;
+}
 
+/* Éclair lumineux */
+button::after,
+.custom-stats ::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    height: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 0;
+}
+
+button:hover::after,
+.custom-stats :hover::after {
+    transform: translate(-50%, -50%) scale(8);
+    opacity: 1;
+}
+
+button::before,
+.custom-stats ::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.1) 2%, transparent 60%),
+        radial-gradient(circle, rgba(255, 0, 0, 0.1) 2%, transparent 60%);
+    animation: particles 3s linear infinite;
+    z-index: -2;
+}
 * {
     box-sizing: border-box;
 }
+body.dark .container, body.accessible .container {
+    max-width: none !important;
+    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
+    /* lien direct ici */
+    background-position: 40 center;
+    background-size: contain;
+}
 
+body.light .container {
+    max-width: none !important;
+    background-image: url(https://i.imgur.com/6Idvk9K.jpeg);
+    /* lien direct ici */
+    background-position: 40 center;
+    background-size: contain;
+}
+body.accessible header.NavBar,
+body.dark header.NavBar
+{
+    background: linear-gradient(45deg, #3b0000, #b46918);
+}
+body.light header.NavBar {
+    background: linear-gradient(45deg, #c3751d, #c00000);
+}
+
+body.accessible .ogs-nav-logo,
+body.dark .ogs-nav-logo,
+body.light .ogs-nav-logo {
+    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/) !important;
+}
 body.dark .avatar-container,
 body.dark .ratings-container,
 body.accessible .avatar-container,
@@ -36,22 +116,6 @@ body.light .ratings-container {
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid #4d0b00b5;
-}
-
-body.dark .container, body.accessible .container {
-    max-width: none !important;
-    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
-    /* lien direct ici */
-    background-position: 40 center;
-    background-size: contain;
-}
-
-body.light .container {
-    max-width: none !important;
-    background-image: url(https://i.imgur.com/6Idvk9K.jpeg);
-    /* lien direct ici */
-    background-position: 40 center;
-    background-size: contain;
 }
 
 .avatar-container .username {
@@ -129,14 +193,8 @@ body.light .container {
 .avatar-container .Player-username span:nth-child(2) {
     animation-delay: 0.2s;
 }
-
-.Player-username {
-    color: rgb(255 36 0);
-    font-family: 'bangers';
-}
-
-.PaginatedTable.clickable-rows tbody tr:hover {
-    background-color: #690000 !important;
+body.light .ratings-container{
+    color:#a60000
 }
 
 .custom-stats {
@@ -175,6 +233,198 @@ body.light .container {
     padding-left: 40px;
 }
 
+body.dark .Card, body.accessible .Card {
+    background-color: #4d0b00b5 !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+    border: 2px solid #401c4a66 !important;
+}
+body.light .Card {
+    background-color: #ff24002e !important;
+    border-radius: 20px !important;
+    margin-bottom: 10px !important;
+    border: 2px solid #ff24002e !important;
+}
+body.accessible .RatingsChart .weak-wins,
+body.dark .RatingsChart .weak-wins,
+body.light .RatingsChart .weak-wins {
+    fill: #a5077787 !important;
+}
+
+body.accessible .RatingsChart .strong-wins,
+body.dark .RatingsChart .strong-wins,
+body.light .RatingsChart .strong-wins {
+    fill: rgb(255 36 0 / 48%) !important;
+}
+
+body.accessible .RatingsChart .weak-losses,
+body.dark .RatingsChart .weak-losses,
+body.light .RatingsChart .weak-losses {
+    fill: #1b0f1b85 !important;
+}
+
+body.accessible .RatingsChart .strong-losses,
+body.dark .RatingsChart .strong-losses,
+body.light .RatingsChart .strong-losses {
+    fill: #5299ffb8 !important;
+}
+
+body.accessible .RatingsChart .chart .rating.line,
+body.dark .RatingsChart .chart .rating.line,
+body.light .RatingsChart .chart .rating.line {
+    stroke: #ff2400 !important;
+}
+
+body.accessible .RatingsChart .deviation-area,
+body.dark .RatingsChart .deviation-area,
+body.light .RatingsChart .deviation-area {
+    fill: #ff240033 !important;
+}
+
+body.accessible .RatingsChart .area,
+body.dark .RatingsChart .area,
+body.light .RatingsChart .area {
+    fill: #ff24005e !important;
+    stroke: #ff2400 !important;
+}
+
+body.accessible .PaginatedTable div table tr,
+body.dark .PaginatedTable div table tr,
+body.light .PaginatedTable div table tr {
+    border-bottom-color: #772424 !important;
+}
+
+body.accessible .PaginatedTable div table tr,
+body.dark .PaginatedTable div table tr,
+body.light .PaginatedTable div table tr::hover {
+    border-bottom-color: #772424 !important;
+    background-color: #772424 !important;
+}
+
+.sm {
+    color: #550000 !important;
+    background-color: #570f03f0 !important;
+}
+
+body.accessible .RatingsChartByGame .weak-wins,
+body.dark .RatingsChartByGame .weak-wins,
+body.light .RatingsChartByGame .weak-wins {
+    fill: #a5077787 !important;
+}
+
+body.accessible .RatingsChartByGame .strong-wins,
+body.dark .RatingsChartByGame .strong-wins,
+body.light .RatingsChartByGame .strong-wins {
+    fill: rgb(255 36 0 / 48%) !important;
+}
+
+body.accessible .RatingsChartByGame .weak-losses,
+body.dark .RatingsChartByGame .weak-losses,
+body.light .RatingsChartByGame .weak-losses {
+    fill: #1b0f1b85 !important;
+}
+
+body.accessible .RatingsChartByGame .strong-losses,
+body.dark .RatingsChartByGame .strong-losses,
+body.light .RatingsChartByGame .strong-losses {
+    fill: #5299ffb8 !important;
+}
+
+body.accessible .RatingsChartByGame .chart .rating.line,
+body.dark .RatingsChartByGame .chart .rating.line,
+body.light .RatingsChartByGame .chart .rating.line {
+    stroke: #ff2400 !important;
+}
+
+body.accessible .RatingsChartByGame .deviation-area,
+body.dark .RatingsChartByGame .deviation-area,
+body.light .RatingsChartByGame .deviation-area {
+    fill: #6c0f0096 !important;
+}
+
+body.accessible .RatingsChartByGame .area,
+body.dark .RatingsChartByGame .area,
+body.light .RatingsChartByGame .area {
+    fill: #ff24005e !important;
+    stroke: #ff2400 !important;
+}
+
+body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
+    color: #ff0000 !important;
+}
+body.light .User .game-history-table .library-won-result-unranked, body.light .User .review-history-table .library-won-result-unranked {
+    color: #ffd100 !important;
+}
+.PaginatedTable.clickable-rows tbody tr:hover {
+    background-color: #69000096 !important;
+}
+.Player-username {
+    color: rgb(255 36 0);
+    font-family: 'bangers';
+}
+/* Style de base du lien */
+.Card.activity-card a {
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background: linear-gradient(to right, #ff4500, #ff8c00);
+    padding: 2px 6px;
+    border-radius: 6px;
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+
+/* Effet feu : couche animée */
+.Card.activity-card a::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -30%;
+    width: 160%;
+    height: 160%;
+    background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 10%, transparent 70%);
+    opacity: 0.7;
+    border-radius: 50%;
+    animation: flame-flicker 1.5s infinite ease-in-out;
+    z-index: -1;
+    filter: blur(8px);
+    pointer-events: none;
+}
+
+/* Éclair au survol */
+.Card.activity-card a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.Card.activity-card a:hover {
+    color: #4b0e0d !important;
+}
+/* Animation du feu */
+@keyframes flame-flicker {
+
+    0%,
+    100% {
+        transform: scale(1) translateY(0px) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: scale(1.2) translateY(-5px) rotate(2deg);
+        opacity: 1;
+    }
+}
 .star::before {
     content: '';
     position: absolute;
@@ -288,268 +538,4 @@ body.light .container {
         transform: rotate(315deg) translateX(-1000px);
         opacity: 0;
     }
-}
-
-body.dark .Card, body.accessible .Card {
-    background-color: #4d0b00b5 !important;
-    border-radius: 20px !important;
-    margin-bottom: 10px !important;
-    border: 2px solid #401c4a66 !important;
-}
-body.light .Card {
-    background-color: #ff24002e !important;
-    border-radius: 20px !important;
-    margin-bottom: 10px !important;
-    border: 2px solid #ff24002e !important;
-}
-body.accessible .RatingsChart .weak-wins,
-body.dark .RatingsChart .weak-wins,
-body.light .RatingsChart .weak-wins {
-    fill: #a5077787 !important;
-}
-
-body.accessible .RatingsChart .strong-wins,
-body.dark .RatingsChart .strong-wins,
-body.light .RatingsChart .strong-wins {
-    fill: rgb(255 36 0 / 48%) !important;
-}
-
-body.accessible .RatingsChart .weak-losses,
-body.dark .RatingsChart .weak-losses,
-body.light .RatingsChart .weak-losses {
-    fill: #1b0f1b85 !important;
-}
-
-body.accessible .RatingsChart .strong-losses,
-body.dark .RatingsChart .strong-losses,
-body.light .RatingsChart .strong-losses {
-    fill: #5299ffb8 !important;
-}
-
-body.accessible .RatingsChart .chart .rating.line,
-body.dark .RatingsChart .chart .rating.line,
-body.light .RatingsChart .chart .rating.line {
-    stroke: #ff2400 !important;
-}
-
-body.accessible .RatingsChart .deviation-area,
-body.dark .RatingsChart .deviation-area,
-body.light .RatingsChart .deviation-area {
-    fill: #ff240033 !important;
-}
-
-body.accessible .RatingsChart .area,
-body.dark .RatingsChart .area,
-body.light .RatingsChart .area {
-    fill: #ff24005e !important;
-    stroke: #ff2400 !important;
-}
-
-body.accessible header.NavBar,
-body.dark header.NavBar
-{
-    background: linear-gradient(45deg, #3b0000, #b46918);
-}
-body.light header.NavBar {
-    background: linear-gradient(45deg, #c3751d, #c00000);
-}
-
-body.accessible .ogs-nav-logo,
-body.dark .ogs-nav-logo,
-body.light .ogs-nav-logo {
-    background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/) !important;
-}
-
-body.accessible .PaginatedTable div table tr,
-body.dark .PaginatedTable div table tr,
-body.light .PaginatedTable div table tr {
-    border-bottom-color: #772424 !important;
-}
-
-body.accessible .PaginatedTable div table tr,
-body.dark .PaginatedTable div table tr,
-body.light .PaginatedTable div table tr::hover {
-    border-bottom-color: #772424 !important;
-    background-color: #772424 !important;
-}
-
-.sm {
-    color: #550000 !important;
-    background-color: #570f03f0 !important;
-}
-
-button,
-.custom-stats {
-    position: relative;
-    padding: 14px 28px;
-    background: linear-gradient(45deg, #ff2d00, #ff8c00);
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
-    transition: transform 0.2s ease;
-}
-
-/* Éclair lumineux */
-button::after,
-.custom-stats ::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10%;
-    height: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.8), transparent);
-    border-radius: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 0;
-}
-
-button:hover::after,
-.custom-stats :hover::after {
-    transform: translate(-50%, -50%) scale(8);
-    opacity: 1;
-}
-
-/* Particules animées */
-button::before,
-.custom-stats ::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 0, 0.1) 2%, transparent 60%),
-        radial-gradient(circle, rgba(255, 0, 0, 0.1) 2%, transparent 60%);
-    animation: particles 3s linear infinite;
-    z-index: -2;
-}
-
-/* Style de base du lien */
-.Card.activity-card a {
-    position: relative;
-    color: #fff;
-    font-weight: bold;
-    text-decoration: none;
-    background: linear-gradient(to right, #ff4500, #ff8c00);
-    padding: 2px 6px;
-    border-radius: 6px;
-    transition: background 0.3s ease;
-    z-index: 1;
-}
-
-/* Effet feu : couche animée */
-.Card.activity-card a::before {
-    content: '';
-    position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 160%;
-    height: 160%;
-    background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 10%, transparent 70%);
-    opacity: 0.7;
-    border-radius: 50%;
-    animation: flame-flicker 1.5s infinite ease-in-out;
-    z-index: -1;
-    filter: blur(8px);
-    pointer-events: none;
-}
-
-/* Éclair au survol */
-.Card.activity-card a::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0;
-    transition: all 0.4s ease;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.Card.activity-card a:hover {
-    color: #4b0e0d !important;
-}
-
-/* Animation du feu */
-@keyframes flame-flicker {
-
-    0%,
-    100% {
-        transform: scale(1) translateY(0px) rotate(0deg);
-        opacity: 0.6;
-    }
-
-    50% {
-        transform: scale(1.2) translateY(-5px) rotate(2deg);
-        opacity: 1;
-    }
-}
-
-
-body.accessible .RatingsChartByGame .weak-wins,
-body.dark .RatingsChartByGame .weak-wins,
-body.light .RatingsChartByGame .weak-wins {
-    fill: #a5077787 !important;
-}
-
-body.accessible .RatingsChartByGame .strong-wins,
-body.dark .RatingsChartByGame .strong-wins,
-body.light .RatingsChartByGame .strong-wins {
-    fill: rgb(255 36 0 / 48%) !important;
-}
-
-body.accessible .RatingsChartByGame .weak-losses,
-body.dark .RatingsChartByGame .weak-losses,
-body.light .RatingsChartByGame .weak-losses {
-    fill: #1b0f1b85 !important;
-}
-
-body.accessible .RatingsChartByGame .strong-losses,
-body.dark .RatingsChartByGame .strong-losses,
-body.light .RatingsChartByGame .strong-losses {
-    fill: #5299ffb8 !important;
-}
-
-body.accessible .RatingsChartByGame .chart .rating.line,
-body.dark .RatingsChartByGame .chart .rating.line,
-body.light .RatingsChartByGame .chart .rating.line {
-    stroke: #ff2400 !important;
-}
-
-body.accessible .RatingsChartByGame .deviation-area,
-body.dark .RatingsChartByGame .deviation-area,
-body.light .RatingsChartByGame .deviation-area {
-    fill: #6c0f0096 !important;
-}
-
-body.accessible .RatingsChartByGame .area,
-body.dark .RatingsChartByGame .area,
-body.light .RatingsChartByGame .area {
-    fill: #ff24005e !important;
-    stroke: #ff2400 !important;
-}
-body.light .ratings-container{
-    color:#a60000
-}
-body.light input, body.light select, body.light textarea {
-    color: #d2d2d2 !important;
-}
-body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
-    color: #a30000 !important;
-}
-body.light .User .game-history-table .library-won-result-unranked, body.light .User .review-history-table .library-won-result-unranked {
-    color: #ff8e00 !important;
 }
