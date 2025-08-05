@@ -12,7 +12,7 @@ h1,
 h2,
 h3 {
     font-family: 'Cinzel', cursive;
-    text-shadow: 2px 3px #000;
+    text-shadow: 2px 1px #000;
     text-align: center;
     color: #fff6e5;
     letter-spacing: 1px;
@@ -57,7 +57,7 @@ button::before {
 }
 body.dark .container, body.accessible .container {
     max-width: none !important;
-    background-image: url(https://i.pinimg.com/564x/67/6f/6d/676f6d861a8fffe0a1cd1e24f68d983e.jpg);
+    background-image: url(https://i.imgur.com/2Nd2cym.jpeg);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -65,7 +65,7 @@ body.dark .container, body.accessible .container {
 
 body.light .container {
     max-width: none !important;
-    background-image: url(https://i.pinimg.com/736x/d8/fa/94/d8fa9442a1b62dc61bfea064c3e09e6d.jpg);
+    background-image: url(https://i.imgur.com/KBSuSnN.jpeg);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -116,6 +116,10 @@ body.light .ratings-container {
     position: relative;
     z-index: 2;
     transition: all 0.5s ease;
+}
+body.light .avatar-container .username span {
+    text-shadow: 2px 3px #00000000;
+    color: #000000;
 }
 .avatar-container .username::before,
 .avatar-container .username::after {
