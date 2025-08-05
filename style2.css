@@ -5,10 +5,6 @@ body {
     background-color: #0b0e3c;
     color: #d0d8ff !important;
     font-family: "Segoe UI", sans-serif;
-    background-image: url('https://i.imgur.com/RiOtu0S.jpeg'); /* fond galaxie */
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
 }
 
 /* Titres façon science-fiction ancienne */
@@ -19,7 +15,20 @@ h1, h2, h3 {
     letter-spacing: 2px;
     text-align: center;
 }
+body.dark .container, body.accessible .container {
+    max-width: none !important;
+    background-image: url(https://i.imgur.com/1RoDkpp.png);
+    /* lien direct ici */
+    background-position: 40 center;
+    background-size: contain;
+}
 
+body.light .container {
+    max-width: none !important;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/654/651/831/doctor-who-tardis-artwork-wallpaper-preview.jpg);
+    /* lien direct ici */
+    background-position: center 0;
+}
 /* Boutons façon console TARDIS */
 button {
     background: radial-gradient(circle at center, #001e6c, #0b0e3c);
@@ -54,18 +63,6 @@ button::before {
 
 * {
     box-sizing: border-box;
-}
-
-/* Conteneur principal */
-body.dark .container, body.accessible .container {
-    background: rgba(0, 0, 0, 0.6);
-    border: 1px solid #00aaff33;
-    backdrop-filter: blur(3px);
-    padding: 20px;
-}
-
-body.light .container {
-    background: rgba(10, 20, 40, 0.7);
 }
 
 /* Barre de navigation */
@@ -165,7 +162,7 @@ body::after {
     content: '';
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: url('https://i.imgur.com/pZ9aIJc.png') repeat;
+    background: url('https://i.imgur.com/0l255dr.jpeg') repeat; /* Nouveau fond de nuages */
     opacity: 0.03;
     pointer-events: none;
     z-index: 0;
