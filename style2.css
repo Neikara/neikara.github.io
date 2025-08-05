@@ -1,0 +1,178 @@
+/* === OGS Custom Profile Theme - Doctor Who Edition by Yannick === */
+
+/* Couleurs principales inspirées du TARDIS */
+body {
+    background-color: #0b0e3c;
+    color: #d0d8ff !important;
+    font-family: "Segoe UI", sans-serif;
+    background-image: url('https://i.imgur.com/hXWzChG.jpg'); /* fond galaxie */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Titres façon science-fiction ancienne */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00aaff;
+    text-shadow: 0 0 10px #001e6c;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Boutons façon console TARDIS */
+button {
+    background: radial-gradient(circle at center, #001e6c, #0b0e3c);
+    border: 2px solid #00aaff;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 16px;
+    color: #d0d8ff !important;
+    text-shadow: 1px 1px #001e6c;
+    box-shadow: 0 0 10px #00aaff55;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background: radial-gradient(circle at center, #0b0e3c, #001e6c);
+    box-shadow: 0 0 15px #00aaffaa, inset 0 0 5px #00aaff55;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: inset 2px 2px 5px #003366;
+}
+
+button::before {
+    content: "🛸 ";
+    margin-right: 8px;
+    color: #00aaff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Conteneur principal */
+body.dark .container, body.accessible .container {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00aaff33;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+}
+
+body.light .container {
+    background: rgba(10, 20, 40, 0.7);
+}
+
+/* Barre de navigation */
+header.NavBar {
+    background: linear-gradient(90deg, #001e6c, #00aaff);
+    border-bottom: 2px solid #00aaff;
+}
+
+/* Avatar container style */
+.avatar-container {
+    background: #00000066;
+    border-radius: 16px;
+    padding: 10px;
+    border: 1px solid #00aaff33;
+    text-align: center;
+}
+
+.avatar-container .username {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        text-shadow: 0 0 5px #00aaff, 0 0 10px #001e6c;
+    }
+    50% {
+        text-shadow: 0 0 20px #00aaffaa, 0 0 30px #001e6c;
+    }
+}
+
+/* Cartes de profil */
+.Card {
+    background-color: rgba(0, 0, 20, 0.8) !important;
+    border: 1px solid #00aaff33 !important;
+    color: #c9e6ff;
+    border-radius: 12px;
+    box-shadow: 0 0 12px #00aaff33;
+}
+
+/* Graphiques */
+.RatingsChart .chart .rating.line,
+.RatingsChartByGame .chart .rating.line {
+    stroke: #00aaff !important;
+}
+.RatingsChart .deviation-area,
+.RatingsChartByGame .deviation-area {
+    fill: #00aaff44 !important;
+}
+.RatingsChart .area,
+.RatingsChartByGame .area {
+    fill: #00224488 !important;
+    stroke: #00aaff !important;
+}
+
+/* Historique de parties */
+.PaginatedTable.clickable-rows tbody tr:hover {
+    background-color: #001e6c88 !important;
+}
+
+/* Liens activité */
+.Card.activity-card a {
+    font-family: 'Orbitron', sans-serif;
+    color: #00aaff;
+    border: 1px solid #00aaff55;
+    background-color: #001e6c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00aaff33;
+}
+
+.Card.activity-card a::before {
+    content: "🌀 ";
+    color: #00aaff;
+    margin-right: 6px;
+}
+
+.Card.activity-card a:hover {
+    background-color: #0033aa;
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00aaffaa;
+}
+
+.Card.activity-card a:active {
+    transform: scale(0.95);
+    box-shadow: inset 2px 2px 6px #001e6c;
+}
+
+/* Nuages cosmiques décoratifs (optionnel) */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://i.imgur.com/pZ9aIJc.png') repeat;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+    animation: floatNebula 120s linear infinite;
+}
+
+@keyframes floatNebula {
+    from { background-position: 0 0; }
+    to { background-position: 1000px 1000px; }
+}
