@@ -78,9 +78,10 @@ button::before,
 }
 
 .container {
-  position: relative;
+  position:relative;
   z-index: 0;
-  overflow: hidden; /* important pour que le clip-path reste propre */
+min-height: 100vh;  /* toujours au moins la hauteur du viewport */
+  min-width: 100vw;   /* toujours au moins la largeur du viewport */
 }
 
 .container::before,
