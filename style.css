@@ -93,7 +93,7 @@ min-height: 100vh;  /* toujours au moins la hauteur du viewport */
   background-repeat: repeat;
   background-size: contain;
   background-position: 40 center;
-  transition: clip-path 0.8s ease-in-out;
+  transition: clip-path 1.8s ease-in-out;
   pointer-events: none;
 }
 
