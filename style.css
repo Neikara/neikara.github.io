@@ -11,7 +11,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: 'Bangers', cursive;
+    font-family: 'Anime Ace 2.0 BB', cursive;
     color: rgb(255 36 0);
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
@@ -203,13 +203,13 @@ body.light .ratings-container {
 }
 
 .avatar-container .Player-username {
-    font-family: 'Bangers', cursive;
+    font-family: 'Anime Ace 2.0 BB', cursive;
     display: inline-block;
 }
 
 .avatar-container .Player-rank {
     font-size: 24pt;
-    font-family: 'Bangers', cursive;
+    font-family: 'Anime Ace 2.0 BB', cursive;
 }
 
 @keyframes wave {
