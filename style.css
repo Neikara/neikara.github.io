@@ -72,21 +72,46 @@ button::before,
 * {
     box-sizing: border-box;
 }
-body.dark .container, body.accessible .container {
-    max-width: none !important;
-    background-image: url(https://i.imgur.com/nhQ9Tfy.jpeg);
-    /* lien direct ici */
-    background-position: 40 center;
-    background-size: contain;
+/* 1) Centralise les URLs (facile à changer) */
+:root {
+  --bg-light: url(https://i.imgur.com/6Idvk9K.jpeg);
+  --bg-dark:  url(https://i.imgur.com/nhQ9Tfy.jpeg);
 }
 
-body.light .container {
-    max-width: none !important;
-    background-image: url(https://i.imgur.com/6Idvk9K.jpeg);
-    /* lien direct ici */
-    background-position: 40 center;
-    background-size: contain;
+/* 2) Assure un contexte de positionnement + pile de rendu */
+.container {
+  position: relative;
+  z-index: 0; /* crée une pile pour placer les calques derrière le contenu */
 }
+
+/* 3) Les deux calques "fond" (light = ::before, dark = ::after) */
+.container::before,
+.container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;           /* derrière le contenu de .container */
+  background-repeat: repeat;
+  background-size: contain;          /* ou 'cover' si tu veux remplir tout l'écran */
+  background-position: 40 center;   /* ton  "40 center" était invalide -> 40% center */
+  opacity: 0;                         /* caché par défaut */
+  transition: opacity 0.6s ease-in-out;
+  pointer-events: none;               /* just in case */
+}
+
+/* 4) Mappe les images sur chaque calque */
+.container::before { background-image: var(--bg-light); }
+.container::after  { background-image: var(--bg-dark);  }
+
+/* 5) États : en light on voit le calque light, en dark le calque dark */
+body.light .container::before { opacity: 1; }  /* fond light visible */
+body.light .container::after  { opacity: 0; }  /* fond dark caché  */
+
+body.dark .container::before,
+body.accessible .container::before { opacity: 0; }  /* fond light caché */
+body.dark .container::after,
+body.accessible .container::after  { opacity: 1; }  /* fond dark visible */
+
 body.accessible header.NavBar,
 body.dark header.NavBar
 {
