@@ -396,11 +396,12 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 /* Style de base du lien */
 .Card.activity-card a {
     position: relative;
+    display: inline-block; /* Assure un comportement de bloc tout en s'adaptant au contenu */
     color: #fff;
     font-weight: bold;
     text-decoration: none;
+    padding: 0.2rem 0.5rem; /* Un peu d'espace intérieur */
     background: linear-gradient(to right, #ff4500, #ff8c00);
-    padding: 2px 6px;
     border-radius: 6px;
     transition: background 0.3s ease;
     z-index: 1;
@@ -418,12 +419,12 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 
     /* Un dégradé plus riche et vibrant pour simuler le magma */
     background: linear-gradient(
-        180deg,
+        90deg,
         #ff3d00, /* Rouge intense */
         #ff8c00, /* Orange foncé */
         #ffc107, /* Ambre/Or */
-        #ff8c00, /* Retour à l'orange */
-        #ff3d00  /* Boucle sur le rouge */
+        #ff8c00, /* Orange foncé */ 
+        #ff3d00 /* Rouge intense */
     );
     background-size: 300% 100%; /* Taille du fond correspondant à la largeur */
 
@@ -441,10 +442,9 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 50%;    
     width: 200px; /* Dimensions fixes pour un cercle parfait */
     height: 200px;
-    
     /* Dégradé radial pour un flash lumineux central */
     background: radial-gradient(circle, rgba(255, 255, 220, 0.7) 0%, transparent 70%);
 
@@ -500,7 +500,7 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
         background-position: 0% 50%;
     }
     100% {
-        background-position: 100% 50%;
+        background-position: 150% 50%;
     }
 }
 /* Animation du feu */
