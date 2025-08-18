@@ -406,41 +406,102 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     z-index: 1;
 }
 
-/* Effet feu : couche animée */
+/* 1. Couche de fond : Les flammes animées (::before) */
 .Card.activity-card a::before {
     content: '';
     position: absolute;
-    top: -30%;
-    left: -30%;
-    width: 160%;
-    height: 160%;
-    background: radial-gradient(circle, rgba(255, 140, 0, 0.3) 10%, transparent 70%);
-    opacity: 0.7;
-    border-radius: 50%;
-    animation: flame-flicker 1.5s infinite ease-in-out;
-    z-index: -1;
-    filter: blur(8px);
-    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%; /* Plus large pour un mouvement de gradient plus ample et naturel */
+    height: 100%;
+    z-index: -1; /* Placé derrière le contenu du lien */
+
+    /* Un dégradé plus riche et vibrant pour simuler le magma */
+    background: linear-gradient(
+        180deg,
+        #ff3d00, /* Rouge intense */
+        #ff8c00, /* Orange foncé */
+        #ffc107, /* Ambre/Or */
+        #ff8c00, /* Retour à l'orange */
+        #ff3d00  /* Boucle sur le rouge */
+    );
+    background-size: 300% 100%; /* Taille du fond correspondant à la largeur */
+
+    /* Animation plus lente et fluide */
+    animation: molten-flow 5s linear infinite;
+
+    /* Flou plus prononcé pour un effet de chaleur diffuse */
+    filter: blur(10px);
+    opacity: 0.8; /* Légère transparence pour mieux s'intégrer */
+    transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
-/* Éclair au survol */
+/* 2. Onde de choc lumineuse au survol (::after) */
 .Card.activity-card a::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 10px;
-    height: 10px;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.6), transparent);
+    width: 200px; /* Dimensions fixes pour un cercle parfait */
+    height: 200px;
+    
+    /* Dégradé radial pour un flash lumineux central */
+    background: radial-gradient(circle, rgba(255, 255, 220, 0.7) 0%, transparent 70%);
+
+    /* Positionné au centre et invisible par défaut */
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
-    transition: all 0.4s ease;
-    pointer-events: none;
-    z-index: -1;
+    
+    /* Transition pour l'effet d'explosion */
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease;
+    border-radius: 50%; /* Assure une forme de cercle parfait */
+    pointer-events: none; /* L'onde de choc n'intercepte pas les clics */
 }
 
+
+/*
+    ========================================
+    ÉTATS AU SURVOL (:hover)
+    ========================================
+*/
+
+/* Survol du lien principal */
 .Card.activity-card a:hover {
-    color: #4b0e0d !important;
+    color: #fff !important; /* Texte encore plus lumineux */
+    /* Ombre portée plus intense, simulant une lueur de chaleur */
+    box-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.7);
+}
+
+/* Au survol, les flammes deviennent plus nettes et vives */
+.Card.activity-card a:hover::before {
+    filter: blur(5px); /* Flou réduit pour un effet de "focus" */
+    opacity: 1; /* Totalement opaque pour plus d'intensité */
+    animation-duration: 3s; /* L'animation s'accélère */
+}
+
+/* Au survol, l'onde de choc se déploie */
+.Card.activity-card a:hover::after {
+    transform: translate(-50%, -50%) scale(2.5); /* L'onde grandit */
+    opacity: 1; /* Elle apparaît... */
+    /* La transition de l'opacité est plus lente pour un effet de dissipation */
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease;
+    opacity: 0; /* ...puis disparaît (la transition s'applique avant la disparition) */
+}
+
+
+/*
+    ========================================
+    KEYFRAMES POUR L'ANIMATION
+    ========================================
+*/
+
+@keyframes molten-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 /* Animation du feu */
 @keyframes flame-flicker {
