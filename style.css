@@ -93,7 +93,7 @@ min-height: 100vh;  /* toujours au moins la hauteur du viewport */
   background-repeat: repeat;
   background-size: contain;
   background-position: 40 center;
-  transition: clip-path 1.8s ease-in-out;
+  transition: clip-path 2s cubic-bezier(1, 0, 0, 1);
   pointer-events: none;
 }
 
@@ -389,10 +389,11 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 .PaginatedTable.clickable-rows tbody tr:hover {
     background-color: #69000096 !important;
 }
-.Player-username {
-    color: rgb(255 36 0);
-    font-family: 'bangers';
+.Player{
+    color: rgb(255 36 0) !important;
+    font-family: 'Anime Ace 2.0 BB';
 }
+
 /* Style de base du lien */
 .Card.activity-card a {
     position: relative;
@@ -403,7 +404,8 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     padding: 0.2rem 0.5rem; /* Un peu d'espace intérieur */
     background: linear-gradient(to right, #ff4500, #ff8c00);
     border-radius: 6px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease;    
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 1;
 }
 
@@ -467,10 +469,12 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 
 /* Survol du lien principal */
 .Card.activity-card a:hover {
+    transform: scale(1.1); /* Agrandissement du lien de 10% */
     color: #fff !important; /* Texte encore plus lumineux */
     /* Ombre portée plus intense, simulant une lueur de chaleur */
     box-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.7);
 }
+
 
 /* Au survol, les flammes deviennent plus nettes et vives */
 .Card.activity-card a:hover::before {
