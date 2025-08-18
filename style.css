@@ -1,7 +1,5 @@
 /* === OGS Custom Profile Theme by neikara === */
 
-/* Fond général plus sombre */
-
 body {
     background-color: #040404;
     color: rgb(255 36 0) !important;
@@ -16,6 +14,7 @@ h3 {
     text-shadow: 1px 1px 1px #000;
     letter-spacing: 1px;
 }
+
 button,
 .custom-stats {
     position: relative;
@@ -31,10 +30,11 @@ button,
     box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
     transition: transform 0.2s ease;
 }
-.custom-stats{
+
+.custom-stats {
     font-family: 'Anime Ace 2.0 BB', cursive;
 }
-/* Éclair lumineux */
+
 button::after,
 .custom-stats ::after {
     content: '';
@@ -71,63 +71,69 @@ button::before,
     animation: particles 3s linear infinite;
     z-index: -2;
 }
+
 * {
     box-sizing: border-box;
 }
+
 :root {
-  --bg-light: url(https://i.imgur.com/6Idvk9K.jpeg);
-  --bg-dark:  url(https://i.imgur.com/nhQ9Tfy.jpeg);
+    --bg-light: url(https://i.imgur.com/6Idvk9K.jpeg);
+    --bg-dark: url(https://i.imgur.com/nhQ9Tfy.jpeg);
 }
 
 .container {
-  position:relative;
-  z-index: 0;
-min-height: 100vh;  /* toujours au moins la hauteur du viewport */
-  min-width: 100vw;   /* toujours au moins la largeur du viewport */
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 .container::before,
 .container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-repeat: repeat;
-  background-size: contain;
-  background-position: 40 center;
-  transition: clip-path 2s cubic-bezier(1, 0, 0, 1);
-  pointer-events: none;
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: 40 center;
+    transition: clip-path 2s cubic-bezier(1, 0, 0, 1);
+    pointer-events: none;
 }
 
-/* Fond light et dark */
-.container::before { background-image: var(--bg-light); }
-.container::after  { background-image: var(--bg-dark); }
+.container::before {
+    background-image: var(--bg-light);
+}
 
-/* État initial : light → dark, le fond dark est masqué par un petit cercle */
+.container::after {
+    background-image: var(--bg-dark);
+}
+
 body.light .container::after {
-  clip-path: circle(0% at 0 0); /* cercle minuscule en haut à gauche */
+    clip-path: circle(0% at 0 0);
+    /* cercle minuscule en haut à gauche */
 }
 
-/* Quand on passe en dark, le cercle grandit pour révéler le fond dark */
 body.dark .container::after,
 body.accessible .container::after {
-  clip-path: circle(150% at 0 0); /* cercle assez grand pour couvrir tout l'écran */
+    clip-path: circle(150% at 0 0);
+    /* cercle assez grand pour couvrir tout l'écran */
 }
 
-/* Inverse : dark → light, le fond light est masqué au départ */
 body.dark .container::before,
 body.accessible .container::before {
-  clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
 }
+
 body.light .container::before {
-  clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
 }
 
 body.accessible header.NavBar,
-body.dark header.NavBar
-{
+body.dark header.NavBar {
     background: linear-gradient(45deg, #3b0000, #b46918);
 }
+
 body.light header.NavBar {
     background: linear-gradient(45deg, #c3751d, #c00000);
 }
@@ -137,15 +143,17 @@ body.dark .ogs-nav-logo,
 body.light .ogs-nav-logo {
     background-image: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/) !important;
 }
+
 body.dark .avatar-container,
 body.dark .ratings-container,
 body.accessible .avatar-container,
-body.accessible .ratings-container{
+body.accessible .ratings-container {
     background-color: #ff24002e;
     border-radius: 20px;
     margin-bottom: 10px;
     border: 2px solid #ff24002e;
 }
+
 body.light .avatar-container,
 body.light .ratings-container {
     background-color: #ffffff78;
@@ -173,6 +181,7 @@ body.light .ratings-container {
     z-index: 2;
     transition: all 0.5s ease;
 }
+
 .avatar-container .username::before,
 .avatar-container .username::after {
     content: '';
@@ -266,18 +275,21 @@ body.light .ratings-container {
     padding-left: 40px;
 }
 
-body.dark .Card, body.accessible .Card {
+body.dark .Card,
+body.accessible .Card {
     background-color: #4d0b00b5 !important;
     border-radius: 20px !important;
     margin-bottom: 10px !important;
     border: 2px solid #401c4a66 !important;
 }
+
 body.light .Card {
     background-color: #ffffffb0 !important;
     border-radius: 20px !important;
     margin-bottom: 10px !important;
     border: 2px solid #ff24002e !important;
 }
+
 body.accessible .RatingsChart .weak-wins,
 body.dark .RatingsChart .weak-wins,
 body.light .RatingsChart .weak-wins {
@@ -382,74 +394,89 @@ body.light .RatingsChartByGame .area {
     stroke: #ff2400 !important;
 }
 
-body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
+body.light .User .game-history-table .library-lost-result-unranked,
+body.light .User .review-history-table .library-lost-result-unranked {
     color: #ff0000 !important;
 }
-body.light .User .game-history-table .library-won-result-unranked, body.light .User .review-history-table .library-won-result-unranked {
+
+body.light .User .game-history-table .library-won-result-unranked,
+body.light .User .review-history-table .library-won-result-unranked {
     color: #ffd100 !important;
 }
+
 .PaginatedTable.clickable-rows tbody tr:hover {
     background-color: #69000096 !important;
 }
-.Player{
+
+.Player {
     color: rgb(255 0 0) !important;
 }
-.col-sm-8 .Card{
+
+.col-sm-8 .Card {
     font-family: 'Cinzel Decorative';
     font-weight: bold;
 }
-/* Style de base du lien */
+
 .Card.activity-card a {
     position: relative;
-    display: inline-block; /* Assure un comportement de bloc tout en s'adaptant au contenu */
+    display: inline-block;
+    /* Assure un comportement de bloc tout en s'adaptant au contenu */
     color: #fff;
     font-weight: bold;
     text-decoration: none;
-    padding: 0.2rem 0.5rem; /* Un peu d'espace intérieur */
+    padding: 0.2rem 0.5rem;
+    /* Un peu d'espace intérieur */
     background: linear-gradient(to right, #ff4500, #ff8c00);
     border-radius: 6px;
-    transition: background 0.3s ease;    
+    transition: background 0.3s ease;
     transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     z-index: 1;
 }
 
-/* 1. Couche de fond : Les flammes animées (::before) */
 .Card.activity-card a::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Plus large pour un mouvement de gradient plus ample et naturel */
+    width: 100%;
+    /* Plus large pour un mouvement de gradient plus ample et naturel */
     height: 100%;
-    z-index: -1; /* Placé derrière le contenu du lien */
+    z-index: -1;
+    /* Placé derrière le contenu du lien */
 
     /* Un dégradé plus riche et vibrant pour simuler le magma */
-    background: linear-gradient(
-        90deg,
-        #ff3d00, /* Rouge intense */
-        #ff8c00, /* Orange foncé */
-        #ffc107, /* Ambre/Or */
-        #ff8c00, /* Orange foncé */ 
-        #ff3d00 /* Rouge intense */
-    );
-    background-size: 300% 100%; /* Taille du fond correspondant à la largeur */
+    background: linear-gradient(90deg,
+            #ff3d00,
+            /* Rouge intense */
+            #ff8c00,
+            /* Orange foncé */
+            #ffc107,
+            /* Ambre/Or */
+            #ff8c00,
+            /* Orange foncé */
+            #ff3d00
+            /* Rouge intense */
+        );
+    background-size: 300% 100%;
+    /* Taille du fond correspondant à la largeur */
 
     /* Animation plus lente et fluide */
     animation: molten-flow 5s linear infinite;
 
     /* Flou plus prononcé pour un effet de chaleur diffuse */
     filter: blur(10px);
-    opacity: 0.8; /* Légère transparence pour mieux s'intégrer */
+    opacity: 0.8;
+    /* Légère transparence pour mieux s'intégrer */
     transition: filter 0.5s ease, opacity 0.5s ease;
 }
 
-/* 2. Onde de choc lumineuse au survol (::after) */
 .Card.activity-card a::after {
     content: '';
     position: absolute;
     top: 50%;
-    left: 50%;    
-    width: 200px; /* Dimensions fixes pour un cercle parfait */
+    left: 50%;
+    width: 200px;
+    /* Dimensions fixes pour un cercle parfait */
     height: 200px;
     /* Dégradé radial pour un flash lumineux central */
     background: radial-gradient(circle, rgba(255, 255, 220, 0.7) 0%, transparent 70%);
@@ -457,24 +484,20 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     /* Positionné au centre et invisible par défaut */
     transform: translate(-50%, -50%) scale(0);
     opacity: 0;
-    
+
     /* Transition pour l'effet d'explosion */
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease;
-    border-radius: 50%; /* Assure une forme de cercle parfait */
-    pointer-events: none; /* L'onde de choc n'intercepte pas les clics */
+    border-radius: 50%;
+    /* Assure une forme de cercle parfait */
+    pointer-events: none;
+    /* L'onde de choc n'intercepte pas les clics */
 }
 
-
-/*
-    ========================================
-    ÉTATS AU SURVOL (:hover)
-    ========================================
-*/
-
-/* Survol du lien principal */
 .Card.activity-card a:hover {
-    transform: scale(1.1); /* Agrandissement du lien de 10% */
-    color: #fff !important; /* Texte encore plus lumineux */
+    transform: scale(1.1);
+    /* Agrandissement du lien de 10% */
+    color: #fff !important;
+    /* Texte encore plus lumineux */
     /* Ombre portée plus intense, simulant une lueur de chaleur */
     box-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.7);
 }
@@ -482,36 +505,36 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 
 /* Au survol, les flammes deviennent plus nettes et vives */
 .Card.activity-card a:hover::before {
-    filter: blur(5px); /* Flou réduit pour un effet de "focus" */
-    opacity: 1; /* Totalement opaque pour plus d'intensité */
-    animation-duration: 3s; /* L'animation s'accélère */
+    filter: blur(5px);
+    /* Flou réduit pour un effet de "focus" */
+    opacity: 1;
+    /* Totalement opaque pour plus d'intensité */
+    animation-duration: 3s;
+    /* L'animation s'accélère */
 }
 
 /* Au survol, l'onde de choc se déploie */
 .Card.activity-card a:hover::after {
-    transform: translate(-50%, -50%) scale(2.5); /* L'onde grandit */
-    opacity: 1; /* Elle apparaît... */
+    transform: translate(-50%, -50%) scale(2.5);
+    /* L'onde grandit */
+    opacity: 1;
+    /* Elle apparaît... */
     /* La transition de l'opacité est plus lente pour un effet de dissipation */
     transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.8s ease;
-    opacity: 0; /* ...puis disparaît (la transition s'applique avant la disparition) */
+    opacity: 0;
+    /* ...puis disparaît (la transition s'applique avant la disparition) */
 }
-
-
-/*
-    ========================================
-    KEYFRAMES POUR L'ANIMATION
-    ========================================
-*/
 
 @keyframes molten-flow {
     0% {
         background-position: 0% 50%;
     }
+
     100% {
         background-position: 150% 50%;
     }
 }
-/* Animation du feu */
+
 @keyframes flame-flicker {
 
     0%,
@@ -525,6 +548,7 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
         opacity: 1;
     }
 }
+
 .star::before {
     content: '';
     position: absolute;
@@ -552,11 +576,11 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     animation-iteration-count: infinite;
 }
 
-/* Animations avec des delays et durées différentes */
 body.dark .star,
-body.accessible .star{
-    display:block;
+body.accessible .star {
+    display: block;
 }
+
 .star1 {
     top: 0;
     left: 40%;
@@ -646,161 +670,167 @@ body.accessible .star{
 
 body.light .country-line::before,
 body.light .country-line::after {
-  content: '';
-  position: absolute;
-  top: 10%;
-  left: -50px;
-  width: 300px;
-  height: 100px;
-  background: radial-gradient(circle at 30% 30%, #ffffffdd, transparent 70%),
-              radial-gradient(circle at 70% 60%, #ffffffdd, transparent 70%),
-              radial-gradient(circle at 50% 50%, #ffffffdd, transparent 70%);
-  opacity: 0.4;
-  border-radius: 50%;
-  animation: cloudFloat 30s linear infinite;
-  pointer-events: none;
-  z-index: 0;
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: -50px;
+    width: 300px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #ffffffdd, transparent 70%),
+        radial-gradient(circle at 70% 60%, #ffffffdd, transparent 70%),
+        radial-gradient(circle at 50% 50%, #ffffffdd, transparent 70%);
+    opacity: 0.4;
+    border-radius: 50%;
+    animation: cloudFloat 30s linear infinite;
+    pointer-events: none;
+    z-index: 0;
 }
 
 body.light .country-line::after {
-  top: 50%;
-  left: -400px;
-  animation-delay: 30s;
+    top: 50%;
+    left: -400px;
+    animation-delay: 30s;
 }
 
 @keyframes cloudFloat {
-  0% {
-    transform: translateX(-300px);
-  }
-  100% {
-    transform: translateX(100vw);
-  }
+    0% {
+        transform: translateX(-300px);
+    }
+
+    100% {
+        transform: translateX(100vw);
+    }
 }
-/* Pseudo éléments sur le parent (body.light) */
+
 body.light::before,
 body.light::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
-  border-radius: 50%;
-  opacity: 0.7;
-  filter: blur(1.5px);
-  pointer-events: none;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  z-index: 1;
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(1.5px);
+    pointer-events: none;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 body.light::before {
-  left: 10%;
-  animation-name: floatPollen1;
-  animation-duration: 14s;
-  animation-delay: 0s;
+    left: 10%;
+    animation-name: floatPollen1;
+    animation-duration: 14s;
+    animation-delay: 0s;
 }
 
 body.light::after {
-  left: 85%;
-  animation-name: floatPollen2;
-  animation-duration: 16s;
-  animation-delay: 4s;
+    left: 85%;
+    animation-name: floatPollen2;
+    animation-duration: 16s;
+    animation-delay: 4s;
 }
 
-/* Pseudo éléments sur .country-line */
 body.light .country-line::before,
 body.light .country-line::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
-  border-radius: 50%;
-  opacity: 0.7;
-  filter: blur(1.5px);
-  pointer-events: none;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-fill-mode: forwards;
-  z-index: 1;
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(1.5px);
+    pointer-events: none;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    z-index: 1;
 }
 
 body.light .country-line::before {
-  left: 20%;
-  animation-name: floatPollen3;
-  animation-duration: 15s;
-  animation-delay: 2s;
+    left: 20%;
+    animation-name: floatPollen3;
+    animation-duration: 15s;
+    animation-delay: 2s;
 }
 
 body.light .country-line::after {
-  left: 65%;
-  animation-name: floatPollen4;
-  animation-duration: 17s;
-  animation-delay: 6s;
+    left: 65%;
+    animation-name: floatPollen4;
+    animation-duration: 17s;
+    animation-delay: 6s;
 }
 
-/* Animations */
 
 @keyframes floatPollen1 {
-  0% {
-    transform: translateY(0) translateX(0) scale(1);
-    opacity: 0.6;
-  }
-  50% {
-    transform: translateY(-90px) translateX(10px) scale(1.3);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-180px) translateX(-10px) scale(1);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-90px) translateX(10px) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-180px) translateX(-10px) scale(1);
+        opacity: 0;
+    }
 }
 
 @keyframes floatPollen2 {
-  0% {
-    transform: translateY(0) translateX(5px) scale(0.9);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translateY(-85px) translateX(-8px) scale(1.1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-170px) translateX(5px) scale(0.9);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(5px) scale(0.9);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-85px) translateX(-8px) scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-170px) translateX(5px) scale(0.9);
+        opacity: 0;
+    }
 }
 
 @keyframes floatPollen3 {
-  0% {
-    transform: translateY(0) translateX(-5px) scale(1.1);
-    opacity: 0.4;
-  }
-  50% {
-    transform: translateY(-95px) translateX(12px) scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-185px) translateX(-8px) scale(1);
-    opacity: 0;
-  }
+    0% {
+        transform: translateY(0) translateX(-5px) scale(1.1);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: translateY(-95px) translateX(12px) scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-185px) translateX(-8px) scale(1);
+        opacity: 0;
+    }
 }
 
 @keyframes floatPollen4 {
-  0% {
-    transform: translateY(0) translateX(-10px) scale(1);
-    opacity: 0.7;
-  }
-  50% {
-    transform: translateY(-88px) translateX(7px) scale(1.25);
-    opacity: 0.9;
-  }
-  100% {
-    transform: translateY(-175px) translateX(-5px) scale(1);
-    opacity: 0;
-  }
-}
+    0% {
+        transform: translateY(0) translateX(-10px) scale(1);
+        opacity: 0.7;
+    }
 
+    50% {
+        transform: translateY(-88px) translateX(7px) scale(1.25);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-175px) translateX(-5px) scale(1);
+        opacity: 0;
+    }
+}
