@@ -31,7 +31,9 @@ button,
     box-shadow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
     transition: transform 0.2s ease;
 }
-
+.custom-stats{
+    font-family: 'Anime Ace 2.0 BB', cursive;
+}
 /* Éclair lumineux */
 button::after,
 .custom-stats ::after {
@@ -271,7 +273,7 @@ body.dark .Card, body.accessible .Card {
     border: 2px solid #401c4a66 !important;
 }
 body.light .Card {
-    background-color: #ff24002e !important;
+    background-color: #ffffffb0 !important;
     border-radius: 20px !important;
     margin-bottom: 10px !important;
     border: 2px solid #ff24002e !important;
@@ -390,10 +392,12 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
     background-color: #69000096 !important;
 }
 .Player{
-    color: rgb(255 36 0) !important;
-    font-family: 'Anime Ace 2.0 BB';
+    color: rgb(255 0 0) !important;
 }
-
+.col-sm-8 .Card{
+    font-family: 'Cinzel Decorative';
+    font-weight: bold;
+}
 /* Style de base du lien */
 .Card.activity-card a {
     position: relative;
