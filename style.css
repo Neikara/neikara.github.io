@@ -382,6 +382,12 @@ body.light .User .review-history-table .library-won-result-unranked {
   box-shadow: 0 0 25px rgba(255, 140, 0, 0.9), 0 0 50px rgba(255, 69, 0, 0.7);
 }
 
+.Card.activity-card a:hover::before {
+  filter: blur(5px);
+  opacity: 1;
+  animation-duration: 3s;
+}
+
 /* ===== ANIMATIONS ===== */
 @keyframes wave {
   0%, 100% { transform: translateY(0); }
