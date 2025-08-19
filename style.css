@@ -454,7 +454,7 @@ body.dark .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
   background-color: var(--flame-dark-row-hover-bg-general) !important;
 }
-body.dark .game-history-table td.date, body.dark .review-history-table.date {
+body.dark .game-history-table td.date, body.dark .review-history-table .date {
   color: var(--flame-dark-date-text-color) !important;
 }
 body.dark .game-history-table td.library-won-result-unranked {
@@ -506,7 +506,7 @@ body.light .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
   background-color: var(--flame-light-row-hover-bg-general) !important;
 }
-body.light .game-history-table td.date, body.light .review-history-table.date {
+body.light .game-history-table td.date, body.light .review-history-table .date {
   color: var(--flame-light-date-text-color) !important;
 }
 body.light .game-history-table td.library-won-result-unranked {
@@ -558,7 +558,7 @@ body.accessible .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
   background-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
-body.accessible .game-history-table td.date, body.accessible .review-history-table.date {
+body.accessible .game-history-table td.date, body.accessible .review-history-table .date {
   color: var(--flame-accessible-date-text-color) !important;
 }
 body.accessible .game-history-table td.library-won-result-unranked {
