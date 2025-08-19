@@ -325,30 +325,204 @@ body.light .Card {
 }
 
 /* ===== TABLES ===== */
-.PaginatedTable div table tr {
-  border-bottom-color: #772424 !important;
+/* ===== VARIABLES DE COULEURS POUR LE MODE SOMBRE (par défaut) ===== */
+body.dark {
+  --flame-dark-table-bg: #1a0000;
+  --flame-dark-table-border-bottom: rgba(255, 69, 0, 0.5);
+  --flame-dark-table-text-color: #fff;
+  --flame-dark-header-bg: #580000;
+  --flame-dark-row-even-bg: #2b0000;
+  --flame-dark-row-odd-bg: #4f0000;
+  --flame-dark-row-hover-bg-general: #772424;
+  --flame-dark-row-hover-bg-clickable: #69000096;
+  --flame-dark-glow-color1: #ff8c00;
+  --flame-dark-glow-color2: #ff4500;
+  --flame-dark-border-color: #ff4500;
+  --flame-dark-date-text-color: #ffde5b;
+  --flame-dark-won-result-color: #7aff7a;
+  --flame-dark-lost-result-color: #ff6b6b;
 }
 
-.PaginatedTable div table tr:hover {
-  border-bottom-color: #772424 !important;
-  background-color: #772424 !important;
+/* ===== VARIABLES DE COULEURS POUR LE MODE CLAIR ===== */
+body.light {
+  --flame-light-table-bg: #fffbf0;
+  --flame-light-table-border-bottom: rgba(255, 140, 0, 0.5);
+  --flame-light-table-text-color: #333;
+  --flame-light-header-bg: #ffead0;
+  --flame-light-row-even-bg: #fff8eb;
+  --flame-light-row-odd-bg: #fff4e1;
+  --flame-light-row-hover-bg-general: #ffddb1;
+  --flame-light-row-hover-bg-clickable: #ffc99896;
+  --flame-light-glow-color1: #ffde5b;
+  --flame-light-glow-color2: #ff8c00;
+  --flame-light-border-color: #ff8c00;
+  --flame-light-date-text-color: #e65c00;
+  --flame-light-won-result-color: #008000;
+  --flame-light-lost-result-color: #cc0000;
 }
 
-.PaginatedTable.clickable-rows tbody tr:hover {
-  background-color: #69000096 !important;
+
+/* ===== STYLES DES TABLEAUX BASÉS SUR LES CLASSES DU BODY ===== */
+
+/* --- Règles pour le mode SOMBRE --- */
+body.dark .PaginatedTable.game-history-table, 
+body.dark .PaginatedTable.review-history-table {
+  background-color: var(--flame-dark-table-bg);
+  box-shadow: 0 0 20px var(--flame-dark-glow-color1), 0 0 40px var(--flame-dark-glow-color2);
+  color: var(--flame-dark-table-text-color);
 }
 
-/* Game results */
-body.light .User .game-history-table .library-lost-result-unranked,
-body.light .User .review-history-table .library-lost-result-unranked {
-  color: #ff0000 !important;
+body.dark .game-history-table thead tr, 
+body.dark .review-history-table thead tr {
+  background-color: var(--flame-dark-header-bg);
+  color: var(--flame-dark-table-text-color);
 }
 
-body.light .User .game-history-table .library-won-result-unranked,
-body.light .User .review-history-table .library-won-result-unranked {
-  color: #ffd100 !important;
+body.dark .game-history-table th, 
+body.dark .review-history-table thead th {
+  border-bottom: 2px solid var(--flame-dark-border-color);
 }
 
+body.dark .game-history-table tbody tr:nth-child(even), 
+body.dark .review-history-table tbody tr:nth-child(even) {
+  background-color: var(--flame-dark-row-even-bg);
+}
+
+body.dark .game-history-table tbody tr:nth-child(odd), 
+body.dark .review-history-table tbody tr:nth-child(odd) {
+  background-color: var(--flame-dark-row-odd-bg);
+}
+
+body.dark .game-history-table tbody tr:hover, 
+body.dark .review-history-table tbody tr:hover {
+  background-color: var(--flame-dark-row-hover-bg-general);
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+body.dark .PaginatedTable.clickable-rows tbody tr:hover {
+  background-color: var(--flame-dark-row-hover-bg-clickable) !important;
+}
+
+body.dark .game-history-table td, 
+body.dark .review-history-table td {
+  border-bottom: 1px solid var(--flame-dark-table-border-bottom);
+}
+
+body.dark .PaginatedTable div table tr {
+  border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
+}
+
+body.dark .PaginatedTable div table tr:hover {
+  border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
+  background-color: var(--flame-dark-row-hover-bg-general) !important;
+}
+
+body.dark .game-history-table td.date, 
+body.dark .review-history-table.date {
+  color: var(--flame-dark-date-text-color) !important;
+}
+
+body.dark .game-history-table td.library-won-result-unranked {
+  color: var(--flame-dark-won-result-color);
+}
+
+body.dark .game-history-table td.library-lost-result-unranked {
+  color: var(--flame-dark-lost-result-color);
+}
+
+
+/* --- Règles pour le mode CLAIR --- */
+body.light .PaginatedTable.game-history-table, 
+body.light .PaginatedTable.review-history-table {
+  background-color: var(--flame-light-table-bg);
+  box-shadow: 0 0 20px var(--flame-light-glow-color1), 0 0 40px var(--flame-light-glow-color2);
+  color: var(--flame-light-table-text-color);
+}
+
+body.light .game-history-table thead tr, 
+body.light .review-history-table thead tr {
+  background-color: var(--flame-light-header-bg);
+  color: var(--flame-light-table-text-color);
+}
+
+body.light .game-history-table th, 
+body.light .review-history-table thead th {
+  border-bottom: 2px solid var(--flame-light-border-color);
+}
+
+body.light .game-history-table tbody tr:nth-child(even), 
+body.light .review-history-table tbody tr:nth-child(even) {
+  background-color: var(--flame-light-row-even-bg);
+}
+
+body.light .game-history-table tbody tr:nth-child(odd), 
+body.light .review-history-table tbody tr:nth-child(odd) {
+  background-color: var(--flame-light-row-odd-bg);
+}
+
+body.light .game-history-table tbody tr:hover, 
+body.light .review-history-table tbody tr:hover {
+  background-color: var(--flame-light-row-hover-bg-general);
+  transform: scale(1.01);
+  box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
+  position: relative;
+  z-index: 1;
+}
+
+body.light .PaginatedTable.clickable-rows tbody tr:hover {
+  background-color: var(--flame-light-row-hover-bg-clickable) !important;
+}
+
+body.light .game-history-table td, 
+body.light .review-history-table td {
+  border-bottom: 1px solid var(--flame-light-table-border-bottom);
+}
+
+body.light .PaginatedTable div table tr {
+  border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
+}
+
+body.light .PaginatedTable div table tr:hover {
+  border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
+  background-color: var(--flame-light-row-hover-bg-general) !important;
+}
+
+body.light .game-history-table td.date, 
+body.light .review-history-table.date {
+  color: var(--flame-light-date-text-color) !important;
+}
+
+body.light .game-history-table td.library-won-result-unranked {
+  color: var(--flame-light-won-result-color);
+}
+
+body.light .game-history-table td.library-lost-result-unranked {
+  color: var(--flame-light-lost-result-color);
+}
+
+/* --- Styles génériques qui s'appliquent aux deux modes --- */
+.PaginatedTable.game-history-table, .PaginatedTable.review-history-table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.game-history-table th, .review-history-table thead th {
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.game-history-table tbody tr, .review-history-table tbody tr {
+  transition: background-color 0.3s ease;
+}
+
+.game-history-table td, .review-history-table td {
+  padding: 8px 15px;
+}
 /* ===== ACTIVITY LINKS WITH ADVANCED EFFECTS ===== */
 .Card.activity-card a {
   position: relative;
