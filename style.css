@@ -1,6 +1,6 @@
 /* === OGS Custom Profile Theme by neikara - Refactorisé === */
 
-/* ===== VARIABLES CSS ===== */
+/* ===== CSS VARIABLES ===== */
 :root {
   /* Couleurs principales */
   --primary-color: rgb(255, 36, 0);
@@ -34,7 +34,7 @@
   --border-radius-large: 20px;
 }
 
-/* ===== STYLES DE BASE ===== */
+/* ===== BASE STYLES ===== */
 * {
   box-sizing: border-box;
 }
@@ -45,7 +45,7 @@ body {
   font-family: var(--font-primary);
 }
 
-/* ===== TYPOGRAPHIE ===== */
+/* ===== TYPOGRAPHY ===== */
 h1, h2, h3 {
   font-family: var(--font-display);
   color: var(--primary-color);
@@ -53,7 +53,7 @@ h1, h2, h3 {
   letter-spacing: 1px;
 }
 
-/* ===== CONTENEUR PRINCIPAL ===== */
+/* ===== MAIN CONTAINER ===== */
 .container {
   position: relative;
   z-index: 0;
@@ -82,8 +82,8 @@ h1, h2, h3 {
   background-image: var(--bg-dark);
 }
 
-/* ===== THÈMES (CLAIR/SOMBRE) ===== */
-/* Thème sombre */
+/* ===== THEMES (LIGHT/DARK) ===== */
+/* Dark theme */
 body.dark .container::after,
 body.accessible .container::after {
   clip-path: circle(150% at 0 0);
@@ -94,7 +94,7 @@ body.accessible .container::before {
   clip-path: circle(0% at 0 0);
 }
 
-/* Thème clair */
+/* Light theme */
 body.light .container::after {
   clip-path: circle(0% at 0 0);
 }
@@ -119,7 +119,7 @@ body.light .ogs-nav-logo {
   background-image: var(--logo-url) !important;
 }
 
-/* ===== BOUTONS ET ÉLÉMENTS INTERACTIFS ===== */
+/* ===== BUTTONS AND INTERACTIVE ELEMENTS ===== */
 button,
 .custom-stats {
   position: relative;
@@ -147,7 +147,7 @@ button,
   border-radius: 0.3rem;
 }
 
-/* Effets de survol pour les boutons */
+/* Hover effects for buttons */
 button::after,
 .custom-stats::after {
   content: '';
@@ -175,8 +175,8 @@ button:hover::after,
   background-color: #ffb326;
 }
 
-/* ===== CONTENEURS ET CARTES ===== */
-/* Conteneurs avatar et ratings */
+/* ===== CONTAINERS AND CARDS ===== */
+/* Avatar and ratings containers */
 body.dark .avatar-container,
 body.dark .ratings-container,
 body.accessible .avatar-container,
@@ -195,7 +195,7 @@ body.light .ratings-container {
   border: 2px solid var(--bg-card-dark);
 }
 
-/* Cartes générales */
+/* General cards */
 body.dark .Card,
 body.accessible .Card {
   background-color: var(--bg-card-dark) !important;
@@ -216,7 +216,7 @@ body.light .Card {
   font-weight: bold;
 }
 
-/* ===== AVATAR ET NOM D'UTILISATEUR ===== */
+/* ===== AVATAR AND USERNAME ===== */
 .avatar-container .username {
   width: 150px;
   height: 50px;
@@ -252,8 +252,8 @@ body.light .Card {
   font-family: var(--font-display);
 }
 
-/* ===== GRAPHIQUES ET DONNÉES ===== */
-/* Variables pour les couleurs des graphiques */
+/* ===== CHARTS AND DATA ===== */
+/* Variables for chart colors */
 :root {
   --chart-weak-wins: #a5077787;
   --chart-strong-wins: rgba(255, 36, 0, 0.48);
@@ -264,7 +264,7 @@ body.light .Card {
   --chart-area-fill: #ff24005e;
 }
 
-/* Graphiques de rating */
+/* Rating charts */
 .RatingsChart .weak-wins,
 .RatingsChartByGame .weak-wins {
   fill: var(--chart-weak-wins) !important;
@@ -301,7 +301,7 @@ body.light .Card {
   stroke: var(--chart-rating-line) !important;
 }
 
-/* ===== TABLEAUX ===== */
+/* ===== TABLES ===== */
 .PaginatedTable div table tr {
   border-bottom-color: #772424 !important;
 }
@@ -315,7 +315,7 @@ body.light .Card {
   background-color: #69000096 !important;
 }
 
-/* Résultats de jeux */
+/* Game results */
 body.light .User .game-history-table .library-lost-result-unranked,
 body.light .User .review-history-table .library-lost-result-unranked {
   color: #ff0000 !important;
@@ -326,7 +326,7 @@ body.light .User .review-history-table .library-won-result-unranked {
   color: #ffd100 !important;
 }
 
-/* ===== LIENS D'ACTIVITÉ AVEC EFFETS AVANCÉS ===== */
+/* ===== ACTIVITY LINKS WITH ADVANCED EFFECTS ===== */
 .Card.activity-card a {
   position: relative;
   display: inline-block;
@@ -387,8 +387,8 @@ body.light .User .review-history-table .library-won-result-unranked {
   100% { transform: translateX(100vw); }
 }
 
-/* ===== EFFETS VISUELS ===== */
-/* Étoiles filantes */
+/* ===== VISUAL EFFECTS ===== */
+/* Shooting stars */
 .star {
   display: none;
   position: absolute;
@@ -405,7 +405,7 @@ body.accessible .star {
   display: block;
 }
 
-/* Positionnement des étoiles */
+/* Star positioning */
 .star1 { top: 0; left: 40%; animation-duration: 1.7s; animation-delay: 0s; }
 .star2 { top: 0; left: 80%; animation-duration: 2.8s; animation-delay: 0.4s; }
 .star3 { top: 0; left: 25%; animation-duration: 2.5s; animation-delay: 0.8s; }
@@ -417,32 +417,146 @@ body.accessible .star {
 .star9 { top: 10%; left: 100%; animation-duration: 5.0s; animation-delay: 3.2s; }
 .star10 { top: 25%; left: 100%; animation-duration: 6.6s; animation-delay: 3.6s; }
 
-/* Nuages (thème clair) */
+/* Star trail effect */
+.star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+  transform: translateY(-50%);
+  opacity: 0.8;
+}
+
+/* Floating pollen effect (light theme) */
+body.light::before,
+body.light::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(1.5px);
+  pointer-events: none;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+body.light::before {
+  left: 10%;
+  animation-name: floatPollen1;
+  animation-duration: 14s;
+  animation-delay: 0s;
+}
+
+body.light::after {
+  left: 85%;
+  animation-name: floatPollen2;
+  animation-duration: 16s;
+  animation-delay: 4s;
+}
+
 body.light .country-line::before,
 body.light .country-line::after {
   content: '';
   position: absolute;
-  top: 10%;
-  left: -50px;
-  width: 300px;
-  height: 100px;
-  background: radial-gradient(circle at 30% 30%, #ffffffdd, transparent 70%),
-              radial-gradient(circle at 70% 60%, #ffffffdd, transparent 70%),
-              radial-gradient(circle at 50% 50%, #ffffffdd, transparent 70%);
-  opacity: 0.4;
+  bottom: -20px;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #fff7c2 50%, transparent 70%);
   border-radius: 50%;
-  animation: cloudFloat 30s linear infinite;
+  opacity: 0.7;
+  filter: blur(1.5px);
   pointer-events: none;
-  z-index: 0;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  z-index: 1;
+}
+
+body.light .country-line::before {
+  left: 20%;
+  animation-name: floatPollen3;
+  animation-duration: 15s;
+  animation-delay: 2s;
 }
 
 body.light .country-line::after {
-  top: 50%;
-  left: -400px;
-  animation-delay: 30s;
+  left: 65%;
+  animation-name: floatPollen4;
+  animation-duration: 17s;
+  animation-delay: 6s;
 }
 
-/* ===== UTILITAIRES ===== */
+/* Pollen floating animations */
+@keyframes floatPollen1 {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-90px) translateX(10px) scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-180px) translateX(-10px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes floatPollen2 {
+  0% {
+    transform: translateY(0) translateX(5px) scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-85px) translateX(-8px) scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-170px) translateX(5px) scale(0.9);
+    opacity: 0;
+  }
+}
+
+@keyframes floatPollen3 {
+  0% {
+    transform: translateY(0) translateX(-5px) scale(1.1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-95px) translateX(12px) scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-185px) translateX(-8px) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes floatPollen4 {
+  0% {
+    transform: translateY(0) translateX(-10px) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-88px) translateX(7px) scale(1.25);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-175px) translateX(-5px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* ===== UTILITIES ===== */
 .Player {
   color: rgb(255, 0, 0) !important;
 }
@@ -452,7 +566,7 @@ body.light .country-line::after {
   background-color: #570f03f0 !important;
 }
 
-/* Icône personnalisée pour les stats */
+/* Custom icon for stats */
 .custom-stats a::before {
   width: 32px;
   content: " ";
