@@ -656,6 +656,7 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 /* ===== VISUAL EFFECTS ===== */
 /* Shooting stars */
 .star {
+  display:none;
   opacity: 0;
   position: absolute;
   width: 4px;
