@@ -174,72 +174,53 @@ body.light .Card {
     border: 2px solid #ffffff2e !important;
 }
 
-body.accessible .RatingsChart .chart .rating.line,
-body.dark .RatingsChart .chart .rating.line,
-body.light .RatingsChart .chart .rating.line {
-    stroke: #000000 !important;
+/* ===== CHARTS AND DATA ===== */
+/* Variables for chart colors */
+:root {
+  --chart-weak-wins: #8d8d8d87;
+  --chart-strong-wins: #4f4f4f;
+  --chart-weak-losses: #1b0f1b85;
+  --chart-strong-losses: #2c2c2c;
+  --chart-rating-line: #1b0f1b;
+  --chart-deviation-area: #4f4f4fb0; 
+  --chart-area-fill: #8d8d8d5e;
 }
 
-body.accessible .RatingsChart .deviation-area,
-body.dark .RatingsChart .deviation-area,
-body.light .RatingsChart .deviation-area {
-    fill: #777676d4 !important;
+/* Rating charts */
+.RatingsChart .weak-wins,
+.RatingsChartByGame .weak-wins {
+  fill: var(--chart-weak-wins) !important;
 }
 
-body.accessible .RatingsChart .area,
-body.dark .RatingsChart .area,
-body.light .RatingsChart .area {
-    fill: #ffffff5e !important;
-    stroke: #3a3a3a !important;
+.RatingsChart .strong-wins,
+.RatingsChartByGame .strong-wins {
+  fill: var(--chart-strong-wins) !important;
 }
 
-
-
-.sm {
-    color: #6c6c6c !important;
+.RatingsChart .weak-losses,
+.RatingsChartByGame .weak-losses {
+  fill: var(--chart-weak-losses) !important;
 }
 
-body.accessible .RatingsChartByGame .weak-wins,
-body.dark .RatingsChartByGame .weak-wins,
-body.light .RatingsChartByGame .weak-wins {
-    fill: #a5077787 !important;
+.RatingsChart .strong-losses,
+.RatingsChartByGame .strong-losses {
+  fill: var(--chart-strong-losses) !important;
 }
 
-body.accessible .RatingsChartByGame .strong-wins,
-body.dark .RatingsChartByGame .strong-wins,
-body.light .RatingsChartByGame .strong-wins {
-    fill: rgb(255 36 0 / 48%) !important;
+.RatingsChart .chart .rating.line,
+.RatingsChartByGame .chart .rating.line {
+  stroke: var(--chart-rating-line) !important;
 }
 
-body.accessible .RatingsChartByGame .weak-losses,
-body.dark .RatingsChartByGame .weak-losses,
-body.light .RatingsChartByGame .weak-losses {
-    fill: #1b0f1b85 !important;
+.RatingsChart .deviation-area,
+.RatingsChartByGame .deviation-area {
+  fill: var(--chart-deviation-area) !important;
 }
 
-body.accessible .RatingsChartByGame .strong-losses,
-body.dark .RatingsChartByGame .strong-losses,
-body.light .RatingsChartByGame .strong-losses {
-    fill: #5299ffb8 !important;
-}
-
-body.accessible .RatingsChartByGame .chart .rating.line,
-body.dark .RatingsChartByGame .chart .rating.line,
-body.light .RatingsChartByGame .chart .rating.line {
-    stroke: #ff2400 !important;
-}
-
-body.accessible .RatingsChartByGame .deviation-area,
-body.dark .RatingsChartByGame .deviation-area,
-body.light .RatingsChartByGame .deviation-area {
-    fill: #6c0f00b0 !important;
-}
-
-body.accessible .RatingsChartByGame .area,
-body.dark .RatingsChartByGame .area,
-body.light .RatingsChartByGame .area {
-    fill: #ff240073 !important;
-    stroke: #ff2400 !important;
+.RatingsChart .area,
+.RatingsChartByGame .area {
+  fill: var(--chart-area-fill) !important;
+  stroke: var(--chart-rating-line) !important;
 }
 
 body.light .User .game-history-table .library-lost-result-unranked, body.light .User .review-history-table .library-lost-result-unranked {
