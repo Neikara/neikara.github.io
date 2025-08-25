@@ -232,14 +232,15 @@ body.light .User .game-history-table .library-won-result-unranked, body.light .U
 .PaginatedTable.clickable-rows tbody tr:hover {
     background-color: #71717196 !important;
 }
-body.light .Player-username {
+body.light .Player-username, .Player-rank {
     color: #5C5C5C;
     font-family: 'Cinzel';
 }
-body.dark .Player-username, body.accessible .Player-username {
+body.dark .Player-username, body.accessible .Player-username, body.dark .Player-rank, body.accessible .Player-rank {
     color: #cbcbcb;
     font-family: 'Cinzel';
 }
+
 /* Style de base du lien */
 /* Police rétro stylisée */
 .Card.activity-card a {
