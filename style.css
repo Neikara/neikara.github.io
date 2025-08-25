@@ -638,11 +638,9 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 @keyframes shootingStar {
   0% {
     transform: rotate(315deg) translateX(0);
-    opacity: 1;
+    opacity: 0;
   }
-  20%{
-    opacity: 1;
-  }
+  20% { opacity: 1; }
   70% { opacity: 1; }
   100% {
     transform: rotate(315deg) translateX(-1000px);
@@ -658,7 +656,7 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 /* ===== VISUAL EFFECTS ===== */
 /* Shooting stars */
 .star {
-  display: none;
+  opacity: 0;
   position: absolute;
   width: 4px;
   height: 4px;
