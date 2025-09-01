@@ -10,7 +10,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3, 
+.subtitle-steampunk  {
     font-family: 'Cinzel', cursive;
     text-shadow: 2px 1px #000;
     text-align: center;
