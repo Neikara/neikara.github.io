@@ -97,9 +97,12 @@ body.light .ratings-container {
 }
 
 .avatar-container .username {
+    font-family: 'Cinzel', cursive;
+    color: #fff6e5;
+    text-align: center;
+    text-shadow: 2px 3px #000;
     width: 150px;
     height: 50px;
-    background: #00000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,55 +111,9 @@ body.light .ratings-container {
     animation: wave 4s ease-in-out infinite;
 }
 
-.avatar-container .username span {
-    font-family: 'Cinzel', cursive;
-    text-shadow: 2px 3px #000;
-    text-align: center;
-    color: #fff6e5;
-    position: relative;
-    z-index: 2;
-    transition: all 0.5s ease;
-}
 body.light .avatar-container .username span {
     text-shadow: 2px 3px #00000000;
     color: #000000;
-}
-.avatar-container .username::before,
-.avatar-container .username::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 300%;
-    background: repeating-radial-gradient(circle at center,
-            #5C5C5C 5px,
-            transparent 10px,
-            transparent 20px);
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.avatar-container .Player-username {
-    font-family: 'Cinzel', cursive;
-    display: inline-block;
-}
-
-.avatar-container .Player-rank {
-    font-size: 24pt;
-    font-family: 'Cinzel', cursive;
-}
-
-@keyframes wave {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(7px);
-    }
 }
 
 .avatar-container .Player-username span:nth-child(2) {
