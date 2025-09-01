@@ -111,11 +111,14 @@ body.light .ratings-container {
     animation: wave 4s ease-in-out infinite;
 }
 
-body.light .avatar-container .username span {
+body.light h3 {
     text-shadow: 2px 3px #00000000;
     color: #000000;
 }
-
+body.light .avatar-container .username {
+    text-shadow: 2px 3px #00000000;
+    color: #000000;
+}
 .avatar-container .Player-username span:nth-child(2) {
     animation-delay: 0.2s;
 }
