@@ -643,6 +643,7 @@ body.accessible .game-history-table td.library-lost-result-unranked {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  font-size: 13px;
 }
 
 .game-history-table th,
