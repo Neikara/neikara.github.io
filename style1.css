@@ -291,6 +291,11 @@ body.light .country-line::after {
     transform: translateX(100vw);
   }
 }
-
+.MenuLink{
+  all: unset;
+}
+body.dark .MenuLink, body.accessible .MenuLink{
+    color: #dededd !important;
+}
 
 
