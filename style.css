@@ -338,6 +338,7 @@ body.light .Card {
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
+  table-layout: fixed; /* Ajoute cette ligne */
 }
 
 .game-history-table thead,
@@ -347,7 +348,7 @@ body.light .Card {
 
 .game-history-table th,
 .review-history-table thead th {
-  padding: 10px 15px;
+  padding: 10px 8px;
   text-align: left;
 }
 
@@ -358,7 +359,7 @@ body.light .Card {
 
 .game-history-table td,
 .review-history-table td {
-  padding: 8px 15px;
+  padding: 8px 8px;
 }
 
 /* ===== RÈGLES POUR LE MODE SOMBRE ===== */
@@ -649,7 +650,7 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 
 .game-history-table th,
 .review-history-table thead th {
-  padding: 10px 15px;
+  padding: 10px 8px;
   text-align: left;
 }
 
@@ -660,7 +661,7 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 
 .game-history-table td,
 .review-history-table td {
-  padding: 8px 15px;
+  padding: 8px 8px;
 }
 
 /* ===== ACTIVITY LINKS WITH ADVANCED EFFECTS ===== */
