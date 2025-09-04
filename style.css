@@ -9,24 +9,24 @@
   --gradient-primary: linear-gradient(45deg, #ff2d00, #ff8c00);
   --gradient-navbar-dark: linear-gradient(45deg, #3b0000, #b46918);
   --gradient-navbar-light: linear-gradient(45deg, #c3751d, #c00000);
-  
+
   /* Couleurs de fond */
   --bg-dark: #040404;
   --bg-primary-alpha: #ff24002e;
   --bg-light-alpha: #ffffff78;
   --bg-card-dark: #4d0b00b5;
   --bg-card-light: #ffffffb0;
-  
+
   /* Images de fond */
   --bg-light: url(https://i.imgur.com/6Idvk9K.jpeg);
   --bg-dark: url(https://i.imgur.com/nhQ9Tfy.jpeg);
   --logo-url: url(https://static.wikia.nocookie.net/fictionalcrossover/images/c/ca/Konosuba_Logo.png/);
-  
+
   /* Polices */
   --font-primary: "Segoe UI", sans-serif;
   --font-display: 'Anime Ace 2.0 BB', cursive;
   --font-decorative: 'Cinzel Decorative';
-  
+
   /* Ombres et effets */
   --text-shadow: 1px 1px 1px #000;
   --box-shadow-glow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
@@ -46,7 +46,9 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-display);
   color: var(--primary-color);
   text-shadow: var(--text-shadow);
@@ -228,22 +230,24 @@ body.light .Card {
   z-index: 1;
   animation: wave 4s cubic-bezier(0.4, 0, 1, 1) infinite;
 }
+
 .avatar-container .username::before,
 .avatar-container .username::after {
-    content: '';
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 300%;
-    background: repeating-radial-gradient(circle at center,
-            rgb(255 36 0) 5px,
-            transparent 10px,
-            transparent 20px);
-    opacity: 0;
-    transition: all 0.5s ease;
-    clip-path: circle(50% at 50% 50%); 
+  content: '';
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background: repeating-radial-gradient(circle at center,
+      rgb(255 36 0) 5px,
+      transparent 10px,
+      transparent 20px);
+  opacity: 0;
+  transition: all 0.5s ease;
+  clip-path: circle(50% at 50% 50%);
 }
+
 .avatar-container .username span {
   color: var(--primary-color);
   text-shadow: var(--text-shadow);
@@ -258,14 +262,15 @@ body.light .Card {
 }
 
 .avatar-container .username:hover::before {
-    transform: scale(2) rotate(45deg);
-    opacity: 0.3;
+  transform: scale(2) rotate(45deg);
+  opacity: 0.3;
 }
 
 .avatar-container .username:hover::after {
-    transform: scale(2) rotate(-45deg);
-    opacity: 0.3;
+  transform: scale(2) rotate(-45deg);
+  opacity: 0.3;
 }
+
 .avatar-container .Player-username {
   font-family: var(--font-display);
   display: inline-block;
@@ -327,25 +332,32 @@ body.light .Card {
 
 /* ===== TABLES ===== */
 /* ===== STYLES GÉNÉRAUX ===== */
-.PaginatedTable.game-history-table, .PaginatedTable.review-history-table {
+.PaginatedTable.game-history-table,
+.PaginatedTable.review-history-table {
   border-collapse: collapse;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
-.game-history-table thead,.review-history-table thead {
+
+.game-history-table thead,
+.review-history-table thead {
   font-family: var(--font-display);
 }
-.game-history-table th, .review-history-table thead th {
+
+.game-history-table th,
+.review-history-table thead th {
   padding: 10px 15px;
   text-align: left;
 }
 
-.game-history-table tbody tr, .review-history-table tbody tr {
+.game-history-table tbody tr,
+.review-history-table tbody tr {
   transition: background-color 0.3s ease;
 }
 
-.game-history-table td, .review-history-table td {
+.game-history-table td,
+.review-history-table td {
   padding: 8px 15px;
 }
 
@@ -414,178 +426,243 @@ body.accessible {
 /* ===== STYLES DES TABLEAUX BASÉS SUR LES CLASSES DU BODY ===== */
 
 /* --- Règles pour le mode SOMBRE --- */
-body.dark .PaginatedTable.game-history-table, 
+body.dark .PaginatedTable.game-history-table,
 body.dark .PaginatedTable.review-history-table {
   background-color: var(--flame-dark-table-bg);
   box-shadow: 0 0 20px var(--flame-dark-glow-color1), 0 0 40px var(--flame-dark-glow-color2);
   color: var(--flame-dark-table-text-color);
 }
-body.dark .game-history-table thead, body.dark .review-history-table thead {
+
+body.dark .game-history-table thead,
+body.dark .review-history-table thead {
   background-color: var(--flame-dark-header-bg);
   box-shadow: var(--flame-dark-header-glow);
   color: var(--flame-dark-table-text-color);
   font-weight: bold;
 }
-body.dark .game-history-table th, body.dark .review-history-table thead th {
+
+body.dark .game-history-table th,
+body.dark .review-history-table thead th {
   border-bottom: var(--flame-dark-header-border);
 }
-body.dark .game-history-table tbody tr:nth-child(even), body.dark .review-history-table tbody tr:nth-child(even) {
+
+body.dark .game-history-table tbody tr:nth-child(even),
+body.dark .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-dark-row-even-bg);
 }
-body.dark .game-history-table tbody tr:nth-child(odd), body.dark .review-history-table tbody tr:nth-child(odd) {
+
+body.dark .game-history-table tbody tr:nth-child(odd),
+body.dark .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-dark-row-odd-bg);
 }
-body.dark .game-history-table tbody tr:hover, body.dark .review-history-table tbody tr:hover {
+
+body.dark .game-history-table tbody tr:hover,
+body.dark .review-history-table tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
   position: relative;
   z-index: 1;
 }
+
 body.dark .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-clickable) !important;
 }
-body.dark .game-history-table td, body.dark .review-history-table td {
+
+body.dark .game-history-table td,
+body.dark .review-history-table td {
   border-bottom: 1px solid var(--flame-dark-table-border-bottom);
 }
+
 body.dark .PaginatedTable div table tr {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
 }
+
 body.dark .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
   background-color: var(--flame-dark-row-hover-bg-general) !important;
 }
-body.dark .game-history-table td.date, body.dark .review-history-table .date {
+
+body.dark .game-history-table td.date,
+body.dark .review-history-table .date {
   color: var(--flame-dark-date-text-color) !important;
 }
+
 body.dark .game-history-table td.library-won-result-unranked {
   color: var(--flame-dark-won-result-color);
 }
+
 body.dark .game-history-table td.library-lost-result-unranked {
   color: var(--flame-dark-lost-result-color);
 }
 
 /* --- Règles pour le mode CLAIR --- */
-body.light .PaginatedTable.game-history-table, 
+body.light .PaginatedTable.game-history-table,
 body.light .PaginatedTable.review-history-table {
   background-color: var(--flame-light-table-bg);
   box-shadow: 0 0 20px var(--flame-light-glow-color1), 0 0 40px var(--flame-light-glow-color2);
   color: var(--flame-light-table-text-color);
 }
-body.light .game-history-table thead, body.light .review-history-table thead {
+
+body.light .game-history-table thead,
+body.light .review-history-table thead {
   background-color: var(--flame-light-header-bg);
   box-shadow: var(--flame-light-header-glow);
   color: var(--flame-light-table-text-color);
   font-weight: bold;
 }
-body.light .game-history-table th, body.light .review-history-table thead th {
+
+body.light .game-history-table th,
+body.light .review-history-table thead th {
   border-bottom: var(--flame-light-header-border);
 }
-body.light .game-history-table tbody tr:nth-child(even), body.light .review-history-table tbody tr:nth-child(even) {
+
+body.light .game-history-table tbody tr:nth-child(even),
+body.light .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-light-row-even-bg);
 }
-body.light .game-history-table tbody tr:nth-child(odd), body.light .review-history-table tbody tr:nth-child(odd) {
+
+body.light .game-history-table tbody tr:nth-child(odd),
+body.light .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-light-row-odd-bg);
 }
-body.light .game-history-table tbody tr:hover, body.light .review-history-table tbody tr:hover {
+
+body.light .game-history-table tbody tr:hover,
+body.light .review-history-table tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
   position: relative;
   z-index: 1;
 }
+
 body.light .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-clickable) !important;
 }
-body.light .game-history-table td, body.light .review-history-table td {
+
+body.light .game-history-table td,
+body.light .review-history-table td {
   border-bottom: 1px solid var(--flame-light-table-border-bottom);
 }
+
 body.light .PaginatedTable div table tr {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
 }
+
 body.light .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
   background-color: var(--flame-light-row-hover-bg-general) !important;
 }
-body.light .game-history-table td.date, body.light .review-history-table .date {
+
+body.light .game-history-table td.date,
+body.light .review-history-table .date {
   color: var(--flame-light-date-text-color) !important;
 }
+
 body.light .game-history-table td.library-won-result-unranked {
   color: var(--flame-light-won-result-color);
 }
+
 body.light .game-history-table td.library-lost-result-unranked {
   color: var(--flame-light-lost-result-color);
 }
 
 /* --- Règles pour le mode ACCESSIBLE --- */
-body.accessible .PaginatedTable.game-history-table, 
+body.accessible .PaginatedTable.game-history-table,
 body.accessible .PaginatedTable.review-history-table {
   background-color: var(--flame-accessible-table-bg);
   box-shadow: 0 0 20px var(--flame-accessible-glow-color1), 0 0 40px var(--flame-accessible-glow-color2);
   color: var(--flame-accessible-table-text-color);
 }
-body.accessible .game-history-table thead, body.accessible .review-history-table thead {
+
+body.accessible .game-history-table thead,
+body.accessible .review-history-table thead {
   background-color: var(--flame-accessible-header-bg);
   box-shadow: var(--flame-accessible-header-glow);
   color: var(--flame-accessible-table-text-color);
   font-weight: bold;
 }
-body.accessible .game-history-table th, body.accessible .review-history-table thead th {
+
+body.accessible .game-history-table th,
+body.accessible .review-history-table thead th {
   border-bottom: var(--flame-accessible-header-border);
 }
-body.accessible .game-history-table tbody tr:nth-child(even), body.accessible .review-history-table tbody tr:nth-child(even) {
+
+body.accessible .game-history-table tbody tr:nth-child(even),
+body.accessible .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-accessible-row-even-bg);
 }
-body.accessible .game-history-table tbody tr:nth-child(odd), body.accessible .review-history-table tbody tr:nth-child(odd) {
+
+body.accessible .game-history-table tbody tr:nth-child(odd),
+body.accessible .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-accessible-row-odd-bg);
 }
-body.accessible .game-history-table tbody tr:hover, body.accessible .review-history-table tbody tr:hover {
+
+body.accessible .game-history-table tbody tr:hover,
+body.accessible .review-history-table tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
   position: relative;
   z-index: 1;
 }
+
 body.accessible .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-clickable) !important;
 }
-body.accessible .game-history-table td, body.accessible .review-history-table td {
+
+body.accessible .game-history-table td,
+body.accessible .review-history-table td {
   border-bottom: 1px solid var(--flame-accessible-table-border-bottom);
 }
+
 body.accessible .PaginatedTable div table tr {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
+
 body.accessible .PaginatedTable div table tr:hover {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
   background-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
-body.accessible .game-history-table td.date, body.accessible .review-history-table .date {
+
+body.accessible .game-history-table td.date,
+body.accessible .review-history-table .date {
   color: var(--flame-accessible-date-text-color) !important;
 }
+
 body.accessible .game-history-table td.library-won-result-unranked {
   color: var(--flame-accessible-won-result-color);
 }
+
 body.accessible .game-history-table td.library-lost-result-unranked {
   color: var(--flame-accessible-lost-result-color);
 }
 
 /* --- Styles génériques qui s'appliquent aux trois modes --- */
-.PaginatedTable.game-history-table, .PaginatedTable.review-history-table {
+.PaginatedTable.game-history-table,
+.PaginatedTable.review-history-table {
   border-collapse: collapse;
   width: 100%;
   border-radius: 8px;
   overflow: hidden;
 }
-.game-history-table th, .review-history-table thead th {
+
+.game-history-table th,
+.review-history-table thead th {
   padding: 10px 15px;
   text-align: left;
 }
-.game-history-table tbody tr, .review-history-table tbody tr {
+
+.game-history-table tbody tr,
+.review-history-table tbody tr {
   transition: background-color 0.3s ease;
 }
-.game-history-table td, .review-history-table td {
+
+.game-history-table td,
+.review-history-table td {
   padding: 8px 15px;
 }
+
 /* ===== ACTIVITY LINKS WITH ADVANCED EFFECTS ===== */
 .Card.activity-card a {
   position: relative;
@@ -627,13 +704,25 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 
 /* ===== ANIMATIONS ===== */
 @keyframes wave {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(7px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
 }
 
 @keyframes molten-flow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 150% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 150% 50%;
+  }
 }
 
 @keyframes shootingStar {
@@ -641,8 +730,15 @@ body.accessible .game-history-table td.library-lost-result-unranked {
     transform: rotate(315deg) translateX(0);
     opacity: 0;
   }
-  20% { opacity: 1; }
-  70% { opacity: 1; }
+
+  20% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
   100% {
     transform: rotate(315deg) translateX(-1000px);
     opacity: 0;
@@ -650,14 +746,19 @@ body.accessible .game-history-table td.library-lost-result-unranked {
 }
 
 @keyframes cloudFloat {
-  0% { transform: translateX(-300px); }
-  100% { transform: translateX(100vw); }
+  0% {
+    transform: translateX(-300px);
+  }
+
+  100% {
+    transform: translateX(100vw);
+  }
 }
 
 /* ===== VISUAL EFFECTS ===== */
 /* Shooting stars */
 .star {
-  display:none;
+  display: none;
   opacity: 0;
   position: absolute;
   width: 4px;
@@ -674,16 +775,75 @@ body.accessible .star {
 }
 
 /* Star positioning */
-.star1 { top: 0; left: 60%; animation-duration: 3.0s; animation-delay: 0s; }
-.star2 { top: 0; left: 80%; animation-duration: 6.0s; animation-delay: 0.4s; }
-.star3 { top: 0; left: 50%; animation-duration: 2.5s; animation-delay: 0.8s; }
-.star4 { top: 0; left: 20%; animation-duration: 5.0s; animation-delay: 1.2s; }
-.star5 { top: 1%; left: 100%; animation-duration: 2.7s; animation-delay: 1.6s; }
-.star6 { top: 10%; left: 100%; animation-duration: 3.1s; animation-delay: 2.0s; }
-.star7 { top: 6%; left: 100%; animation-duration: 4.9s; animation-delay: 2.4s; }
-.star8 { top: 8%; left: 100%; animation-duration: 3.3s; animation-delay: 2.8s; }
-.star9 { top: 2%; left: 100%; animation-duration: 2.0s; animation-delay: 3.2s; }
-.star10 { top: 8%; left: 100%; animation-duration: 6.6s; animation-delay: 3.6s; }
+.star1 {
+  top: 0;
+  left: 60%;
+  animation-duration: 3.0s;
+  animation-delay: 0s;
+}
+
+.star2 {
+  top: 0;
+  left: 80%;
+  animation-duration: 6.0s;
+  animation-delay: 0.4s;
+}
+
+.star3 {
+  top: 0;
+  left: 50%;
+  animation-duration: 2.5s;
+  animation-delay: 0.8s;
+}
+
+.star4 {
+  top: 0;
+  left: 20%;
+  animation-duration: 5.0s;
+  animation-delay: 1.2s;
+}
+
+.star5 {
+  top: 1%;
+  left: 100%;
+  animation-duration: 2.7s;
+  animation-delay: 1.6s;
+}
+
+.star6 {
+  top: 10%;
+  left: 100%;
+  animation-duration: 3.1s;
+  animation-delay: 2.0s;
+}
+
+.star7 {
+  top: 6%;
+  left: 100%;
+  animation-duration: 4.9s;
+  animation-delay: 2.4s;
+}
+
+.star8 {
+  top: 8%;
+  left: 100%;
+  animation-duration: 3.3s;
+  animation-delay: 2.8s;
+}
+
+.star9 {
+  top: 2%;
+  left: 100%;
+  animation-duration: 2.0s;
+  animation-delay: 3.2s;
+}
+
+.star10 {
+  top: 8%;
+  left: 100%;
+  animation-duration: 6.6s;
+  animation-delay: 3.6s;
+}
 
 /* Star trail effect */
 .star::before {
@@ -769,10 +929,12 @@ body.light .country-line::after {
     transform: translateY(0) translateX(0) scale(1);
     opacity: 0.6;
   }
+
   50% {
     transform: translateY(-90px) translateX(10px) scale(1.3);
     opacity: 1;
   }
+
   100% {
     transform: translateY(-180px) translateX(-10px) scale(1);
     opacity: 0;
@@ -784,10 +946,12 @@ body.light .country-line::after {
     transform: translateY(0) translateX(5px) scale(0.9);
     opacity: 0.5;
   }
+
   50% {
     transform: translateY(-85px) translateX(-8px) scale(1.1);
     opacity: 0.8;
   }
+
   100% {
     transform: translateY(-170px) translateX(5px) scale(0.9);
     opacity: 0;
@@ -799,10 +963,12 @@ body.light .country-line::after {
     transform: translateY(0) translateX(-5px) scale(1.1);
     opacity: 0.4;
   }
+
   50% {
     transform: translateY(-95px) translateX(12px) scale(1.2);
     opacity: 1;
   }
+
   100% {
     transform: translateY(-185px) translateX(-8px) scale(1);
     opacity: 0;
@@ -814,10 +980,12 @@ body.light .country-line::after {
     transform: translateY(0) translateX(-10px) scale(1);
     opacity: 0.7;
   }
+
   50% {
     transform: translateY(-88px) translateX(7px) scale(1.25);
     opacity: 0.9;
   }
+
   100% {
     transform: translateY(-175px) translateX(-5px) scale(1);
     opacity: 0;
@@ -853,4 +1021,61 @@ body.light .country-line::after {
   text-decoration: none !important;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
   padding-left: 40px;
+}
+
+body.dark .title-row,
+body.dark .speed,
+body.accessible .title-row,
+body.accessible .speed {
+  color: #fff;
+  font-family: sans-serif;
+}
+
+body.light .title-row,
+body.light .speed {
+  color: #000000;
+  font-family: sans-serif;
+}
+
+.ratings-container {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.ratings-container,
+.Card,
+.avatar-container {
+
+
+  /* Styles de feu */
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.7),
+    /* Orange */
+    0 0 30px rgba(255, 69, 0, 0.5),
+    /* Rouge-Orange */
+    0 0 45px rgba(255, 0, 0, 0.3);
+  /* Rouge */
+  animation: fire-glow 2s infinite alternate;
+  /* Animation de scintillement */
+}
+
+@keyframes fire-glow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7),
+      0 0 30px rgba(255, 69, 0, 0.5),
+      0 0 45px rgba(255, 0, 0, 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8),
+      /* Jaune-Orange plus intense */
+      0 0 35px rgba(255, 80, 0, 0.6),
+      0 0 50px rgba(255, 20, 0, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 15px rgba(255, 165, 0, 0.7),
+      0 0 30px rgba(255, 69, 0, 0.5),
+      0 0 45px rgba(255, 0, 0, 0.3);
+  }
 }
