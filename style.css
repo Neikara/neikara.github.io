@@ -429,8 +429,7 @@ body.accessible {
 /* --- Règles pour le mode SOMBRE --- */
 body.dark .PaginatedTable.game-history-table,
 body.dark .PaginatedTable.review-history-table {
-  background-color: var(--flame-dark-table-bg);
-  box-shadow: 0 0 20px var(--flame-dark-glow-color1), 0 0 40px var(--flame-dark-glow-color2);
+  border: 2px solid var( --flame-dark-row-even-bg);
   color: var(--flame-dark-table-text-color);
 }
 
@@ -500,8 +499,7 @@ body.dark .game-history-table td.library-lost-result-unranked {
 /* --- Règles pour le mode CLAIR --- */
 body.light .PaginatedTable.game-history-table,
 body.light .PaginatedTable.review-history-table {
-  background-color: var(--flame-light-table-bg);
-  box-shadow: 0 0 20px var(--flame-light-glow-color1), 0 0 40px var(--flame-light-glow-color2);
+  border: 2px solid var( --flame-light-row-even-bg);
   color: var(--flame-light-table-text-color);
 }
 
@@ -571,8 +569,7 @@ body.light .game-history-table td.library-lost-result-unranked {
 /* --- Règles pour le mode ACCESSIBLE --- */
 body.accessible .PaginatedTable.game-history-table,
 body.accessible .PaginatedTable.review-history-table {
-  background-color: var(--flame-accessible-table-bg);
-  box-shadow: 0 0 20px var(--flame-accessible-glow-color1), 0 0 40px var(--flame-accessible-glow-color2);
+  border: 2px solid var( --flame-accessible-row-even-bg);
   color: var(--flame-accessible-table-text-color);
 }
 
