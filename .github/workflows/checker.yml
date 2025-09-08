@@ -1,0 +1,20 @@
+name: OGS Checker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Exécuté toutes les 5 minutes
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install requests
+      - name: Run script
+        run: python ogs_watcher.py
