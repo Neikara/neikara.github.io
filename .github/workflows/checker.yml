@@ -22,7 +22,7 @@ jobs:
       - name: Installation des dépendances
         run: pip install requests
 
-      - name: Exécution du script de surveillance
+      - name: Exécution du script ade surveillance
         run: python check_ogs.py
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
