@@ -31,7 +31,7 @@
   --text-shadow: 1px 1px 1px #000;
   --box-shadow-glow: 0 0 10px #ff4500, 0 0 20px #ff8c00 inset;
   --border-radius: 10px;
-  --border-radius-large: 20px;
+  --border-radius-large: 10px;
 }
 
 /* ===== BASE STYLES ===== */
@@ -185,8 +185,6 @@ body.dark .Card,
 body.accessible .Card {
   background-color: var(--bg-card-dark) !important;
   border-radius: var(--border-radius-large) !important;
-  margin-bottom: 10px !important;
-  border: 2px solid #401c4a66 !important;
 }
 
 .col-sm-12 .Card {
@@ -196,8 +194,6 @@ body.accessible .Card {
 body.light .Card {
   background-color: var(--bg-card-light) !important;
   border-radius: var(--border-radius-large) !important;
-  margin-bottom: 10px !important;
-  border: 2px solid var(--bg-primary-alpha) !important;
 }
 
 .col-sm-8 .Card {
