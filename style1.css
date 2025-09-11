@@ -80,23 +80,6 @@ body.light header.NavBar {
     background: linear-gradient(45deg, #B0B0B0 , #5C5C5C );
 }
 
-body.dark .avatar-container,
-body.dark .ratings-container,
-body.accessible .avatar-container,
-body.accessible .ratings-container{
-    background-color: #ffffff2e;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    border: 2px solid #ffffff2e;
-}
-body.light .avatar-container,
-body.light .ratings-container {
-    text-align: center;
-    background-color: #ffffff78;
-    margin-bottom: 10px;
-    border: 2px solid #484848b5;
-}
-
 .avatar-container .username {
     font-family: 'Cinzel', cursive;
     color: #fff6e5;
