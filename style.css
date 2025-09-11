@@ -179,24 +179,6 @@ button:hover::after,
 }
 
 /* ===== CONTAINERS AND CARDS ===== */
-/* Avatar and ratings containers */
-body.dark .avatar-container,
-body.dark .ratings-container,
-body.accessible .avatar-container,
-body.accessible .ratings-container {
-  background-color: var(--bg-primary-alpha);
-  border-radius: var(--border-radius-large);
-  margin-bottom: 10px;
-  border: 2px solid var(--bg-primary-alpha);
-}
-
-body.light .avatar-container,
-body.light .ratings-container {
-  background-color: var(--bg-light-alpha);
-  border-radius: var(--border-radius-large);
-  margin-bottom: 10px;
-  border: 2px solid var(--bg-card-dark);
-}
 
 /* General cards */
 body.dark .Card,
@@ -207,6 +189,10 @@ body.accessible .Card {
   border: 2px solid #401c4a66 !important;
 }
 
+.col-sm-12 .Card {
+  all: unset;
+  position : center;
+}
 body.light .Card {
   background-color: var(--bg-card-light) !important;
   border-radius: var(--border-radius-large) !important;
@@ -1043,11 +1029,7 @@ body.light .speed {
   padding: 20px;
 }
 
-.ratings-container,
-.Card,
-.avatar-container {
-
-
+.Card {
   /* Styles de feu */
   box-shadow: 0 0 15px rgba(255, 165, 0, 0.7),
     /* Orange */
