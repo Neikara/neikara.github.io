@@ -1014,19 +1014,6 @@ body.dark .speed,
 body.accessible .title-row,
 body.accessible .speed {
   color: #fff;
-  font-family: sans-serif;
-}
-
-body.light .title-row,
-body.light .speed {
-  color: #000000;
-  font-family: sans-serif;
-}
-
-.ratings-container {
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
 }
 
 .Card {
