@@ -87,38 +87,38 @@ h3 {
 
 /* ===== THEMES (LIGHT/DARK) ===== */
 /* Dark theme */
-body.dark .container::after,
-body.accessible .container::after {
+body[data-theme="dark"] .container::after,
+body[data-theme="accessible"] .container::after {
   clip-path: circle(150% at 0 0);
 }
 
-body.dark .container::before,
-body.accessible .container::before {
+body[data-theme="dark"] .container::before,
+body[data-theme="accessible"] .container::before {
   clip-path: circle(0% at 0 0);
 }
 
 /* Light theme */
-body.light .container::after {
+body[data-theme="light"] .container::after {
   clip-path: circle(0% at 0 0);
 }
 
-body.light .container::before {
+body[data-theme="light"] .container::before {
   clip-path: circle(150% at 0 0);
 }
 
 /* ===== NAVIGATION ===== */
-body.accessible header.NavBar,
-body.dark header.NavBar {
+body[data-theme="accessible"] header.NavBar,
+body[data-theme="dark"] header.NavBar {
   background: var(--gradient-navbar-dark);
 }
 
-body.light header.NavBar {
+body[data-theme="light"] header.NavBar {
   background: var(--gradient-navbar-light);
 }
 
-body.accessible .ogs-nav-logo,
-body.dark .ogs-nav-logo,
-body.light .ogs-nav-logo {
+body[data-theme="accessible"] .ogs-nav-logo,
+body[data-theme="dark"] .ogs-nav-logo,
+body[data-theme="light"] .ogs-nav-logo {
   background-image: var(--logo-url) !important;
 }
 
@@ -181,8 +181,8 @@ button:hover::after,
 /* ===== CONTAINERS AND CARDS ===== */
 
 /* General cards */
-body.dark .Card,
-body.accessible .Card {
+body[data-theme="dark"] .Card,
+body[data-theme="accessible"] .Card {
   background-color: var(--bg-card-dark) !important;
   border-radius: var(--border-radius-large) !important;
 }
@@ -191,7 +191,7 @@ body.accessible .Card {
   all: unset;
   position : center;
 }
-body.light .Card {
+body[data-theme="light"] .Card {
   background-color: var(--bg-card-light) !important;
   border-radius: var(--border-radius-large) !important;
 }
@@ -347,7 +347,7 @@ body.light .Card {
 
 /* ===== RÈGLES POUR LE MODE SOMBRE ===== */
 /* ===== VARIABLES DE COULEURS POUR LE MODE SOMBRE (par défaut) ===== */
-body.dark {
+body[data-theme="dark"] {
   --flame-dark-table-bg: #1a0000;
   --flame-dark-table-border-bottom: rgba(255, 69, 0, 0.5);
   --flame-dark-table-text-color: #fff;
@@ -367,7 +367,7 @@ body.dark {
 }
 
 /* ===== VARIABLES DE COULEURS POUR LE MODE CLAIR ===== */
-body.light {
+body[data-theme="light"] {
   --flame-light-table-bg: #fffbf0;
   --flame-light-table-border-bottom: rgba(255, 140, 0, 0.5);
   --flame-light-table-text-color: #333;
@@ -387,7 +387,7 @@ body.light {
 }
 
 /* ===== VARIABLES DE COULEURS POUR LE MODE ACCESSIBLE (Haut contraste) ===== */
-body.accessible {
+body[data-theme="accessible"] {
   --flame-accessible-table-bg: #1a0000;
   --flame-accessible-table-border-bottom: rgba(255, 69, 0, 0.5);
   --flame-accessible-table-text-color: #fff;
@@ -410,37 +410,37 @@ body.accessible {
 /* ===== STYLES DES TABLEAUX BASÉS SUR LES CLASSES DU BODY ===== */
 
 /* --- Règles pour le mode SOMBRE --- */
-body.dark .PaginatedTable.game-history-table,
-body.dark .PaginatedTable.review-history-table {
+body[data-theme="dark"] .PaginatedTable.game-history-table,
+body[data-theme="dark"] .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-dark-row-even-bg);
   color: var(--flame-dark-table-text-color);
 }
 
-body.dark .game-history-table thead,
-body.dark .review-history-table thead {
+body[data-theme="dark"] .game-history-table thead,
+body[data-theme="dark"] .review-history-table thead {
   background-color: var(--flame-dark-header-bg);
   box-shadow: var(--flame-dark-header-glow);
   color: var(--flame-dark-table-text-color);
   font-weight: bold;
 }
 
-body.dark .game-history-table th,
-body.dark .review-history-table thead th {
+body[data-theme="dark"] .game-history-table th,
+body[data-theme="dark"] .review-history-table thead th {
   border-bottom: var(--flame-dark-header-border);
 }
 
-body.dark .game-history-table tbody tr:nth-child(even),
-body.dark .review-history-table tbody tr:nth-child(even) {
+body[data-theme="dark"] .game-history-table tbody tr:nth-child(even),
+body[data-theme="dark"] .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-dark-row-even-bg);
 }
 
-body.dark .game-history-table tbody tr:nth-child(odd),
-body.dark .review-history-table tbody tr:nth-child(odd) {
+body[data-theme="dark"] .game-history-table tbody tr:nth-child(odd),
+body[data-theme="dark"] .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-dark-row-odd-bg);
 }
 
-body.dark .game-history-table tbody tr:hover,
-body.dark .review-history-table tbody tr:hover {
+body[data-theme="dark"] .game-history-table tbody tr:hover,
+body[data-theme="dark"] .review-history-table tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -448,64 +448,64 @@ body.dark .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body.dark .PaginatedTable.clickable-rows tbody tr:hover {
+body[data-theme="dark"] .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-clickable) !important;
 }
 
-body.dark .game-history-table td,
-body.dark .review-history-table td {
+body[data-theme="dark"] .game-history-table td,
+body[data-theme="dark"] .review-history-table td {
   border-bottom: 1px solid var(--flame-dark-table-border-bottom);
 }
 
-body.dark .PaginatedTable div table tr {
+body[data-theme="dark"] .PaginatedTable div table tr {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
 }
 
-body.dark .game-history-table td.date,
-body.dark .review-history-table .date {
+body[data-theme="dark"] .game-history-table td.date,
+body[data-theme="dark"] .review-history-table .date {
   color: var(--flame-dark-date-text-color) !important;
 }
 
-body.dark .game-history-table td.library-won-result-unranked {
+body[data-theme="dark"] .game-history-table td.library-won-result-unranked {
   color: var(--flame-dark-won-result-color);
 }
 
-body.dark .game-history-table td.library-lost-result-unranked {
+body[data-theme="dark"] .game-history-table td.library-lost-result-unranked {
   color: var(--flame-dark-lost-result-color);
 }
 
 /* --- Règles pour le mode CLAIR --- */
-body.light .PaginatedTable.game-history-table,
-body.light .PaginatedTable.review-history-table {
+body[data-theme="light"] .PaginatedTable.game-history-table,
+body[data-theme="light"] .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-light-row-even-bg);
   color: var(--flame-light-table-text-color);
 }
 
-body.light .game-history-table thead,
-body.light .review-history-table thead {
+body[data-theme="light"] .game-history-table thead,
+body[data-theme="light"] .review-history-table thead {
   background-color: var(--flame-light-header-bg);
   box-shadow: var(--flame-light-header-glow);
   color: var(--flame-light-table-text-color);
   font-weight: bold;
 }
 
-body.light .game-history-table th,
-body.light .review-history-table thead th {
+body[data-theme="light"] .game-history-table th,
+body[data-theme="light"] .review-history-table thead th {
   border-bottom: var(--flame-light-header-border);
 }
 
-body.light .game-history-table tbody tr:nth-child(even),
-body.light .review-history-table tbody tr:nth-child(even) {
+body[data-theme="light"] .game-history-table tbody tr:nth-child(even),
+body[data-theme="light"] .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-light-row-even-bg);
 }
 
-body.light .game-history-table tbody tr:nth-child(odd),
-body.light .review-history-table tbody tr:nth-child(odd) {
+body[data-theme="light"] .game-history-table tbody tr:nth-child(odd),
+body[data-theme="light"] .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-light-row-odd-bg);
 }
 
-body.light .game-history-table tbody tr:hover,
-body.light .review-history-table tbody tr:hover {
+body[data-theme="light"] .game-history-table tbody tr:hover,
+body[data-theme="light"] .review-history-table tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -513,64 +513,64 @@ body.light .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body.light .PaginatedTable.clickable-rows tbody tr:hover {
+body[data-theme="light"] .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-clickable) !important;
 }
 
-body.light .game-history-table td,
-body.light .review-history-table td {
+body[data-theme="light"] .game-history-table td,
+body[data-theme="light"] .review-history-table td {
   border-bottom: 1px solid var(--flame-light-table-border-bottom);
 }
 
-body.light .PaginatedTable div table tr {
+body[data-theme="light"] .PaginatedTable div table tr {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
 }
 
-body.light .game-history-table td.date,
-body.light .review-history-table .date {
+body[data-theme="light"] .game-history-table td.date,
+body[data-theme="light"] .review-history-table .date {
   color: var(--flame-light-date-text-color) !important;
 }
 
-body.light .game-history-table td.library-won-result-unranked {
+body[data-theme="light"] .game-history-table td.library-won-result-unranked {
   color: var(--flame-light-won-result-color);
 }
 
-body.light .game-history-table td.library-lost-result-unranked {
+body[data-theme="light"] .game-history-table td.library-lost-result-unranked {
   color: var(--flame-light-lost-result-color);
 }
 
 /* --- Règles pour le mode ACCESSIBLE --- */
-body.accessible .PaginatedTable.game-history-table,
-body.accessible .PaginatedTable.review-history-table {
+body[data-theme="accessible"] .PaginatedTable.game-history-table,
+body[data-theme="accessible"] .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-accessible-row-even-bg);
   color: var(--flame-accessible-table-text-color);
 }
 
-body.accessible .game-history-table thead,
-body.accessible .review-history-table thead {
+body[data-theme="accessible"] .game-history-table thead,
+body[data-theme="accessible"] .review-history-table thead {
   background-color: var(--flame-accessible-header-bg);
   box-shadow: var(--flame-accessible-header-glow);
   color: var(--flame-accessible-table-text-color);
   font-weight: bold;
 }
 
-body.accessible .game-history-table th,
-body.accessible .review-history-table thead th {
+body[data-theme="accessible"] .game-history-table th,
+body[data-theme="accessible"] .review-history-table thead th {
   border-bottom: var(--flame-accessible-header-border);
 }
 
-body.accessible .game-history-table tbody tr:nth-child(even),
-body.accessible .review-history-table tbody tr:nth-child(even) {
+body[data-theme="accessible"] .game-history-table tbody tr:nth-child(even),
+body[data-theme="accessible"] .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-accessible-row-even-bg);
 }
 
-body.accessible .game-history-table tbody tr:nth-child(odd),
-body.accessible .review-history-table tbody tr:nth-child(odd) {
+body[data-theme="accessible"] .game-history-table tbody tr:nth-child(odd),
+body[data-theme="accessible"] .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-accessible-row-odd-bg);
 }
 
-body.accessible .game-history-table tbody tr:hover,
-body.accessible .review-history-table tbody tr:hover {
+body[data-theme="accessible"] .game-history-table tbody tr:hover,
+body[data-theme="accessible"] .review-history-table tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -578,29 +578,29 @@ body.accessible .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body.accessible .PaginatedTable.clickable-rows tbody tr:hover {
+body[data-theme="accessible"] .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-clickable) !important;
 }
 
-body.accessible .game-history-table td,
-body.accessible .review-history-table td {
+body[data-theme="accessible"] .game-history-table td,
+body[data-theme="accessible"] .review-history-table td {
   border-bottom: 1px solid var(--flame-accessible-table-border-bottom);
 }
 
-body.accessible .PaginatedTable div table tr {
+body[data-theme="accessible"] .PaginatedTable div table tr {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
 
-body.accessible .game-history-table td.date,
-body.accessible .review-history-table .date {
+body[data-theme="accessible"] .game-history-table td.date,
+body[data-theme="accessible"] .review-history-table .date {
   color: var(--flame-accessible-date-text-color) !important;
 }
 
-body.accessible .game-history-table td.library-won-result-unranked {
+body[data-theme="accessible"] .game-history-table td.library-won-result-unranked {
   color: var(--flame-accessible-won-result-color);
 }
 
-body.accessible .game-history-table td.library-lost-result-unranked {
+body[data-theme="accessible"] .game-history-table td.library-lost-result-unranked {
   color: var(--flame-accessible-lost-result-color);
 }
 
@@ -736,8 +736,8 @@ body.accessible .game-history-table td.library-lost-result-unranked {
   animation: shootingStar linear infinite;
 }
 
-body.dark .star,
-body.accessible .star {
+body[data-theme="dark"] .star,
+body[data-theme="accessible"] .star {
   display: block;
 }
 
@@ -826,8 +826,8 @@ body.accessible .star {
 }
 
 /* Floating pollen effect (light theme) */
-body.light::before,
-body.light::after {
+body[data-theme="light"]::before,
+body[data-theme="light"]::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -844,22 +844,22 @@ body.light::after {
   z-index: 1;
 }
 
-body.light::before {
+body[data-theme="light"]::before {
   left: 10%;
   animation-name: floatPollen1;
   animation-duration: 14s;
   animation-delay: 0s;
 }
 
-body.light::after {
+body[data-theme="light"]::after {
   left: 85%;
   animation-name: floatPollen2;
   animation-duration: 16s;
   animation-delay: 4s;
 }
 
-body.light .country-line::before,
-body.light .country-line::after {
+body[data-theme="light"] .country-line::before,
+body[data-theme="light"] .country-line::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -876,14 +876,14 @@ body.light .country-line::after {
   z-index: 1;
 }
 
-body.light .country-line::before {
+body[data-theme="light"] .country-line::before {
   left: 20%;
   animation-name: floatPollen3;
   animation-duration: 15s;
   animation-delay: 2s;
 }
 
-body.light .country-line::after {
+body[data-theme="light"] .country-line::after {
   left: 65%;
   animation-name: floatPollen4;
   animation-duration: 17s;
@@ -990,10 +990,10 @@ body.light .country-line::after {
   padding-left: 40px;
 }
 
-body.dark .title-row,
-body.dark .speed,
-body.accessible .title-row,
-body.accessible .speed {
+body[data-theme="dark"] .title-row,
+body[data-theme="dark"] .speed,
+body[data-theme="accessible"] .title-row,
+body[data-theme="accessible"] .speed {
   color: #fff;
 }
 
@@ -1041,21 +1041,21 @@ body.accessible .speed {
 }
 
 /* --- Règles pour le mode SOMBRE --- */
-body.dark .search {
+body[data-theme="dark"] .search {
   background-color: var(--flame-dark-row-odd-bg); /* Un fond sombre qui se détache */
   color: var(--flame-dark-table-text-color); /* Texte blanc */
   border: 2px solid var(--flame-dark-border-color); /* Bordure rouge-orange */
 }
 
 /* --- Règles pour le mode CLAIR --- */
-body.light .search {
+body[data-theme="light"] .search {
   background-color: var(--flame-light-row-odd-bg); /* Un fond plus clair */
   color: var(--flame-light-table-text-color); /* Texte noir/gris */
   border: 2px solid var(--flame-light-border-color); /* Bordure orange */
 }
 
 /* --- Règles pour le mode ACCESSIBLE (Haut contraste) --- */
-body.accessible .search {
+body[data-theme="accessible"] .search {
   background-color: var(--flame-accessible-row-odd-bg);
   color: var(--flame-accessible-table-text-color);
   border: 2px solid var(--flame-accessible-border-color);

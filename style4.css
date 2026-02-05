@@ -1,0 +1,115 @@
+/* === OGS Custom Profile Theme - Adapté à la structure du Groupe/Chat === */
+
+/* ===== VARIABLES (Inchangées pour garder ton identité visuelle) ===== */
+:root {
+  --primary-color: rgb(255, 36, 0);
+  --primary-dark: #ff2400;
+  --gradient-primary: linear-gradient(45deg, #ff2d00, #ff8c00);
+  --bg-card-dark: #4d0b00b5;
+  --bg-card-light: #ffffffb0;
+  --border-radius: 10px;
+  --box-shadow-fire: 0 0 15px rgba(255, 165, 0, 0.7), 0 0 30px rgba(255, 69, 0, 0.5);
+  --font-display: 'Anime Ace 2.0 BB', cursive;
+}
+
+/* ===== STRUCTURE PRINCIPALE ===== */
+/* Ciblage direct du conteneur de l'image */
+#main-content {
+  background-color: transparent;
+  padding: 15px;
+}
+
+/* ===== CARDS ET CONTENEURS ===== */
+/* Style appliqué à toutes les cartes (News, Chat, Membres, Ladders) */
+.Card, 
+.Card.EmbeddedChatCard, 
+.Card.ladders {
+  border-radius: var(--border-radius) !important;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 69, 0, 0.3);
+  animation: fire-glow 2s infinite alternate;
+  overflow: hidden; /* Pour les bords arrondis avec le contenu interne */
+}
+
+body[data-theme="dark"] .Card { background-color: var(--bg-card-dark) !important; }
+body[data-theme="light"] .Card { background-color: var(--bg-card-light) !important; }
+
+/* Animation de lueur de feu */
+@keyframes fire-glow {
+  0% { box-shadow: 0 0 10px rgba(255, 165, 0, 0.5); }
+  100% { box-shadow: 0 0 20px rgba(255, 69, 0, 0.8); }
+}
+
+/* ===== CHAT ET INTERFACE DE JEU ===== */
+/* Conteneur du chat intégré */
+.EmbeddedChatCard .ChatLog {
+  background: transparent;
+}
+
+/* La liste des parties à gauche du chat */
+.game-list {
+  background: rgba(0, 0, 0, 0.2);
+  border-right: 1px solid var(--primary-dark);
+}
+
+/* Les lignes de messages */
+.chat-lines {
+  background: rgba(0, 0, 0, 0.1);
+  font-family: var(--font-primary);
+}
+
+/* Input du chat (adapté de ton style .search) */
+#chat-input {
+  width: 98% !important;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 13px;
+  background-color: #1a0000 !important;
+  color: white !important;
+  border: 2px solid var(--primary-dark) !important;
+  font-family: var(--font-primary);
+}
+
+/* ===== TABLEAUX (News & Members) ===== */
+/* On généralise tes styles de tableaux pour .PaginatedTable */
+.PaginatedTable {
+  width: 100% !important;
+  background: transparent !important;
+}
+
+.PaginatedTable th {
+  font-family: var(--font-display);
+  color: var(--primary-color);
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--primary-dark) !important;
+}
+
+.PaginatedTable tr:hover {
+  background-color: rgba(255, 36, 0, 0.2) !important;
+  transition: 0.3s;
+}
+
+/* Style spécifique pour le tableau des Ladders (Sidebar) */
+.ladder-configuration table {
+  width: 100%;
+  color: inherit;
+}
+
+/* ===== BARRE DE NAVIGATION (Si présente) ===== */
+header.NavBar {
+  border-bottom: 2px solid var(--primary-dark);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* ===== BOUTONS ET ICÔNES ===== */
+/* Icône crayon dans la première Card */
+.fa-pencil {
+  color: var(--primary-color);
+  filter: drop-shadow(0 0 5px var(--primary-dark));
+}
+
+/* Gutter (la barre de séparation redimensionnable dans le chat) */
+.gutter.gutter-vertical {
+  background-color: var(--primary-dark) !important;
+  opacity: 0.5;
+}
