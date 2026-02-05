@@ -15,7 +15,7 @@ h1, h2, h3 {
     letter-spacing: 2px;
     text-align: center;
 }
-body.dark .container, body.accessible .container {
+body[data-theme="dark"] .container, body[data-theme="accessible"] .container {
     max-width: none !important;
     background-image: url(https://i.imgur.com/1RoDkpp.png);
     /* lien direct ici */
@@ -23,7 +23,7 @@ body.dark .container, body.accessible .container {
     background-size: contain;
 }
 
-body.light .container {
+body[data-theme="light"] .container {
     max-width: none !important;
     background-image: url(https://c4.wallpaperflare.com/wallpaper/654/651/831/doctor-who-tardis-artwork-wallpaper-preview.jpg);
     /* lien direct ici */
