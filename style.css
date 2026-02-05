@@ -4,7 +4,6 @@
 :root {
   /* Couleurs principales */
   --primary-color: rgb(255, 36, 0);
-  --primary-dark: #ff2400;
   --secondary-color: #ff8c00;
   --gradient-primary: linear-gradient(45deg, #ff2d00, #ff8c00);
   --gradient-navbar-dark: linear-gradient(45deg, #3b0000, #b46918);
@@ -271,7 +270,7 @@ body[data-theme="light"] .Card {
   --chart-strong-wins: rgba(255, 36, 0, 0.48);
   --chart-weak-losses: #1b0f1b85;
   --chart-strong-losses: #5299ffb8;
-  --chart-rating-line: var(--primary-dark);
+  --chart-rating-line: var(--primary-color);
   --chart-deviation-area: #6c0f00b0;
   --chart-area-fill: #ff24005e;
 }
