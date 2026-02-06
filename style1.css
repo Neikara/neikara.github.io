@@ -59,7 +59,7 @@ button::before {
 * {
     box-sizing: border-box;
 }
-body[data-theme="dark"] .container, body[data-theme="accessible"] .container {
+html[data-theme="dark"] body .container, html[data-theme="accessible"] body .container {
     max-width: none !important;
     background-image: url(https://i.ibb.co/xKZpWJcZ/Hailuo-Video-animatethefallingblueflowe-452445950927056897-ezgif-com-optimize-1.gif);
     /* lien direct ici */
@@ -67,19 +67,19 @@ body[data-theme="dark"] .container, body[data-theme="accessible"] .container {
     background-size: contain;
 }
 
-body[data-theme="light"] .container {
+html[data-theme="light"] body .container {
     max-width: none !important;
     background-image: url(https://i.ibb.co/0RMC8fHW/generated-video-ed650fff-5fda-4e8f-8bf4-69de43dcd41d-ezgif-com-optimize.gif);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
 }
-body[data-theme="accessible"] header.NavBar,
-body[data-theme="dark"] header.NavBar
+html[data-theme="accessible"] body header.NavBar,
+html[data-theme="dark"] body header.NavBar
 {
     background: linear-gradient(45deg, #5C5C5C, #B0B0B0);
 }
-body[data-theme="light"] header.NavBar {
+html[data-theme="light"] body header.NavBar {
     background: linear-gradient(45deg, #B0B0B0 , #5C5C5C );
 }
 
@@ -99,12 +99,12 @@ body[data-theme="light"] header.NavBar {
     font-weight: bold;
 }
 
-body[data-theme="dark"] .Card, body[data-theme="accessible"] .Card {
+html[data-theme="dark"] body .Card, html[data-theme="accessible"] body .Card {
     background-color: #4a4a4ab5 !important;
     margin-bottom: 10px !important;
     border: 2px solid #43434366 !important;
 }
-body[data-theme="light"] .Card {
+html[data-theme="light"] body .Card {
     background-color: #d9d9d9db !important;
     margin-bottom: 10px !important;
     border: 2px solid #ffffff2e !important;
@@ -159,21 +159,21 @@ body[data-theme="light"] .Card {
   stroke: var(--chart-rating-line) !important;
 }
 
-body[data-theme="light"] .User .game-history-table .library-lost-result-unranked, body[data-theme="light"] .User .review-history-table .library-lost-result-unranked {
+html[data-theme="light"] body .User .game-history-table .library-lost-result-unranked, html[data-theme="light"] body .User .review-history-table .library-lost-result-unranked {
     color: #000000 !important;
 }
-body[data-theme="light"] .User .game-history-table .library-won-result-unranked, body[data-theme="light"] .User .review-history-table .library-won-result-unranked {
+html[data-theme="light"] body .User .game-history-table .library-won-result-unranked, html[data-theme="light"] body .User .review-history-table .library-won-result-unranked {
     color: #ffffff !important;
 }
 .PaginatedTable.clickable-rows tbody tr:hover {
     background-color: #71717196 !important;
 }
-body[data-theme="light"] .Player-username, body[data-theme="light"] .Player-rank {
+html[data-theme="light"] body .Player-username, html[data-theme="light"] body .Player-rank {
     color: #5C5C5C;
     font-family: 'Annie Use Your Telescope';
     font-size: 23px;
 }
-body[data-theme="dark"] .Player-username, body[data-theme="accessible"] .Player-username, body[data-theme="dark"] .Player-rank, body[data-theme="accessible"] .Player-rank {
+html[data-theme="dark"] body .Player-username, html[data-theme="accessible"] body .Player-username, html[data-theme="dark"] body .Player-rank, html[data-theme="accessible"] body .Player-rank {
     color: #b1b1b1;
     font-family: 'Annie Use Your Telescope';
     font-size: 23px;
@@ -229,7 +229,7 @@ body[data-theme="dark"] .Player-username, body[data-theme="accessible"] .Player-
 .MenuLink{
   all: unset;
 }
-body[data-theme="dark"] .MenuLink, body[data-theme="accessible"] .MenuLink{
+html[data-theme="dark"] body .MenuLink, html[data-theme="accessible"] body .MenuLink{
     color: #dededd !important;
 }
 

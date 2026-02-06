@@ -86,38 +86,38 @@ h3 {
 
 /* ===== THEMES (LIGHT/DARK) ===== */
 /* Dark theme */
-body[data-theme="dark"] .container::after,
-body[data-theme="accessible"] .container::after {
+html[data-theme="dark"] body .container::after,
+html[data-theme="accessible"] body .container::after {
   clip-path: circle(150% at 0 0);
 }
 
-body[data-theme="dark"] .container::before,
-body[data-theme="accessible"] .container::before {
+html[data-theme="dark"] body .container::before,
+html[data-theme="accessible"] body .container::before {
   clip-path: circle(0% at 0 0);
 }
 
 /* Light theme */
-body[data-theme="light"] .container::after {
+html[data-theme="light"] body .container::after {
   clip-path: circle(0% at 0 0);
 }
 
-body[data-theme="light"] .container::before {
+html[data-theme="light"] body .container::before {
   clip-path: circle(150% at 0 0);
 }
 
 /* ===== NAVIGATION ===== */
-body[data-theme="accessible"] header.NavBar,
-body[data-theme="dark"] header.NavBar {
+html[data-theme="accessible"] body header.NavBar,
+html[data-theme="dark"] body header.NavBar {
   background: var(--gradient-navbar-dark);
 }
 
-body[data-theme="light"] header.NavBar {
+html[data-theme="light"] body header.NavBar {
   background: var(--gradient-navbar-light);
 }
 
-body[data-theme="accessible"] .ogs-nav-logo,
-body[data-theme="dark"] .ogs-nav-logo,
-body[data-theme="light"] .ogs-nav-logo {
+html[data-theme="accessible"] body .ogs-nav-logo,
+html[data-theme="dark"] body .ogs-nav-logo,
+html[data-theme="light"] body .ogs-nav-logo {
   background-image: var(--logo-url) !important;
 }
 
@@ -180,8 +180,8 @@ button:hover::after,
 /* ===== CONTAINERS AND CARDS ===== */
 
 /* General cards */
-body[data-theme="dark"] .Card,
-body[data-theme="accessible"] .Card {
+html[data-theme="dark"] body .Card,
+html[data-theme="accessible"] body .Card {
   background-color: var(--bg-card-dark) !important;
   border-radius: var(--border-radius-large) !important;
 }
@@ -190,7 +190,7 @@ body[data-theme="accessible"] .Card {
   all: unset;
   position : center;
 }
-body[data-theme="light"] .Card {
+html[data-theme="light"] body .Card {
   background-color: var(--bg-card-light) !important;
   border-radius: var(--border-radius-large) !important;
 }
@@ -346,7 +346,7 @@ body[data-theme="light"] .Card {
 
 /* ===== RÈGLES POUR LE MODE SOMBRE ===== */
 /* ===== VARIABLES DE COULEURS POUR LE MODE SOMBRE (par défaut) ===== */
-body[data-theme="dark"] {
+html[data-theme="dark"] body {
   --flame-dark-table-bg: #1a0000;
   --flame-dark-table-border-bottom: rgba(255, 69, 0, 0.5);
   --flame-dark-table-text-color: #fff;
@@ -366,7 +366,7 @@ body[data-theme="dark"] {
 }
 
 /* ===== VARIABLES DE COULEURS POUR LE MODE CLAIR ===== */
-body[data-theme="light"] {
+html[data-theme="light"] body {
   --flame-light-table-bg: #fffbf0;
   --flame-light-table-border-bottom: rgba(255, 140, 0, 0.5);
   --flame-light-table-text-color: #333;
@@ -386,7 +386,7 @@ body[data-theme="light"] {
 }
 
 /* ===== VARIABLES DE COULEURS POUR LE MODE ACCESSIBLE (Haut contraste) ===== */
-body[data-theme="accessible"] {
+html[data-theme="accessible"] body {
   --flame-accessible-table-bg: #1a0000;
   --flame-accessible-table-border-bottom: rgba(255, 69, 0, 0.5);
   --flame-accessible-table-text-color: #fff;
@@ -409,37 +409,37 @@ body[data-theme="accessible"] {
 /* ===== STYLES DES TABLEAUX BASÉS SUR LES CLASSES DU BODY ===== */
 
 /* --- Règles pour le mode SOMBRE --- */
-body[data-theme="dark"] .PaginatedTable.game-history-table,
-body[data-theme="dark"] .PaginatedTable.review-history-table {
+html[data-theme="dark"] body .PaginatedTable.game-history-table,
+html[data-theme="dark"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-dark-row-even-bg);
   color: var(--flame-dark-table-text-color);
 }
 
-body[data-theme="dark"] .game-history-table thead,
-body[data-theme="dark"] .review-history-table thead {
+html[data-theme="dark"] body .game-history-table thead,
+html[data-theme="dark"] body .review-history-table thead {
   background-color: var(--flame-dark-header-bg);
   box-shadow: var(--flame-dark-header-glow);
   color: var(--flame-dark-table-text-color);
   font-weight: bold;
 }
 
-body[data-theme="dark"] .game-history-table th,
-body[data-theme="dark"] .review-history-table thead th {
+html[data-theme="dark"] body .game-history-table th,
+html[data-theme="dark"] body .review-history-table thead th {
   border-bottom: var(--flame-dark-header-border);
 }
 
-body[data-theme="dark"] .game-history-table tbody tr:nth-child(even),
-body[data-theme="dark"] .review-history-table tbody tr:nth-child(even) {
+html[data-theme="dark"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="dark"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-dark-row-even-bg);
 }
 
-body[data-theme="dark"] .game-history-table tbody tr:nth-child(odd),
-body[data-theme="dark"] .review-history-table tbody tr:nth-child(odd) {
+html[data-theme="dark"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="dark"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-dark-row-odd-bg);
 }
 
-body[data-theme="dark"] .game-history-table tbody tr:hover,
-body[data-theme="dark"] .review-history-table tbody tr:hover {
+html[data-theme="dark"] body .game-history-table tbody tr:hover,
+html[data-theme="dark"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -447,64 +447,64 @@ body[data-theme="dark"] .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body[data-theme="dark"] .PaginatedTable.clickable-rows tbody tr:hover {
+html[data-theme="dark"] body .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-clickable) !important;
 }
 
-body[data-theme="dark"] .game-history-table td,
-body[data-theme="dark"] .review-history-table td {
+html[data-theme="dark"] body .game-history-table td,
+html[data-theme="dark"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-dark-table-border-bottom);
 }
 
-body[data-theme="dark"] .PaginatedTable div table tr {
+html[data-theme="dark"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
 }
 
-body[data-theme="dark"] .game-history-table td.date,
-body[data-theme="dark"] .review-history-table .date {
+html[data-theme="dark"] body .game-history-table td.date,
+html[data-theme="dark"] body .review-history-table .date {
   color: var(--flame-dark-date-text-color) !important;
 }
 
-body[data-theme="dark"] .game-history-table td.library-won-result-unranked {
+html[data-theme="dark"] body .game-history-table td.library-won-result-unranked {
   color: var(--flame-dark-won-result-color);
 }
 
-body[data-theme="dark"] .game-history-table td.library-lost-result-unranked {
+html[data-theme="dark"] body .game-history-table td.library-lost-result-unranked {
   color: var(--flame-dark-lost-result-color);
 }
 
 /* --- Règles pour le mode CLAIR --- */
-body[data-theme="light"] .PaginatedTable.game-history-table,
-body[data-theme="light"] .PaginatedTable.review-history-table {
+html[data-theme="light"] body .PaginatedTable.game-history-table,
+html[data-theme="light"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-light-row-even-bg);
   color: var(--flame-light-table-text-color);
 }
 
-body[data-theme="light"] .game-history-table thead,
-body[data-theme="light"] .review-history-table thead {
+html[data-theme="light"] body .game-history-table thead,
+html[data-theme="light"] body .review-history-table thead {
   background-color: var(--flame-light-header-bg);
   box-shadow: var(--flame-light-header-glow);
   color: var(--flame-light-table-text-color);
   font-weight: bold;
 }
 
-body[data-theme="light"] .game-history-table th,
-body[data-theme="light"] .review-history-table thead th {
+html[data-theme="light"] body .game-history-table th,
+html[data-theme="light"] body .review-history-table thead th {
   border-bottom: var(--flame-light-header-border);
 }
 
-body[data-theme="light"] .game-history-table tbody tr:nth-child(even),
-body[data-theme="light"] .review-history-table tbody tr:nth-child(even) {
+html[data-theme="light"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="light"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-light-row-even-bg);
 }
 
-body[data-theme="light"] .game-history-table tbody tr:nth-child(odd),
-body[data-theme="light"] .review-history-table tbody tr:nth-child(odd) {
+html[data-theme="light"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="light"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-light-row-odd-bg);
 }
 
-body[data-theme="light"] .game-history-table tbody tr:hover,
-body[data-theme="light"] .review-history-table tbody tr:hover {
+html[data-theme="light"] body .game-history-table tbody tr:hover,
+html[data-theme="light"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -512,64 +512,64 @@ body[data-theme="light"] .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body[data-theme="light"] .PaginatedTable.clickable-rows tbody tr:hover {
+html[data-theme="light"] body .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-clickable) !important;
 }
 
-body[data-theme="light"] .game-history-table td,
-body[data-theme="light"] .review-history-table td {
+html[data-theme="light"] body .game-history-table td,
+html[data-theme="light"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-light-table-border-bottom);
 }
 
-body[data-theme="light"] .PaginatedTable div table tr {
+html[data-theme="light"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
 }
 
-body[data-theme="light"] .game-history-table td.date,
-body[data-theme="light"] .review-history-table .date {
+html[data-theme="light"] body .game-history-table td.date,
+html[data-theme="light"] body .review-history-table .date {
   color: var(--flame-light-date-text-color) !important;
 }
 
-body[data-theme="light"] .game-history-table td.library-won-result-unranked {
+html[data-theme="light"] body .game-history-table td.library-won-result-unranked {
   color: var(--flame-light-won-result-color);
 }
 
-body[data-theme="light"] .game-history-table td.library-lost-result-unranked {
+html[data-theme="light"] body .game-history-table td.library-lost-result-unranked {
   color: var(--flame-light-lost-result-color);
 }
 
 /* --- Règles pour le mode ACCESSIBLE --- */
-body[data-theme="accessible"] .PaginatedTable.game-history-table,
-body[data-theme="accessible"] .PaginatedTable.review-history-table {
+html[data-theme="accessible"] body .PaginatedTable.game-history-table,
+html[data-theme="accessible"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-accessible-row-even-bg);
   color: var(--flame-accessible-table-text-color);
 }
 
-body[data-theme="accessible"] .game-history-table thead,
-body[data-theme="accessible"] .review-history-table thead {
+html[data-theme="accessible"] body .game-history-table thead,
+html[data-theme="accessible"] body .review-history-table thead {
   background-color: var(--flame-accessible-header-bg);
   box-shadow: var(--flame-accessible-header-glow);
   color: var(--flame-accessible-table-text-color);
   font-weight: bold;
 }
 
-body[data-theme="accessible"] .game-history-table th,
-body[data-theme="accessible"] .review-history-table thead th {
+html[data-theme="accessible"] body .game-history-table th,
+html[data-theme="accessible"] body .review-history-table thead th {
   border-bottom: var(--flame-accessible-header-border);
 }
 
-body[data-theme="accessible"] .game-history-table tbody tr:nth-child(even),
-body[data-theme="accessible"] .review-history-table tbody tr:nth-child(even) {
+html[data-theme="accessible"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="accessible"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-accessible-row-even-bg);
 }
 
-body[data-theme="accessible"] .game-history-table tbody tr:nth-child(odd),
-body[data-theme="accessible"] .review-history-table tbody tr:nth-child(odd) {
+html[data-theme="accessible"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="accessible"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-accessible-row-odd-bg);
 }
 
-body[data-theme="accessible"] .game-history-table tbody tr:hover,
-body[data-theme="accessible"] .review-history-table tbody tr:hover {
+html[data-theme="accessible"] body .game-history-table tbody tr:hover,
+html[data-theme="accessible"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-general);
   transform: scale(1.01);
   box-shadow: 0 5px 15px rgba(255, 69, 0, 0.4);
@@ -577,29 +577,29 @@ body[data-theme="accessible"] .review-history-table tbody tr:hover {
   z-index: 1;
 }
 
-body[data-theme="accessible"] .PaginatedTable.clickable-rows tbody tr:hover {
+html[data-theme="accessible"] body .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-clickable) !important;
 }
 
-body[data-theme="accessible"] .game-history-table td,
-body[data-theme="accessible"] .review-history-table td {
+html[data-theme="accessible"] body .game-history-table td,
+html[data-theme="accessible"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-accessible-table-border-bottom);
 }
 
-body[data-theme="accessible"] .PaginatedTable div table tr {
+html[data-theme="accessible"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
 
-body[data-theme="accessible"] .game-history-table td.date,
-body[data-theme="accessible"] .review-history-table .date {
+html[data-theme="accessible"] body .game-history-table td.date,
+html[data-theme="accessible"] body .review-history-table .date {
   color: var(--flame-accessible-date-text-color) !important;
 }
 
-body[data-theme="accessible"] .game-history-table td.library-won-result-unranked {
+html[data-theme="accessible"] body .game-history-table td.library-won-result-unranked {
   color: var(--flame-accessible-won-result-color);
 }
 
-body[data-theme="accessible"] .game-history-table td.library-lost-result-unranked {
+html[data-theme="accessible"] body .game-history-table td.library-lost-result-unranked {
   color: var(--flame-accessible-lost-result-color);
 }
 
@@ -735,8 +735,8 @@ body[data-theme="accessible"] .game-history-table td.library-lost-result-unranke
   animation: shootingStar linear infinite;
 }
 
-body[data-theme="dark"] .star,
-body[data-theme="accessible"] .star {
+html[data-theme="dark"] body .star,
+html[data-theme="accessible"] body .star {
   display: block;
 }
 
@@ -825,8 +825,8 @@ body[data-theme="accessible"] .star {
 }
 
 /* Floating pollen effect (light theme) */
-body[data-theme="light"]::before,
-body[data-theme="light"]::after {
+html[data-theme="light"] body::before,
+html[data-theme="light"] body::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -843,22 +843,22 @@ body[data-theme="light"]::after {
   z-index: 1;
 }
 
-body[data-theme="light"]::before {
+html[data-theme="light"] body::before {
   left: 10%;
   animation-name: floatPollen1;
   animation-duration: 14s;
   animation-delay: 0s;
 }
 
-body[data-theme="light"]::after {
+html[data-theme="light"] body::after {
   left: 85%;
   animation-name: floatPollen2;
   animation-duration: 16s;
   animation-delay: 4s;
 }
 
-body[data-theme="light"] .country-line::before,
-body[data-theme="light"] .country-line::after {
+html[data-theme="light"] body .country-line::before,
+html[data-theme="light"] body .country-line::after {
   content: '';
   position: absolute;
   bottom: -20px;
@@ -875,14 +875,14 @@ body[data-theme="light"] .country-line::after {
   z-index: 1;
 }
 
-body[data-theme="light"] .country-line::before {
+html[data-theme="light"] body .country-line::before {
   left: 20%;
   animation-name: floatPollen3;
   animation-duration: 15s;
   animation-delay: 2s;
 }
 
-body[data-theme="light"] .country-line::after {
+html[data-theme="light"] body .country-line::after {
   left: 65%;
   animation-name: floatPollen4;
   animation-duration: 17s;
@@ -989,10 +989,10 @@ body[data-theme="light"] .country-line::after {
   padding-left: 40px;
 }
 
-body[data-theme="dark"] .title-row,
-body[data-theme="dark"] .speed,
-body[data-theme="accessible"] .title-row,
-body[data-theme="accessible"] .speed {
+html[data-theme="dark"] body .title-row,
+html[data-theme="dark"] body .speed,
+html[data-theme="accessible"] body .title-row,
+html[data-theme="accessible"] body .speed {
   color: #fff;
 }
 
@@ -1040,21 +1040,21 @@ body[data-theme="accessible"] .speed {
 }
 
 /* --- Règles pour le mode SOMBRE --- */
-body[data-theme="dark"] .search {
+html[data-theme="dark"] body .search {
   background-color: var(--flame-dark-row-odd-bg); /* Un fond sombre qui se détache */
   color: var(--flame-dark-table-text-color); /* Texte blanc */
   border: 2px solid var(--flame-dark-border-color); /* Bordure rouge-orange */
 }
 
 /* --- Règles pour le mode CLAIR --- */
-body[data-theme="light"] .search {
+html[data-theme="light"] body .search {
   background-color: var(--flame-light-row-odd-bg); /* Un fond plus clair */
   color: var(--flame-light-table-text-color); /* Texte noir/gris */
   border: 2px solid var(--flame-light-border-color); /* Bordure orange */
 }
 
 /* --- Règles pour le mode ACCESSIBLE (Haut contraste) --- */
-body[data-theme="accessible"] .search {
+html[data-theme="accessible"] body .search {
   background-color: var(--flame-accessible-row-odd-bg);
   color: var(--flame-accessible-table-text-color);
   border: 2px solid var(--flame-accessible-border-color);

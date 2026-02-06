@@ -31,8 +31,8 @@
   overflow: hidden; /* Pour les bords arrondis avec le contenu interne */
 }
 
-body[data-theme="dark"] .Card { background-color: var(--bg-card-dark) !important; }
-body[data-theme="light"] .Card { background-color: var(--bg-card-light) !important; }
+html[data-theme="dark"] body .Card { background-color: var(--bg-card-dark) !important; }
+html[data-theme="light"] body .Card { background-color: var(--bg-card-light) !important; }
 
 /* Animation de lueur de feu */
 @keyframes fire-glow {
