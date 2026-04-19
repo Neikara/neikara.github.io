@@ -116,18 +116,18 @@ body[data-theme="light"] .container::before {
 }
 
 /* ===== NAVIGATION ===== */
-body[data-theme="accessible"] header.NavBar,
-body[data-theme="dark"] header.NavBar {
+html[data-theme="accessible"] body header.NavBar,
+html[data-theme="dark"] body header.NavBar {
   background: var(--gradient-navbar-dark);
 }
 
-body[data-theme="light"] header.NavBar {
+html[data-theme="light"] body header.NavBar {
   background: var(--gradient-navbar-light);
 }
 
-body[data-theme="accessible"] .ogs-nav-logo,
-body[data-theme="dark"] .ogs-nav-logo,
-body[data-theme="light"] .ogs-nav-logo {
+html[data-theme="accessible"] body .ogs-nav-logo,
+html[data-theme="dark"] body .ogs-nav-logo,
+html[data-theme="light"] body .ogs-nav-logo {
   background-image: var(--logo-url) !important;
 }
 
@@ -238,39 +238,6 @@ body[data-theme="light"] .Card {
   opacity: 0;
   transition: all 0.5s ease;
   clip-path: circle(50% at 50% 50%);
-}
-
-.avatar-container .username span {
-  color: var(--primary-color);
-  text-shadow: var(--text-shadow);
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s ease;
-}
-
-.avatar-container .username:hover span {
-  transform: scale(1.5) rotate(360deg);
-  opacity: 0;
-}
-
-.avatar-container .username:hover::before {
-  transform: scale(2) rotate(45deg);
-  opacity: 0.3;
-}
-
-.avatar-container .username:hover::after {
-  transform: scale(2) rotate(-45deg);
-  opacity: 0.3;
-}
-
-.avatar-container .Player-username {
-  font-family: var(--font-display);
-  display: inline-block;
-}
-
-.avatar-container .Player-rank {
-  font-size: 24pt;
-  font-family: var(--font-display);
 }
 
 /* ===== CHARTS AND DATA ===== */
