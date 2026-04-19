@@ -314,7 +314,7 @@ html[data-theme="light"] body .Card {
 
 /* ===== TABLES ===== */
 /* ===== STYLES GÉNÉRAUX ===== */
-.PaginatedTable.game-history-table,
+.PaginatedTable.GameHistoryTable,
 .PaginatedTable.review-history-table {
   border-collapse: collapse;
   width: 100%;
@@ -323,23 +323,23 @@ html[data-theme="light"] body .Card {
   table-layout: fixed; /* Ajoute cette ligne */
 }
 
-.game-history-table thead,
+.GameHistoryTable thead,
 .review-history-table thead {
   font-family: var(--font-display);
 }
 
-.game-history-table th,
+.GameHistoryTable th,
 .review-history-table thead th {
   padding: 10px 8px;
   text-align: left;
 }
 
-.game-history-table tbody tr,
+.GameHistoryTable tbody tr,
 .review-history-table tbody tr {
   transition: background-color 0.3s ease;
 }
 
-.game-history-table td,
+.GameHistoryTable td,
 .review-history-table td {
   padding: 8px 8px;
 }
@@ -409,13 +409,13 @@ html[data-theme="accessible"] body {
 /* ===== STYLES DES TABLEAUX BASÉS SUR LES CLASSES DU BODY ===== */
 
 /* --- Règles pour le mode SOMBRE --- */
-html[data-theme="dark"] body .PaginatedTable.game-history-table,
+html[data-theme="dark"] body .PaginatedTable.GameHistoryTable,
 html[data-theme="dark"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-dark-row-even-bg);
   color: var(--flame-dark-table-text-color);
 }
 
-html[data-theme="dark"] body .game-history-table thead,
+html[data-theme="dark"] body .GameHistoryTable thead,
 html[data-theme="dark"] body .review-history-table thead {
   background-color: var(--flame-dark-header-bg);
   box-shadow: var(--flame-dark-header-glow);
@@ -423,22 +423,22 @@ html[data-theme="dark"] body .review-history-table thead {
   font-weight: bold;
 }
 
-html[data-theme="dark"] body .game-history-table th,
+html[data-theme="dark"] body .GameHistoryTable th,
 html[data-theme="dark"] body .review-history-table thead th {
   border-bottom: var(--flame-dark-header-border);
 }
 
-html[data-theme="dark"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="dark"] body .GameHistoryTable tbody tr:nth-child(even),
 html[data-theme="dark"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-dark-row-even-bg);
 }
 
-html[data-theme="dark"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="dark"] body .GameHistoryTable tbody tr:nth-child(odd),
 html[data-theme="dark"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-dark-row-odd-bg);
 }
 
-html[data-theme="dark"] body .game-history-table tbody tr:hover,
+html[data-theme="dark"] body .GameHistoryTable tbody tr:hover,
 html[data-theme="dark"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-general);
   transform: scale(1.01);
@@ -451,7 +451,7 @@ html[data-theme="dark"] body .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-dark-row-hover-bg-clickable) !important;
 }
 
-html[data-theme="dark"] body .game-history-table td,
+html[data-theme="dark"] body .GameHistoryTable td,
 html[data-theme="dark"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-dark-table-border-bottom);
 }
@@ -460,27 +460,27 @@ html[data-theme="dark"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-dark-row-hover-bg-general) !important;
 }
 
-html[data-theme="dark"] body .game-history-table td.date,
+html[data-theme="dark"] body .GameHistoryTable td.date,
 html[data-theme="dark"] body .review-history-table .date {
   color: var(--flame-dark-date-text-color) !important;
 }
 
-html[data-theme="dark"] body .game-history-table td.library-won-result-unranked {
+html[data-theme="dark"] body .GameHistoryTable td.library-won-result-unranked {
   color: var(--flame-dark-won-result-color);
 }
 
-html[data-theme="dark"] body .game-history-table td.library-lost-result-unranked {
+html[data-theme="dark"] body .GameHistoryTable td.library-lost-result-unranked {
   color: var(--flame-dark-lost-result-color);
 }
 
 /* --- Règles pour le mode CLAIR --- */
-html[data-theme="light"] body .PaginatedTable.game-history-table,
+html[data-theme="light"] body .PaginatedTable.GameHistoryTable,
 html[data-theme="light"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-light-row-even-bg);
   color: var(--flame-light-table-text-color);
 }
 
-html[data-theme="light"] body .game-history-table thead,
+html[data-theme="light"] body .GameHistoryTable thead,
 html[data-theme="light"] body .review-history-table thead {
   background-color: var(--flame-light-header-bg);
   box-shadow: var(--flame-light-header-glow);
@@ -488,22 +488,22 @@ html[data-theme="light"] body .review-history-table thead {
   font-weight: bold;
 }
 
-html[data-theme="light"] body .game-history-table th,
+html[data-theme="light"] body .GameHistoryTable th,
 html[data-theme="light"] body .review-history-table thead th {
   border-bottom: var(--flame-light-header-border);
 }
 
-html[data-theme="light"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="light"] body .GameHistoryTable tbody tr:nth-child(even),
 html[data-theme="light"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-light-row-even-bg);
 }
 
-html[data-theme="light"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="light"] body .GameHistoryTable tbody tr:nth-child(odd),
 html[data-theme="light"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-light-row-odd-bg);
 }
 
-html[data-theme="light"] body .game-history-table tbody tr:hover,
+html[data-theme="light"] body .GameHistoryTable tbody tr:hover,
 html[data-theme="light"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-general);
   transform: scale(1.01);
@@ -516,7 +516,7 @@ html[data-theme="light"] body .PaginatedTable.clickable-rows tbody tr:hover {
   background-color: var(--flame-light-row-hover-bg-clickable) !important;
 }
 
-html[data-theme="light"] body .game-history-table td,
+html[data-theme="light"] body .GameHistoryTable td,
 html[data-theme="light"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-light-table-border-bottom);
 }
@@ -525,27 +525,27 @@ html[data-theme="light"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-light-row-hover-bg-general) !important;
 }
 
-html[data-theme="light"] body .game-history-table td.date,
+html[data-theme="light"] body .GameHistoryTable td.date,
 html[data-theme="light"] body .review-history-table .date {
   color: var(--flame-light-date-text-color) !important;
 }
 
-html[data-theme="light"] body .game-history-table td.library-won-result-unranked {
+html[data-theme="light"] body .GameHistoryTable td.library-won-result-unranked {
   color: var(--flame-light-won-result-color);
 }
 
-html[data-theme="light"] body .game-history-table td.library-lost-result-unranked {
+html[data-theme="light"] body .GameHistoryTable td.library-lost-result-unranked {
   color: var(--flame-light-lost-result-color);
 }
 
 /* --- Règles pour le mode ACCESSIBLE --- */
-html[data-theme="accessible"] body .PaginatedTable.game-history-table,
+html[data-theme="accessible"] body .PaginatedTable.GameHistoryTable,
 html[data-theme="accessible"] body .PaginatedTable.review-history-table {
   border: 2px solid var( --flame-accessible-row-even-bg);
   color: var(--flame-accessible-table-text-color);
 }
 
-html[data-theme="accessible"] body .game-history-table thead,
+html[data-theme="accessible"] body .GameHistoryTable thead,
 html[data-theme="accessible"] body .review-history-table thead {
   background-color: var(--flame-accessible-header-bg);
   box-shadow: var(--flame-accessible-header-glow);
@@ -553,22 +553,22 @@ html[data-theme="accessible"] body .review-history-table thead {
   font-weight: bold;
 }
 
-html[data-theme="accessible"] body .game-history-table th,
+html[data-theme="accessible"] body .GameHistoryTable th,
 html[data-theme="accessible"] body .review-history-table thead th {
   border-bottom: var(--flame-accessible-header-border);
 }
 
-html[data-theme="accessible"] body .game-history-table tbody tr:nth-child(even),
+html[data-theme="accessible"] body .GameHistoryTable tbody tr:nth-child(even),
 html[data-theme="accessible"] body .review-history-table tbody tr:nth-child(even) {
   background-color: var(--flame-accessible-row-even-bg);
 }
 
-html[data-theme="accessible"] body .game-history-table tbody tr:nth-child(odd),
+html[data-theme="accessible"] body .GameHistoryTable tbody tr:nth-child(odd),
 html[data-theme="accessible"] body .review-history-table tbody tr:nth-child(odd) {
   background-color: var(--flame-accessible-row-odd-bg);
 }
 
-html[data-theme="accessible"] body .game-history-table tbody tr:hover,
+html[data-theme="accessible"] body .GameHistoryTable tbody tr:hover,
 html[data-theme="accessible"] body .review-history-table tbody tr:hover {
   background-color: var(--flame-accessible-row-hover-bg-general);
   transform: scale(1.01);
@@ -581,7 +581,7 @@ html[data-theme="accessible"] body .PaginatedTable.clickable-rows tbody tr:hover
   background-color: var(--flame-accessible-row-hover-bg-clickable) !important;
 }
 
-html[data-theme="accessible"] body .game-history-table td,
+html[data-theme="accessible"] body .GameHistoryTable td,
 html[data-theme="accessible"] body .review-history-table td {
   border-bottom: 1px solid var(--flame-accessible-table-border-bottom);
 }
@@ -590,21 +590,21 @@ html[data-theme="accessible"] body .PaginatedTable div table tr {
   border-bottom-color: var(--flame-accessible-row-hover-bg-general) !important;
 }
 
-html[data-theme="accessible"] body .game-history-table td.date,
+html[data-theme="accessible"] body .GameHistoryTable td.date,
 html[data-theme="accessible"] body .review-history-table .date {
   color: var(--flame-accessible-date-text-color) !important;
 }
 
-html[data-theme="accessible"] body .game-history-table td.library-won-result-unranked {
+html[data-theme="accessible"] body .GameHistoryTable td.library-won-result-unranked {
   color: var(--flame-accessible-won-result-color);
 }
 
-html[data-theme="accessible"] body .game-history-table td.library-lost-result-unranked {
+html[data-theme="accessible"] body .GameHistoryTable td.library-lost-result-unranked {
   color: var(--flame-accessible-lost-result-color);
 }
 
 /* --- Styles génériques qui s'appliquent aux trois modes --- */
-.PaginatedTable.game-history-table,
+.PaginatedTable.GameHistoryTable,
 .PaginatedTable.review-history-table {
   border-collapse: collapse;
   width: 100%;
@@ -613,18 +613,18 @@ html[data-theme="accessible"] body .game-history-table td.library-lost-result-un
   font-size: 13px;
 }
 
-.game-history-table th,
+.GameHistoryTable th,
 .review-history-table thead th {
   padding: 10px 8px;
   text-align: left;
 }
 
-.game-history-table tbody tr,
+.GameHistoryTable tbody tr,
 .review-history-table tbody tr {
   transition: background-color 0.3s ease;
 }
 
-.game-history-table td,
+.GameHistoryTable td,
 .review-history-table td {
   padding: 8px 8px;
 }
