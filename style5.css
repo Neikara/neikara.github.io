@@ -96,22 +96,22 @@ html[data-theme="light"] body .Card {
 
 /* ===== THEMES (LIGHT/DARK) ===== */
 /* Dark theme */
-body[data-theme="dark"] .container::after,
-body[data-theme="accessible"] .container::after {
+html[data-theme="dark"] .container::after,
+html[data-theme="accessible"] .container::after {
   clip-path: circle(150% at 0 0);
 }
 
-body[data-theme="dark"] .container::before,
-body[data-theme="accessible"] .container::before {
+html[data-theme="dark"] .container::before,
+html[data-theme="accessible"] .container::before {
   clip-path: circle(0% at 0 0);
 }
 
 /* Light theme */
-body[data-theme="light"] .container::after {
+html[data-theme="light"] .container::after {
   clip-path: circle(0% at 0 0);
 }
 
-body[data-theme="light"] .container::before {
+bohtmldy[data-theme="light"] .container::before {
   clip-path: circle(150% at 0 0);
 }
 
