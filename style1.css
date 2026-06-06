@@ -61,7 +61,7 @@ button::before {
 }
 html[data-theme="dark"] body .container, html[data-theme="accessible"] body .container {
     max-width: none !important;
-    background-image: url(https://i.ibb.co/xKZpWJcZ/Hailuo-Video-animatethefallingblueflowe-452445950927056897-ezgif-com-optimize-1.gif);
+    background-image: url(https://i.ibb.co/9mNNQ9hb/1780704022834-p8ndscgaz6-ezgif-com-optimize.gif);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
@@ -69,7 +69,7 @@ html[data-theme="dark"] body .container, html[data-theme="accessible"] body .con
 
 html[data-theme="light"] body .container {
     max-width: none !important;
-    background-image: url(https://i.ibb.co/0RMC8fHW/generated-video-ed650fff-5fda-4e8f-8bf4-69de43dcd41d-ezgif-com-optimize.gif);
+    background-image: url(https://i.ibb.co/9mNNQ9hb/1780704022834-p8ndscgaz6-ezgif-com-optimize.gif);
     /* lien direct ici */
     background-position: 40 center;
     background-size: contain;
